@@ -298,6 +298,15 @@ export default function Home() {
             <div className="text-3xl mb-1">📋</div>
             <div className="font-bold text-gray-800 text-sm">出卷</div>
           </div>
+
+          {/* 家長查看 */}
+          <div
+            onClick={() => router.push('/parent-view')}
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center md:col-span-2"
+          >
+            <div className="text-3xl mb-1">👨‍👩‍👧</div>
+            <div className="font-bold text-gray-800 text-sm">家長查看孩子進度</div>
+          </div>
         </div>
 
         {/* 新用戶提示 */}
