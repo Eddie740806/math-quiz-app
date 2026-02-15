@@ -23,14 +23,30 @@ function generateExplanation(q) {
     }
   }
   
+  // 分數逆推問題
+  if (category === '分數逆推問題' || category === '分數連續計算') {
+    return `設未知數為 x，根據題意列出分數方程式，利用等量關係求解。答案是 ${correctAnswer}`;
+  }
+  
   // 分數乘除
-  if (category === '分數乘除' || category.includes('分數')) {
+  if (category === '分數乘除') {
     if (content.includes('÷') || content.includes('除')) {
       return `分數除法：除以一個分數等於乘以它的倒數。計算後約分得到答案 ${correctAnswer}`;
     }
     if (content.includes('×') || content.includes('乘') || content.includes('的')) {
       return `分數乘法：分子乘分子，分母乘分母，最後約分。答案是 ${correctAnswer}`;
     }
+  }
+  
+  // 其他分數題
+  if (category.includes('分數')) {
+    if (content.includes('÷') || content.includes('除')) {
+      return `分數除法：除以一個分數等於乘以它的倒數。計算後約分得到答案 ${correctAnswer}`;
+    }
+    if (content.includes('×') || content.includes('乘') || content.includes('的')) {
+      return `分數乘法：分子乘分子，分母乘分母，最後約分。答案是 ${correctAnswer}`;
+    }
+    return `根據分數運算規則，先通分再計算。答案是 ${correctAnswer}`;
   }
   
   // 小數運算
