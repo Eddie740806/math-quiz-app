@@ -3,7 +3,6 @@
 export interface User {
   id: string;
   username: string;
-  email: string;
   password: string; // 實際應該加密
   createdAt: string;
 }
@@ -50,7 +49,7 @@ export function setCurrentUser(user: User | null) {
   }
 }
 
-export function registerUser(username: string, email: string, password: string): { success: boolean; message: string; user?: User } {
+export function registerUser(username: string, password: string): { success: boolean; message: string; user?: User } {
   const users = getUsers();
   
   // 檢查用戶名是否已存在
@@ -58,15 +57,9 @@ export function registerUser(username: string, email: string, password: string):
     return { success: false, message: '用戶名已存在' };
   }
   
-  // 檢查郵箱是否已存在
-  if (users.find(u => u.email === email)) {
-    return { success: false, message: '郵箱已被註冊' };
-  }
-  
   const newUser: User = {
     id: Date.now().toString(),
     username,
-    email,
     password, // 實際應該加密
     createdAt: new Date().toISOString()
   };

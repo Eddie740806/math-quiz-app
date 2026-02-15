@@ -8,7 +8,6 @@ import { registerUser, setCurrentUser } from '@/lib/storage';
 export default function RegisterPage() {
   const router = useRouter();
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +19,7 @@ export default function RegisterPage() {
     setLoading(true);
 
     // 驗證
-    if (!username || !email || !password || !confirmPassword) {
+    if (!username || !password || !confirmPassword) {
       setError('請填寫所有欄位');
       setLoading(false);
       return;
@@ -44,14 +43,7 @@ export default function RegisterPage() {
       return;
     }
 
-    // 簡單的郵箱驗證
-    if (!email.includes('@')) {
-      setError('請輸入有效的郵箱地址');
-      setLoading(false);
-      return;
-    }
-
-    const result = registerUser(username, email, password);
+    const result = registerUser(username, password);
     
     if (result.success && result.user) {
       setCurrentUser(result.user);
@@ -83,19 +75,6 @@ export default function RegisterPage() {
               onChange={(e) => setUsername(e.target.value)}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="請輸入用戶名"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              電子郵箱
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-              placeholder="請輸入郵箱"
             />
           </div>
 
