@@ -238,6 +238,20 @@ export default function Home() {
           </div>
         )}
 
+        {/* 新用戶提示 */}
+        {!user && (
+          <div className="bg-white/10 backdrop-blur rounded-2xl p-6 mb-6 text-white text-center">
+            <div className="text-2xl mb-2">👋 第一次來嗎？</div>
+            <p className="text-blue-100 mb-4">註冊免費帳號，記錄你的學習進度！</p>
+            <ul className="text-left text-sm text-blue-100 space-y-1 max-w-xs mx-auto">
+              <li>✅ 1000+ 道精選題目</li>
+              <li>✅ 錯題本自動收集</li>
+              <li>✅ 弱點分析報告</li>
+              <li>✅ 連擊系統超好玩</li>
+            </ul>
+          </div>
+        )}
+
         {/* 頁尾 */}
         <div className="text-center py-8 text-blue-100 text-sm">
           <p>支點教育 K12 團隊專屬練習平台</p>

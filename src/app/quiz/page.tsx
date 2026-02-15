@@ -452,8 +452,14 @@ function QuizContent() {
           </div>
         ) : (
           <div className="space-y-4">
-            <div className={`p-4 rounded-xl text-center ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-              {isCorrect ? '🎉 回答正確！' : `😅 答錯了！正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
+            <div className={`p-4 rounded-xl text-center transform transition-all duration-300 ${isCorrect ? 'bg-green-100 text-green-700 scale-105' : 'bg-red-100 text-red-700 animate-pulse'}`}>
+              <div className="text-2xl mb-1">{isCorrect ? '🎉' : '😅'}</div>
+              <div className="font-medium">
+                {isCorrect ? '回答正確！' : `答錯了！正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
+              </div>
+              {isCorrect && combo >= 3 && (
+                <div className="text-orange-500 text-sm mt-1 font-bold animate-bounce">🔥 {combo} 連擊！太強了！</div>
+              )}
             </div>
             
             {/* 詳解區塊 */}
