@@ -162,21 +162,56 @@ export default function Home() {
           </button>
         </div>
 
-        {/* 本週統計 */}
-        {user && progress && progress.totalAnswered > 0 && (
+        {/* 今日目標 + 統計 */}
+        {user && (
           <div className="bg-white rounded-2xl shadow-xl p-4 mb-6">
+            {/* 今日目標進度條 */}
+            <div className="mb-4 pb-4 border-b">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-medium text-gray-700">🎯 今日目標：10 題</span>
+                <span className="text-sm text-blue-500 font-bold">{Math.min(progress?.totalAnswered || 0, 10)}/10</span>
+              </div>
+              <div className="bg-gray-200 rounded-full h-3">
+                <div 
+                  className="bg-gradient-to-r from-blue-400 to-blue-600 h-3 rounded-full transition-all"
+                  style={{ width: `${Math.min(((progress?.totalAnswered || 0) / 10) * 100, 100)}%` }}
+                />
+              </div>
+              {(progress?.totalAnswered || 0) >= 10 && (
+                <div className="text-center text-green-500 text-sm mt-2 font-medium">✅ 已完成今日目標！繼續加油 💪</div>
+              )}
+            </div>
+            
+            {/* 統計數據 */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="text-3xl">📈</div>
                 <div>
                   <div className="text-sm text-gray-500">累計練習</div>
-                  <div className="text-xl font-bold text-gray-800">{progress.totalAnswered} 題</div>
+                  <div className="text-xl font-bold text-gray-800">{progress?.totalAnswered || 0} 題</div>
                 </div>
               </div>
+              
+              {/* 連續天數 */}
+              <div className="text-center px-4">
+                <div className="text-2xl">🔥</div>
+                <div className="text-lg font-bold text-orange-500">{progress?.streak || 1}</div>
+                <div className="text-xs text-gray-500">連續天數</div>
+              </div>
+              
+              {/* 成就 */}
+              <div className="text-center px-4">
+                <div className="text-2xl">🏅</div>
+                <div className="text-lg font-bold text-purple-500">{achievementCount}/14</div>
+                <div className="text-xs text-gray-500">成就</div>
+              </div>
+              
               <div className="text-right">
                 <div className="text-sm text-gray-500">正確率</div>
                 <div className="text-xl font-bold text-green-500">
-                  {Math.round(progress.correctCount / progress.totalAnswered * 100)}%
+                  {progress && progress.totalAnswered > 0 
+                    ? Math.round(progress.correctCount / progress.totalAnswered * 100) 
+                    : 0}%
                 </div>
               </div>
             </div>
@@ -236,11 +271,13 @@ export default function Home() {
           >
             <div className="text-5xl mb-3">5️⃣</div>
             <h2 className="text-xl font-bold text-gray-800 mb-2">五年級數學</h2>
-            <div className="flex flex-wrap gap-1 mb-3">
-              {['分數', '小數', '面積', '因數倍數'].map(tag => (
+            <div className="flex flex-wrap gap-1 mb-2">
+              {['分數', '小數', '面積', '因數倍數', '體積'].map(tag => (
                 <span key={tag} className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">{tag}</span>
               ))}
+              <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">+18 種題型</span>
             </div>
+            <div className="text-xs text-gray-400 mb-2">📚 含 500 道精選題目</div>
             <div className="text-blue-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
 
@@ -250,11 +287,13 @@ export default function Home() {
           >
             <div className="text-5xl mb-3">6️⃣</div>
             <h2 className="text-xl font-bold text-gray-800 mb-2">六年級數學</h2>
-            <div className="flex flex-wrap gap-1 mb-3">
+            <div className="flex flex-wrap gap-1 mb-2">
               {['正負數', '代數', '圓', '體積', '百分率'].map(tag => (
                 <span key={tag} className="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded">{tag}</span>
               ))}
+              <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">+18 種題型</span>
             </div>
+            <div className="text-xs text-gray-400 mb-2">📚 含 500 道精選題目</div>
             <div className="text-purple-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
         </div>
@@ -273,10 +312,15 @@ export default function Home() {
           {/* 成就 */}
           <div
             onClick={() => router.push('/achievements')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20 relative"
           >
             <div className="text-2xl mb-1">🏅</div>
             <div className="font-bold text-gray-800 text-xs">成就</div>
+            {achievementCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {achievementCount}
+              </span>
+            )}
           </div>
 
           {/* 錯題本 */}
