@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, User, UserProgress } from '@/lib/storage';
+import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
 
 export default function Home() {
   const router = useRouter();
@@ -10,8 +11,12 @@ export default function Home() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [weakCategories, setWeakCategories] = useState<{ category: string; accuracy: number; total: number }[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    initTheme();
+    setIsDark(getTheme() === 'dark');
+    
     const currentUser = getCurrentUser();
     if (currentUser) {
       setUser(currentUser);
@@ -20,6 +25,11 @@ export default function Home() {
     }
     setLoading(false);
   }, []);
+
+  const handleToggleTheme = () => {
+    const newTheme = toggleTheme();
+    setIsDark(newTheme === 'dark');
+  };
 
   const handleLogout = () => {
     logoutUser();
@@ -47,7 +57,16 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 p-4">
       <div className="max-w-4xl mx-auto">
         {/* 標題 */}
-        <div className="text-center py-8">
+        <div className="text-center py-8 relative">
+          {/* 深色模式切換 */}
+          <button
+            onClick={handleToggleTheme}
+            className="absolute right-0 top-8 p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+            title={isDark ? '切換淺色模式' : '切換深色模式'}
+          >
+            {isDark ? '☀️' : '🌙'}
+          </button>
+          
           <h1 className="text-4xl font-bold text-white mb-2">📐 國小數學題庫</h1>
           <p className="text-blue-100">五、六年級數學練習平台</p>
         </div>
@@ -227,13 +246,28 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 錯題本入口 */}
-        {user && progress && progress.wrongRecords.length > 0 && (
+        {/* 排行榜 + 錯題本 */}
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          {/* 排行榜入口 */}
           <div
-            onClick={() => router.push('/wrong-answers')}
-            className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-102 transition"
+            onClick={() => router.push('/leaderboard')}
+            className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl">🏆</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800">排行榜</h3>
+                <p className="text-gray-500">看看誰是數學高手！</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 錯題本入口 */}
+          {user && progress && progress.wrongRecords.length > 0 ? (
+            <div
+              onClick={() => router.push('/wrong-answers')}
+              className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition"
+            >
               <div className="flex items-center gap-4">
                 <div className="text-4xl">📝</div>
                 <div>
@@ -241,10 +275,36 @@ export default function Home() {
                   <p className="text-gray-500">你有 {progress.wrongRecords.length} 道題目需要複習</p>
                 </div>
               </div>
-              <div className="text-blue-500 font-medium">去複習 →</div>
             </div>
+          ) : (
+            <div className="bg-white rounded-2xl shadow-xl p-6 opacity-50">
+              <div className="flex items-center gap-4">
+                <div className="text-4xl">📝</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">錯題本</h3>
+                  <p className="text-gray-500">還沒有錯題，繼續保持！</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 老師出卷 */}
+        <div
+          onClick={() => router.push('/create-quiz')}
+          className="bg-white rounded-2xl shadow-xl p-4 mb-6 cursor-pointer hover:scale-105 transition"
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="text-3xl">📋</div>
+              <div>
+                <h3 className="font-bold text-gray-800">出卷系統</h3>
+                <p className="text-sm text-gray-500">老師專用：建立測驗並分享連結</p>
+              </div>
+            </div>
+            <div className="text-teal-500 font-medium">→</div>
           </div>
-        )}
+        </div>
 
         {/* 新用戶提示 */}
         {!user && (

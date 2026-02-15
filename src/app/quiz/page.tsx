@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, User } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, User } from '@/lib/storage';
 import questionsData from '@/data/questions.json';
 
 interface Question {
@@ -23,6 +23,7 @@ function QuizContent() {
   const grade = parseInt(searchParams.get('grade') || '5');
   const countParam = parseInt(searchParams.get('count') || '0');
   const difficultyParam = searchParams.get('difficulty') || '';
+  const quizName = searchParams.get('name') || '';
   
   const [user, setUser] = useState<User | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -255,6 +256,22 @@ function QuizContent() {
       </main>
     );
   }
+
+  // 儲存排行榜
+  useEffect(() => {
+    if (quizFinished && user && answeredCount > 0) {
+      const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+      addToLeaderboard({
+        username: user.username,
+        score,
+        accuracy,
+        maxCombo,
+        totalQuestions: questions.length,
+        date: new Date().toISOString(),
+        grade
+      });
+    }
+  }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade]);
 
   if (quizFinished) {
     const accuracy = answeredCount > 0 ? Math.round((score / (answeredCount * 10)) * 100) : 0;

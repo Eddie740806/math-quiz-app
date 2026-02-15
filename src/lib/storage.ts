@@ -231,3 +231,35 @@ export function removeFromWrongRecords(odiserId: string, questionId: string) {
   progress.wrongRecords = progress.wrongRecords.filter(r => r.questionId !== questionId);
   saveUserProgress(progress);
 }
+
+// 排行榜
+export interface LeaderboardEntry {
+  username: string;
+  score: number;
+  accuracy: number;
+  maxCombo: number;
+  totalQuestions: number;
+  date: string;
+  grade: number;
+}
+
+export function getLeaderboard(): LeaderboardEntry[] {
+  if (typeof window === 'undefined') return [];
+  const data = localStorage.getItem('math_quiz_leaderboard');
+  return data ? JSON.parse(data) : [];
+}
+
+export function addToLeaderboard(entry: LeaderboardEntry) {
+  if (typeof window === 'undefined') return;
+  const leaderboard = getLeaderboard();
+  leaderboard.push(entry);
+  // 按分數排序，保留前 50 名
+  leaderboard.sort((a, b) => b.score - a.score || b.accuracy - a.accuracy);
+  const top50 = leaderboard.slice(0, 50);
+  localStorage.setItem('math_quiz_leaderboard', JSON.stringify(top50));
+}
+
+export function clearLeaderboard() {
+  if (typeof window === 'undefined') return;
+  localStorage.removeItem('math_quiz_leaderboard');
+}
