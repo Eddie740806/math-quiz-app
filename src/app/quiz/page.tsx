@@ -34,6 +34,9 @@ function QuizContent() {
   const [quizFinished, setQuizFinished] = useState(false);
   const [questionCount, setQuestionCount] = useState(countParam || 0);
   const [showCountSelector, setShowCountSelector] = useState(countParam === 0);
+  const [combo, setCombo] = useState(0);
+  const [maxCombo, setMaxCombo] = useState(0);
+  const [showComboEffect, setShowComboEffect] = useState(false);
 
   useEffect(() => {
     const currentUser = getCurrentUser();
@@ -77,10 +80,22 @@ function QuizContent() {
     
     if (correct) {
       setScore(prev => prev + 10);
+      const newCombo = combo + 1;
+      setCombo(newCombo);
+      if (newCombo > maxCombo) {
+        setMaxCombo(newCombo);
+      }
+      // 連擊特效
+      if (newCombo >= 3) {
+        setShowComboEffect(true);
+        setTimeout(() => setShowComboEffect(false), 1000);
+      }
+    } else {
+      setCombo(0);
     }
     
-    // 記錄答案
-    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer);
+    // 記錄答案（含分類）
+    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer, currentQuestion.category);
   };
 
   const handleNext = () => {
@@ -162,7 +177,7 @@ function QuizContent() {
           <h1 className="text-2xl font-bold text-gray-800 mb-4">練習完成！</h1>
           
           <div className="bg-gray-50 rounded-xl p-6 mb-6">
-            <div className="grid grid-cols-2 gap-4 text-center">
+            <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-3xl font-bold text-blue-500">{score}</div>
                 <div className="text-gray-500 text-sm">得分</div>
@@ -170,6 +185,10 @@ function QuizContent() {
               <div>
                 <div className="text-3xl font-bold text-green-500">{accuracy}%</div>
                 <div className="text-gray-500 text-sm">正確率</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-orange-500">{maxCombo}</div>
+                <div className="text-gray-500 text-sm">最高連擊</div>
               </div>
             </div>
           </div>
@@ -215,8 +234,13 @@ function QuizContent() {
           <div className="text-white">
             <span className="font-bold">{grade}</span> 年級數學
           </div>
-          <div className="text-white font-bold">
-            得分: {score}
+          <div className="text-white font-bold flex items-center gap-3">
+            {combo >= 3 && (
+              <span className={`bg-orange-500 px-2 py-1 rounded-full text-sm ${showComboEffect ? 'animate-bounce' : ''}`}>
+                🔥 {combo} 連擊
+              </span>
+            )}
+            <span>得分: {score}</span>
           </div>
         </div>
 

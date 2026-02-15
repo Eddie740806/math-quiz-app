@@ -72,8 +72,8 @@ export default function WrongAnswersPage() {
     setIsCorrect(correct);
     setShowResult(true);
     
-    // 記錄答案
-    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer);
+    // 記錄答案（含分類）
+    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer, currentQuestion.category);
     
     // 如果答對了，從錯題本移除
     if (correct) {

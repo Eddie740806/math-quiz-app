@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, User, UserProgress } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, User, UserProgress } from '@/lib/storage';
 
 export default function Home() {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState<UserProgress | null>(null);
+  const [weakCategories, setWeakCategories] = useState<{ category: string; accuracy: number; total: number }[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Home() {
     if (currentUser) {
       setUser(currentUser);
       setProgress(getUserProgress(currentUser.id));
+      setWeakCategories(getWeakCategories(currentUser.id, 3));
     }
     setLoading(false);
   }, []);
@@ -66,6 +68,9 @@ export default function Home() {
                         ? Math.round(progress.correctCount / progress.totalAnswered * 100) 
                         : 0}%
                     </span>
+                    {progress.streak && progress.streak > 1 && (
+                      <span className="text-orange-500 font-medium">🔥 連續 {progress.streak} 天</span>
+                    )}
                   </div>
                 )}
               </div>
@@ -96,6 +101,76 @@ export default function Home() {
             </div>
           )}
         </div>
+
+        {/* 一鍵開始 - 今日 10 題 */}
+        {user && (
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <button
+              onClick={() => router.push('/quiz?grade=5&count=10')}
+              className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm opacity-80">⚡ 快速開始</div>
+                  <div className="text-xl font-bold">今日 10 題（五年級）</div>
+                </div>
+                <div className="text-4xl">5️⃣</div>
+              </div>
+            </button>
+            <button
+              onClick={() => router.push('/quiz?grade=6&count=10')}
+              className="bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm opacity-80">⚡ 快速開始</div>
+                  <div className="text-xl font-bold">今日 10 題（六年級）</div>
+                </div>
+                <div className="text-4xl">6️⃣</div>
+              </div>
+            </button>
+          </div>
+        )}
+
+        {/* 弱點分析 Top3 */}
+        {user && weakCategories.length > 0 && (
+          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+              <span>📊</span> 弱點分析
+            </h3>
+            <div className="space-y-3">
+              {weakCategories.map((cat, index) => (
+                <div key={cat.category} className="flex items-center gap-3">
+                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold ${
+                    index === 0 ? 'bg-red-500' : index === 1 ? 'bg-orange-500' : 'bg-yellow-500'
+                  }`}>
+                    {index + 1}
+                  </span>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-medium text-gray-700">{cat.category}</span>
+                      <span className={`text-sm font-bold ${
+                        cat.accuracy < 50 ? 'text-red-500' : cat.accuracy < 70 ? 'text-orange-500' : 'text-yellow-600'
+                      }`}>
+                        {cat.accuracy}%
+                      </span>
+                    </div>
+                    <div className="bg-gray-200 rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full ${
+                          cat.accuracy < 50 ? 'bg-red-500' : cat.accuracy < 70 ? 'bg-orange-500' : 'bg-yellow-500'
+                        }`}
+                        style={{ width: `${cat.accuracy}%` }}
+                      />
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">已練習 {cat.total} 題</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-gray-500 mt-4">💡 建議多練習正確率較低的單元</p>
+          </div>
+        )}
 
         {/* 年級選擇 */}
         <div className="grid md:grid-cols-2 gap-6 mb-6">

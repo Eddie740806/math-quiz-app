@@ -12,6 +12,13 @@ export interface WrongRecord {
   wrongCount: number;
   lastWrongAt: string;
   userAnswer: number;
+  category?: string;
+}
+
+export interface CategoryStats {
+  category: string;
+  totalAnswered: number;
+  correctCount: number;
 }
 
 export interface UserProgress {
@@ -20,6 +27,9 @@ export interface UserProgress {
   correctCount: number;
   wrongRecords: WrongRecord[];
   lastActiveAt: string;
+  categoryStats?: CategoryStats[];
+  streak?: number;
+  lastPracticeDate?: string;
 }
 
 // 用戶相關
@@ -131,12 +141,40 @@ export function initUserProgress(odiserId: string) {
   saveUserProgress(progress);
 }
 
-export function recordAnswer(odiserId: string, questionId: string, userAnswer: number, correctAnswer: number) {
+export function recordAnswer(odiserId: string, questionId: string, userAnswer: number, correctAnswer: number, category?: string) {
   const progress = getUserProgress(odiserId);
   const isCorrect = userAnswer === correctAnswer;
   
   progress.totalAnswered++;
   progress.lastActiveAt = new Date().toISOString();
+  
+  // 更新連續練習天數
+  const today = new Date().toISOString().split('T')[0];
+  if (progress.lastPracticeDate !== today) {
+    const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+    if (progress.lastPracticeDate === yesterday) {
+      progress.streak = (progress.streak || 0) + 1;
+    } else if (progress.lastPracticeDate !== today) {
+      progress.streak = 1;
+    }
+    progress.lastPracticeDate = today;
+  }
+  
+  // 更新分類統計
+  if (category) {
+    if (!progress.categoryStats) {
+      progress.categoryStats = [];
+    }
+    let catStat = progress.categoryStats.find(c => c.category === category);
+    if (!catStat) {
+      catStat = { category, totalAnswered: 0, correctCount: 0 };
+      progress.categoryStats.push(catStat);
+    }
+    catStat.totalAnswered++;
+    if (isCorrect) {
+      catStat.correctCount++;
+    }
+  }
   
   if (isCorrect) {
     progress.correctCount++;
@@ -149,18 +187,38 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
       existingRecord.wrongCount++;
       existingRecord.lastWrongAt = new Date().toISOString();
       existingRecord.userAnswer = userAnswer;
+      if (category) existingRecord.category = category;
     } else {
       progress.wrongRecords.push({
         questionId,
         wrongCount: 1,
         lastWrongAt: new Date().toISOString(),
-        userAnswer
+        userAnswer,
+        category
       });
     }
   }
   
   saveUserProgress(progress);
   return isCorrect;
+}
+
+// 獲取弱點分類 Top3
+export function getWeakCategories(odiserId: string, topN: number = 3): { category: string; accuracy: number; total: number }[] {
+  const progress = getUserProgress(odiserId);
+  if (!progress.categoryStats || progress.categoryStats.length === 0) {
+    return [];
+  }
+  
+  return progress.categoryStats
+    .filter(c => c.totalAnswered >= 3) // 至少答過3題才算
+    .map(c => ({
+      category: c.category,
+      accuracy: Math.round((c.correctCount / c.totalAnswered) * 100),
+      total: c.totalAnswered
+    }))
+    .sort((a, b) => a.accuracy - b.accuracy) // 正確率低的排前面
+    .slice(0, topN);
 }
 
 export function getWrongRecords(odiserId: string): WrongRecord[] {
