@@ -264,7 +264,7 @@ export default function WrongAnswersPage() {
           <>
             {/* 開始複習按鈕 */}
             <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-4">
                 <div>
                   <h2 className="text-lg font-bold text-gray-800">
                     你有 {wrongRecords.length} 道錯題
@@ -278,6 +278,16 @@ export default function WrongAnswersPage() {
                   開始複習
                 </button>
               </div>
+              <button
+                onClick={() => {
+                  if (confirm('確定要清空所有錯題嗎？此操作無法復原。')) {
+                    wrongRecords.forEach(r => handleRemoveFromWrongList(r.questionId));
+                  }
+                }}
+                className="w-full py-2 text-sm text-gray-400 hover:text-red-500 transition"
+              >
+                🗑️ 清空錯題本
+              </button>
             </div>
 
             {/* 錯題列表 */}

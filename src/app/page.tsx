@@ -200,22 +200,30 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <div
             onClick={() => startQuiz(5)}
-            className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer hover:scale-105 transition transform"
+            className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition transform"
           >
-            <div className="text-6xl mb-4">5️⃣</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">五年級數學</h2>
-            <p className="text-gray-500">分數、小數、面積、因數倍數...</p>
-            <div className="mt-4 text-blue-500 font-medium">開始練習 →</div>
+            <div className="text-5xl mb-3">5️⃣</div>
+            <h2 className="text-xl font-bold text-gray-800 mb-2">五年級數學</h2>
+            <div className="flex flex-wrap gap-1 mb-3">
+              {['分數', '小數', '面積', '因數倍數'].map(tag => (
+                <span key={tag} className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+            <div className="text-blue-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
 
           <div
             onClick={() => startQuiz(6)}
-            className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer hover:scale-105 transition transform"
+            className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition transform"
           >
-            <div className="text-6xl mb-4">6️⃣</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">六年級數學</h2>
-            <p className="text-gray-500">正負數、代數、圓、體積、百分率...</p>
-            <div className="mt-4 text-blue-500 font-medium">開始練習 →</div>
+            <div className="text-5xl mb-3">6️⃣</div>
+            <h2 className="text-xl font-bold text-gray-800 mb-2">六年級數學</h2>
+            <div className="flex flex-wrap gap-1 mb-3">
+              {['正負數', '代數', '圓', '體積', '百分率'].map(tag => (
+                <span key={tag} className="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+            <div className="text-purple-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
         </div>
 

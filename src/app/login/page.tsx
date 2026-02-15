@@ -92,6 +92,10 @@ export default function LoginPage() {
           </Link>
         </div>
 
+        <div className="mt-2 text-center text-xs text-gray-400">
+          💡 忘記密碼？請重新註冊一個帳號
+        </div>
+
         <div className="mt-4 text-center">
           <Link href="/" className="text-gray-400 hover:text-gray-600 text-sm">
             ← 返回首頁
