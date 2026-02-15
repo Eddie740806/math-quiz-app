@@ -1,0 +1,274 @@
+'use client';
+
+import { useEffect, useState, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { getCurrentUser, recordAnswer, User } from '@/lib/storage';
+import questionsData from '@/data/questions.json';
+
+interface Question {
+  id: string;
+  grade: number;
+  content: string;
+  options: string[];
+  answer: number;
+  category: string;
+  difficulty: string;
+  source: string;
+}
+
+function QuizContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const grade = parseInt(searchParams.get('grade') || '5');
+  
+  const [user, setUser] = useState<User | null>(null);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [showResult, setShowResult] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [score, setScore] = useState(0);
+  const [answeredCount, setAnsweredCount] = useState(0);
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  useEffect(() => {
+    const currentUser = getCurrentUser();
+    if (!currentUser) {
+      router.push('/login');
+      return;
+    }
+    setUser(currentUser);
+
+    // 篩選題目並隨機排序
+    const gradeQuestions = questionsData.questions
+      .filter((q: Question) => q.grade === grade)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 10); // 每次 10 題
+    
+    setQuestions(gradeQuestions);
+  }, [grade, router]);
+
+  const currentQuestion = questions[currentIndex];
+
+  const handleSelectAnswer = (index: number) => {
+    if (showResult) return;
+    setSelectedAnswer(index);
+  };
+
+  const handleSubmit = () => {
+    if (selectedAnswer === null || !user || !currentQuestion) return;
+    
+    const correct = selectedAnswer === currentQuestion.answer;
+    setIsCorrect(correct);
+    setShowResult(true);
+    setAnsweredCount(prev => prev + 1);
+    
+    if (correct) {
+      setScore(prev => prev + 10);
+    }
+    
+    // 記錄答案
+    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer);
+  };
+
+  const handleNext = () => {
+    if (currentIndex >= questions.length - 1) {
+      setQuizFinished(true);
+      return;
+    }
+    
+    setCurrentIndex(prev => prev + 1);
+    setSelectedAnswer(null);
+    setShowResult(false);
+  };
+
+  const handleRestart = () => {
+    // 重新隨機排序題目
+    const gradeQuestions = questionsData.questions
+      .filter((q: Question) => q.grade === grade)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 10);
+    
+    setQuestions(gradeQuestions);
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setScore(0);
+    setAnsweredCount(0);
+    setQuizFinished(false);
+  };
+
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+        <div className="text-white text-xl">載入中...</div>
+      </div>
+    );
+  }
+
+  if (quizFinished) {
+    const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+    
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md text-center">
+          <div className="text-6xl mb-4">🎉</div>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">練習完成！</h1>
+          
+          <div className="bg-gray-50 rounded-xl p-6 mb-6">
+            <div className="grid grid-cols-2 gap-4 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-500">{score}</div>
+                <div className="text-gray-500 text-sm">得分</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-500">{accuracy}%</div>
+                <div className="text-gray-500 text-sm">正確率</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <button
+              onClick={handleRestart}
+              className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition"
+            >
+              再練一次
+            </button>
+            <button
+              onClick={() => router.push('/')}
+              className="flex-1 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-medium transition"
+            >
+              返回首頁
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  if (!currentQuestion) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+        <div className="text-white text-xl">載入題目中...</div>
+      </div>
+    );
+  }
+
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 p-4">
+      <div className="max-w-2xl mx-auto">
+        {/* 頂部狀態 */}
+        <div className="flex items-center justify-between mb-6">
+          <button
+            onClick={() => router.push('/')}
+            className="text-white hover:text-blue-200 transition"
+          >
+            ← 返回
+          </button>
+          <div className="text-white">
+            <span className="font-bold">{grade}</span> 年級數學
+          </div>
+          <div className="text-white font-bold">
+            得分: {score}
+          </div>
+        </div>
+
+        {/* 進度條 */}
+        <div className="bg-white/20 rounded-full h-2 mb-6">
+          <div
+            className="bg-white rounded-full h-2 transition-all"
+            style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+          />
+        </div>
+
+        {/* 題目卡片 */}
+        <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+              {currentQuestion.category}
+            </span>
+            <span className="text-gray-400 text-sm">
+              {currentIndex + 1} / {questions.length}
+            </span>
+          </div>
+
+          <h2 className="text-xl font-medium text-gray-800 mb-6 leading-relaxed">
+            {currentQuestion.content}
+          </h2>
+
+          <div className="space-y-3">
+            {currentQuestion.options.map((option, index) => {
+              let buttonClass = "w-full p-4 text-left rounded-xl border-2 transition ";
+              
+              if (showResult) {
+                if (index === currentQuestion.answer) {
+                  buttonClass += "border-green-500 bg-green-50 text-green-700";
+                } else if (index === selectedAnswer && !isCorrect) {
+                  buttonClass += "border-red-500 bg-red-50 text-red-700";
+                } else {
+                  buttonClass += "border-gray-200 text-gray-400";
+                }
+              } else {
+                if (index === selectedAnswer) {
+                  buttonClass += "border-blue-500 bg-blue-50 text-blue-700";
+                } else {
+                  buttonClass += "border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-gray-700";
+                }
+              }
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleSelectAnswer(index)}
+                  disabled={showResult}
+                  className={buttonClass}
+                >
+                  <span className="font-medium mr-2">
+                    {String.fromCharCode(65 + index)}.
+                  </span>
+                  {option}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 提交/下一題按鈕 */}
+        {!showResult ? (
+          <button
+            onClick={handleSubmit}
+            disabled={selectedAnswer === null}
+            className="w-full py-4 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl font-medium text-lg transition"
+          >
+            確認答案
+          </button>
+        ) : (
+          <div className="space-y-4">
+            <div className={`p-4 rounded-xl text-center ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              {isCorrect ? '🎉 回答正確！' : `😅 答錯了！正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
+            </div>
+            <button
+              onClick={handleNext}
+              className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium text-lg transition"
+            >
+              {currentIndex >= questions.length - 1 ? '完成練習' : '下一題'}
+            </button>
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+
+export default function QuizPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+        <div className="text-white text-xl">載入中...</div>
+      </div>
+    }>
+      <QuizContent />
+    </Suspense>
+  );
+}
