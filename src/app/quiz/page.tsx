@@ -39,6 +39,8 @@ function QuizContent() {
   const [combo, setCombo] = useState(0);
   const [maxCombo, setMaxCombo] = useState(0);
   const [showComboEffect, setShowComboEffect] = useState(false);
+  const [wrongQuestions, setWrongQuestions] = useState<Question[]>([]);
+  const [skippedCount, setSkippedCount] = useState(0);
 
   useEffect(() => {
     const currentUser = getCurrentUser();
@@ -102,6 +104,8 @@ function QuizContent() {
       }
     } else {
       setCombo(0);
+      // 記錄錯題
+      setWrongQuestions(prev => [...prev, currentQuestion]);
     }
     
     // 記錄答案（含分類）
@@ -117,6 +121,22 @@ function QuizContent() {
     setCurrentIndex(prev => prev + 1);
     setSelectedAnswer(null);
     setShowResult(false);
+  };
+
+  const handleSkip = () => {
+    setSkippedCount(prev => prev + 1);
+    setCombo(0);
+    handleNext();
+  };
+
+  const handleExit = () => {
+    if (answeredCount > 0) {
+      if (confirm(`已完成 ${answeredCount} 題，確定要離開嗎？\n進度會保留在錯題本中。`)) {
+        router.push('/');
+      }
+    } else {
+      router.push('/');
+    }
   };
 
   const handleRestart = () => {
@@ -216,13 +236,15 @@ function QuizContent() {
   }
 
   if (quizFinished) {
-    const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+    const accuracy = answeredCount > 0 ? Math.round((score / (answeredCount * 10)) * 100) : 0;
     
     return (
       <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md text-center">
-          <div className="text-6xl mb-4">🎉</div>
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">練習完成！</h1>
+          <div className="text-6xl mb-4">{accuracy >= 80 ? '🎉' : accuracy >= 60 ? '👍' : '💪'}</div>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">
+            {accuracy >= 80 ? '太棒了！' : accuracy >= 60 ? '做得不錯！' : '繼續加油！'}
+          </h1>
           
           <div className="bg-gray-50 rounded-xl p-6 mb-6">
             <div className="grid grid-cols-3 gap-4 text-center">
@@ -239,6 +261,12 @@ function QuizContent() {
                 <div className="text-gray-500 text-sm">最高連擊</div>
               </div>
             </div>
+            {(wrongQuestions.length > 0 || skippedCount > 0) && (
+              <div className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500">
+                {wrongQuestions.length > 0 && <span className="mr-3">❌ 錯 {wrongQuestions.length} 題</span>}
+                {skippedCount > 0 && <span>⏭️ 跳過 {skippedCount} 題</span>}
+              </div>
+            )}
           </div>
 
           <div className="flex gap-4 mb-4">
@@ -255,6 +283,16 @@ function QuizContent() {
               返回首頁
             </button>
           </div>
+          
+          {/* 錯題複習 */}
+          {wrongQuestions.length > 0 && (
+            <button
+              onClick={() => router.push('/wrong-answers')}
+              className="w-full py-3 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg font-medium transition mb-3"
+            >
+              📝 查看錯題（{wrongQuestions.length} 題）
+            </button>
+          )}
           
           {/* 分享按鈕 */}
           <button
@@ -286,7 +324,7 @@ function QuizContent() {
         {/* 頂部狀態 */}
         <div className="flex items-center justify-between mb-6">
           <button
-            onClick={() => router.push('/')}
+            onClick={handleExit}
             className="text-white hover:text-blue-200 transition"
           >
             ← 返回
@@ -366,13 +404,21 @@ function QuizContent() {
 
         {/* 提交/下一題按鈕 */}
         {!showResult ? (
-          <button
-            onClick={handleSubmit}
-            disabled={selectedAnswer === null}
-            className="w-full py-4 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl font-medium text-lg transition"
-          >
-            確認答案
-          </button>
+          <div className="space-y-3">
+            <button
+              onClick={handleSubmit}
+              disabled={selectedAnswer === null}
+              className="w-full py-4 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl font-medium text-lg transition"
+            >
+              確認答案
+            </button>
+            <button
+              onClick={handleSkip}
+              className="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-xl font-medium transition"
+            >
+              跳過此題 →
+            </button>
+          </div>
         ) : (
           <div className="space-y-4">
             <div className={`p-4 rounded-xl text-center ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -380,15 +426,21 @@ function QuizContent() {
             </div>
             
             {/* 詳解區塊 */}
-            {currentQuestion.explanation && (
-              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-yellow-600">💡</span>
-                  <span className="font-medium text-yellow-800">解題思路</span>
-                </div>
-                <p className="text-yellow-900 leading-relaxed">{currentQuestion.explanation}</p>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-yellow-600">💡</span>
+                <span className="font-medium text-yellow-800">解題思路</span>
               </div>
-            )}
+              {currentQuestion.explanation ? (
+                <p className="text-yellow-900 leading-relaxed">{currentQuestion.explanation}</p>
+              ) : (
+                <p className="text-yellow-700 text-sm">
+                  正確答案是 <strong>{currentQuestion.options[currentQuestion.answer]}</strong>
+                  <br />
+                  <span className="text-yellow-600">（此題暫無詳細解析，可請老師或家長協助說明）</span>
+                </p>
+              )}
+            </div>
             
             <button
               onClick={handleNext}
