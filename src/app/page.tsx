@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, User, UserProgress } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, User, UserProgress } from '@/lib/storage';
 import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [weakCategories, setWeakCategories] = useState<{ category: string; accuracy: number; total: number }[]>([]);
+  const [achievementCount, setAchievementCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
@@ -22,6 +23,7 @@ export default function Home() {
       setUser(currentUser);
       setProgress(getUserProgress(currentUser.id));
       setWeakCategories(getWeakCategories(currentUser.id, 3));
+      setAchievementCount(getUserAchievements(currentUser.id).length);
     }
     setLoading(false);
   }, []);
@@ -257,63 +259,44 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 排行榜 + 錯題本 */}
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
-          {/* 排行榜入口 */}
+        {/* 功能區塊 */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+          {/* 排行榜 */}
           <div
             onClick={() => router.push('/leaderboard')}
-            className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
           >
-            <div className="flex items-center gap-4">
-              <div className="text-4xl">🏆</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800">排行榜</h3>
-                <p className="text-gray-500">看看誰是數學高手！</p>
-              </div>
+            <div className="text-3xl mb-1">🏆</div>
+            <div className="font-bold text-gray-800 text-sm">排行榜</div>
+          </div>
+
+          {/* 成就 */}
+          <div
+            onClick={() => router.push('/achievements')}
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+          >
+            <div className="text-3xl mb-1">🏅</div>
+            <div className="font-bold text-gray-800 text-sm">成就 {achievementCount > 0 && `(${achievementCount})`}</div>
+          </div>
+
+          {/* 錯題本 */}
+          <div
+            onClick={() => user ? router.push('/wrong-answers') : router.push('/login')}
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+          >
+            <div className="text-3xl mb-1">📝</div>
+            <div className="font-bold text-gray-800 text-sm">
+              錯題本 {progress && progress.wrongRecords.length > 0 && `(${progress.wrongRecords.length})`}
             </div>
           </div>
 
-          {/* 錯題本入口 */}
-          {user && progress && progress.wrongRecords.length > 0 ? (
-            <div
-              onClick={() => router.push('/wrong-answers')}
-              className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition"
-            >
-              <div className="flex items-center gap-4">
-                <div className="text-4xl">📝</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">錯題本</h3>
-                  <p className="text-gray-500">你有 {progress.wrongRecords.length} 道題目需要複習</p>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="bg-white rounded-2xl shadow-xl p-6 opacity-50">
-              <div className="flex items-center gap-4">
-                <div className="text-4xl">📝</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">錯題本</h3>
-                  <p className="text-gray-500">還沒有錯題，繼續保持！</p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* 老師出卷 */}
-        <div
-          onClick={() => router.push('/create-quiz')}
-          className="bg-white rounded-2xl shadow-xl p-4 mb-6 cursor-pointer hover:scale-105 transition"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="text-3xl">📋</div>
-              <div>
-                <h3 className="font-bold text-gray-800">出卷系統</h3>
-                <p className="text-sm text-gray-500">老師專用：建立測驗並分享連結</p>
-              </div>
-            </div>
-            <div className="text-teal-500 font-medium">→</div>
+          {/* 出卷 */}
+          <div
+            onClick={() => router.push('/create-quiz')}
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+          >
+            <div className="text-3xl mb-1">📋</div>
+            <div className="font-bold text-gray-800 text-sm">出卷</div>
           </div>
         </div>
 

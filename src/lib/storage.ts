@@ -263,3 +263,146 @@ export function clearLeaderboard() {
   if (typeof window === 'undefined') return;
   localStorage.removeItem('math_quiz_leaderboard');
 }
+
+// 成就系統
+export interface Achievement {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  unlockedAt?: string;
+}
+
+export const ACHIEVEMENTS: Achievement[] = [
+  { id: 'first_quiz', name: '初試身手', description: '完成第一次練習', icon: '🎯' },
+  { id: 'streak_3', name: '三連勝', description: '連續答對 3 題', icon: '🔥' },
+  { id: 'streak_5', name: '五連霸', description: '連續答對 5 題', icon: '⚡' },
+  { id: 'streak_10', name: '十連神', description: '連續答對 10 題', icon: '🌟' },
+  { id: 'perfect_10', name: '完美十題', description: '10 題全對', icon: '💯' },
+  { id: 'speed_demon', name: '速算達人', description: '平均答題時間低於 10 秒', icon: '⏱️' },
+  { id: 'practice_50', name: '勤學者', description: '累計練習 50 題', icon: '📚' },
+  { id: 'practice_100', name: '百題達人', description: '累計練習 100 題', icon: '🏅' },
+  { id: 'practice_500', name: '數學高手', description: '累計練習 500 題', icon: '🏆' },
+  { id: 'accuracy_80', name: '精準射手', description: '正確率達到 80%', icon: '🎯' },
+  { id: 'accuracy_90', name: '神準無比', description: '正確率達到 90%', icon: '💎' },
+  { id: 'daily_3', name: '三日不輟', description: '連續練習 3 天', icon: '📅' },
+  { id: 'daily_7', name: '週週努力', description: '連續練習 7 天', icon: '🗓️' },
+  { id: 'daily_30', name: '月度堅持', description: '連續練習 30 天', icon: '🌙' },
+];
+
+export function getUserAchievements(userId: string): Achievement[] {
+  if (typeof window === 'undefined') return [];
+  const data = localStorage.getItem(`math_quiz_achievements_${userId}`);
+  return data ? JSON.parse(data) : [];
+}
+
+export function saveUserAchievements(userId: string, achievements: Achievement[]) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(`math_quiz_achievements_${userId}`, JSON.stringify(achievements));
+}
+
+export function unlockAchievement(userId: string, achievementId: string): Achievement | null {
+  const userAchievements = getUserAchievements(userId);
+  
+  // 已經解鎖過了
+  if (userAchievements.find(a => a.id === achievementId)) {
+    return null;
+  }
+  
+  const achievement = ACHIEVEMENTS.find(a => a.id === achievementId);
+  if (!achievement) return null;
+  
+  const unlockedAchievement = {
+    ...achievement,
+    unlockedAt: new Date().toISOString()
+  };
+  
+  userAchievements.push(unlockedAchievement);
+  saveUserAchievements(userId, userAchievements);
+  
+  return unlockedAchievement;
+}
+
+export function checkAndUnlockAchievements(userId: string, stats: {
+  totalAnswered: number;
+  correctCount: number;
+  streak: number;
+  maxCombo: number;
+  avgTime?: number;
+  isPerfect?: boolean;
+}): Achievement[] {
+  const newAchievements: Achievement[] = [];
+  
+  // 第一次練習
+  if (stats.totalAnswered >= 1) {
+    const a = unlockAchievement(userId, 'first_quiz');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 連擊成就
+  if (stats.maxCombo >= 3) {
+    const a = unlockAchievement(userId, 'streak_3');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.maxCombo >= 5) {
+    const a = unlockAchievement(userId, 'streak_5');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.maxCombo >= 10) {
+    const a = unlockAchievement(userId, 'streak_10');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 累計練習
+  if (stats.totalAnswered >= 50) {
+    const a = unlockAchievement(userId, 'practice_50');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.totalAnswered >= 100) {
+    const a = unlockAchievement(userId, 'practice_100');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.totalAnswered >= 500) {
+    const a = unlockAchievement(userId, 'practice_500');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 正確率成就
+  const accuracy = stats.totalAnswered > 0 ? (stats.correctCount / stats.totalAnswered * 100) : 0;
+  if (accuracy >= 80 && stats.totalAnswered >= 10) {
+    const a = unlockAchievement(userId, 'accuracy_80');
+    if (a) newAchievements.push(a);
+  }
+  if (accuracy >= 90 && stats.totalAnswered >= 10) {
+    const a = unlockAchievement(userId, 'accuracy_90');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 連續天數
+  if (stats.streak >= 3) {
+    const a = unlockAchievement(userId, 'daily_3');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.streak >= 7) {
+    const a = unlockAchievement(userId, 'daily_7');
+    if (a) newAchievements.push(a);
+  }
+  if (stats.streak >= 30) {
+    const a = unlockAchievement(userId, 'daily_30');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 速度成就
+  if (stats.avgTime && stats.avgTime < 10) {
+    const a = unlockAchievement(userId, 'speed_demon');
+    if (a) newAchievements.push(a);
+  }
+  
+  // 完美成就
+  if (stats.isPerfect) {
+    const a = unlockAchievement(userId, 'perfect_10');
+    if (a) newAchievements.push(a);
+  }
+  
+  return newAchievements;
+}

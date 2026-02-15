@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, addToLeaderboard, User } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 import questionsData from '@/data/questions.json';
 
@@ -46,6 +46,7 @@ function QuizContent() {
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [totalTime, setTotalTime] = useState(0);
   const [currentQuestionTime, setCurrentQuestionTime] = useState(0);
+  const [newAchievements, setNewAchievements] = useState<Achievement[]>([]);
 
   // 計時器
   useEffect(() => {
@@ -259,10 +260,12 @@ function QuizContent() {
     );
   }
 
-  // 儲存排行榜
+  // 儲存排行榜 & 檢查成就
   useEffect(() => {
     if (quizFinished && user && answeredCount > 0) {
       const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+      
+      // 儲存排行榜
       addToLeaderboard({
         username: user.username,
         score,
@@ -272,8 +275,26 @@ function QuizContent() {
         date: new Date().toISOString(),
         grade
       });
+      
+      // 檢查成就
+      const progress = getUserProgress(user.id);
+      const avgTime = answeredCount > 0 ? Math.round(totalTime / answeredCount) : 0;
+      const isPerfect = accuracy === 100 && answeredCount >= 10;
+      
+      const achievements = checkAndUnlockAchievements(user.id, {
+        totalAnswered: progress.totalAnswered,
+        correctCount: progress.correctCount,
+        streak: progress.streak || 0,
+        maxCombo,
+        avgTime,
+        isPerfect
+      });
+      
+      if (achievements.length > 0) {
+        setNewAchievements(achievements);
+      }
     }
-  }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade]);
+  }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade, totalTime]);
 
   if (quizFinished) {
     const accuracy = answeredCount > 0 ? Math.round((score / (answeredCount * 10)) * 100) : 0;
@@ -332,6 +353,29 @@ function QuizContent() {
             </button>
           </div>
           
+          {/* 新成就通知 */}
+          {newAchievements.length > 0 && (
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 mb-4">
+              <div className="text-center mb-2">
+                <span className="text-purple-600 font-bold">🎉 解鎖新成就！</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {newAchievements.map((a) => (
+                  <div key={a.id} className="bg-white rounded-lg px-3 py-2 text-center shadow-sm">
+                    <div className="text-2xl">{a.icon}</div>
+                    <div className="text-xs font-medium text-gray-700">{a.name}</div>
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={() => router.push('/achievements')}
+                className="w-full mt-3 py-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition"
+              >
+                查看全部成就 →
+              </button>
+            </div>
+          )}
+
           {/* 錯題複習 */}
           {wrongQuestions.length > 0 && (
             <button
