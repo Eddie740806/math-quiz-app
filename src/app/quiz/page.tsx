@@ -14,12 +14,14 @@ interface Question {
   category: string;
   difficulty: string;
   source: string;
+  explanation?: string;
 }
 
 function QuizContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const grade = parseInt(searchParams.get('grade') || '5');
+  const countParam = parseInt(searchParams.get('count') || '0');
   
   const [user, setUser] = useState<User | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -30,6 +32,8 @@ function QuizContent() {
   const [score, setScore] = useState(0);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
+  const [questionCount, setQuestionCount] = useState(countParam || 0);
+  const [showCountSelector, setShowCountSelector] = useState(countParam === 0);
 
   useEffect(() => {
     const currentUser = getCurrentUser();
@@ -39,14 +43,22 @@ function QuizContent() {
     }
     setUser(currentUser);
 
-    // 篩選題目並隨機排序
-    const gradeQuestions = questionsData.questions
-      .filter((q: Question) => q.grade === grade)
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 10); // 每次 10 題
-    
-    setQuestions(gradeQuestions);
-  }, [grade, router]);
+    if (questionCount > 0) {
+      // 篩選題目並隨機排序
+      const gradeQuestions = questionsData.questions
+        .filter((q: Question) => q.grade === grade)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, questionCount);
+      
+      setQuestions(gradeQuestions);
+      setShowCountSelector(false);
+    }
+  }, [grade, router, questionCount]);
+
+  const startWithCount = (count: number) => {
+    setQuestionCount(count);
+    setShowCountSelector(false);
+  };
 
   const currentQuestion = questions[currentIndex];
 
@@ -103,6 +115,40 @@ function QuizContent() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
         <div className="text-white text-xl">載入中...</div>
       </div>
+    );
+  }
+
+  // 選擇題數
+  if (showCountSelector) {
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+          <div className="text-center mb-6">
+            <div className="text-5xl mb-4">{grade === 5 ? '5️⃣' : '6️⃣'}</div>
+            <h1 className="text-2xl font-bold text-gray-800">{grade} 年級數學</h1>
+            <p className="text-gray-500">選擇要練習的題數</p>
+          </div>
+
+          <div className="space-y-3">
+            {[10, 20, 30, 50].map((count) => (
+              <button
+                key={count}
+                onClick={() => startWithCount(count)}
+                className="w-full py-4 bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 hover:border-blue-400 text-blue-700 rounded-xl font-medium text-lg transition"
+              >
+                {count} 題 {count === 10 ? '（快速）' : count === 50 ? '（挑戰）' : ''}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => router.push('/')}
+            className="w-full mt-6 py-3 text-gray-500 hover:text-gray-700 transition"
+          >
+            ← 返回首頁
+          </button>
+        </div>
+      </main>
     );
   }
 
@@ -248,6 +294,18 @@ function QuizContent() {
             <div className={`p-4 rounded-xl text-center ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
               {isCorrect ? '🎉 回答正確！' : `😅 答錯了！正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
             </div>
+            
+            {/* 詳解區塊 */}
+            {currentQuestion.explanation && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-yellow-600">💡</span>
+                  <span className="font-medium text-yellow-800">解題思路</span>
+                </div>
+                <p className="text-yellow-900 leading-relaxed">{currentQuestion.explanation}</p>
+              </div>
+            )}
+            
             <button
               onClick={handleNext}
               className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium text-lg transition"

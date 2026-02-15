@@ -14,6 +14,7 @@ interface Question {
   category: string;
   difficulty: string;
   source: string;
+  explanation?: string;
 }
 
 export default function WrongAnswersPage() {
@@ -206,6 +207,18 @@ export default function WrongAnswersPage() {
               <div className={`p-4 rounded-xl text-center ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
                 {isCorrect ? '🎉 這次答對了！已從錯題本移除' : `😅 還是錯了，正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
               </div>
+              
+              {/* 詳解區塊 */}
+              {currentQuestion.explanation && (
+                <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-yellow-600">💡</span>
+                    <span className="font-medium text-yellow-800">解題思路</span>
+                  </div>
+                  <p className="text-yellow-900 leading-relaxed">{currentQuestion.explanation}</p>
+                </div>
+              )}
+              
               <button
                 onClick={handleNext}
                 className="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium text-lg transition"
@@ -284,7 +297,7 @@ export default function WrongAnswersPage() {
                       </span>
                     </div>
                     <p className="text-gray-800 mb-3">{question.content}</p>
-                    <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center justify-between text-sm mb-2">
                       <span className="text-gray-500">
                         正確答案: {String.fromCharCode(65 + question.answer)}. {question.options[question.answer]}
                       </span>
@@ -295,6 +308,12 @@ export default function WrongAnswersPage() {
                         移除
                       </button>
                     </div>
+                    {question.explanation && (
+                      <div className="bg-yellow-50 border border-yellow-100 rounded-lg p-2 text-sm">
+                        <span className="text-yellow-600">💡</span>
+                        <span className="text-yellow-800 ml-1">{question.explanation}</span>
+                      </div>
+                    )}
                   </div>
                 );
               })}
