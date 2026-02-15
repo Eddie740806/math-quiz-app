@@ -88,6 +88,42 @@ function QuizContent() {
     }
   }, [grade, router, questionCount, difficulty]);
 
+  // 儲存排行榜 & 檢查成就（必須在所有條件式 return 之前）
+  useEffect(() => {
+    if (quizFinished && user && answeredCount > 0) {
+      const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+      
+      // 儲存排行榜
+      addToLeaderboard({
+        username: user.username,
+        score,
+        accuracy,
+        maxCombo,
+        totalQuestions: questions.length,
+        date: new Date().toISOString(),
+        grade
+      });
+      
+      // 檢查成就
+      const progress = getUserProgress(user.id);
+      const avgTime = answeredCount > 0 ? Math.round(totalTime / answeredCount) : 0;
+      const isPerfect = accuracy === 100 && answeredCount >= 10;
+      
+      const achievements = checkAndUnlockAchievements(user.id, {
+        totalAnswered: progress.totalAnswered,
+        correctCount: progress.correctCount,
+        streak: progress.streak || 0,
+        maxCombo,
+        avgTime,
+        isPerfect
+      });
+      
+      if (achievements.length > 0) {
+        setNewAchievements(achievements);
+      }
+    }
+  }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade, totalTime]);
+
   const startWithCount = (count: number) => {
     setQuestionCount(count);
     setShowCountSelector(false);
@@ -259,42 +295,6 @@ function QuizContent() {
       </main>
     );
   }
-
-  // 儲存排行榜 & 檢查成就
-  useEffect(() => {
-    if (quizFinished && user && answeredCount > 0) {
-      const accuracy = Math.round((score / (answeredCount * 10)) * 100);
-      
-      // 儲存排行榜
-      addToLeaderboard({
-        username: user.username,
-        score,
-        accuracy,
-        maxCombo,
-        totalQuestions: questions.length,
-        date: new Date().toISOString(),
-        grade
-      });
-      
-      // 檢查成就
-      const progress = getUserProgress(user.id);
-      const avgTime = answeredCount > 0 ? Math.round(totalTime / answeredCount) : 0;
-      const isPerfect = accuracy === 100 && answeredCount >= 10;
-      
-      const achievements = checkAndUnlockAchievements(user.id, {
-        totalAnswered: progress.totalAnswered,
-        correctCount: progress.correctCount,
-        streak: progress.streak || 0,
-        maxCombo,
-        avgTime,
-        isPerfect
-      });
-      
-      if (achievements.length > 0) {
-        setNewAchievements(achievements);
-      }
-    }
-  }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade, totalTime]);
 
   if (quizFinished) {
     const accuracy = answeredCount > 0 ? Math.round((score / (answeredCount * 10)) * 100) : 0;
