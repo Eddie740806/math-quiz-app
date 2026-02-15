@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getCurrentUser, getWrongRecords, removeFromWrongRecords, recordAnswer, User, WrongRecord } from '@/lib/storage';
+import { initTheme } from '@/lib/theme';
 import questionsData from '@/data/questions.json';
 
 interface Question {
@@ -29,6 +30,7 @@ export default function WrongAnswersPage() {
   const [practiceQuestions, setPracticeQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
+    initTheme();
     const currentUser = getCurrentUser();
     if (!currentUser) {
       router.push('/login');

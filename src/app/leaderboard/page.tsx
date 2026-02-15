@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getLeaderboard, LeaderboardEntry } from '@/lib/storage';
+import { initTheme } from '@/lib/theme';
 
 export default function LeaderboardPage() {
   const router = useRouter();
@@ -10,6 +11,7 @@ export default function LeaderboardPage() {
   const [filter, setFilter] = useState<'all' | 5 | 6>('all');
 
   useEffect(() => {
+    initTheme();
     setLeaderboard(getLeaderboard());
   }, []);
 

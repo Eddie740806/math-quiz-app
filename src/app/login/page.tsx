@@ -4,6 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { loginUser } from '@/lib/storage';
+import { initTheme } from '@/lib/theme';
+
+import { useEffect } from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -11,6 +14,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    initTheme();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

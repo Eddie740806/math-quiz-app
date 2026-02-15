@@ -3,6 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { getCurrentUser, recordAnswer, addToLeaderboard, User } from '@/lib/storage';
+import { initTheme } from '@/lib/theme';
 import questionsData from '@/data/questions.json';
 
 interface Question {
@@ -58,6 +59,7 @@ function QuizContent() {
   }, [questionStartTime, showCountSelector, quizFinished]);
 
   useEffect(() => {
+    initTheme();
     const currentUser = getCurrentUser();
     if (!currentUser) {
       router.push('/login');

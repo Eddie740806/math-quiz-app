@@ -93,12 +93,23 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <button
-                onClick={handleLogout}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg text-gray-700 transition"
-              >
-                登出
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    handleLogout();
+                    router.push('/login');
+                  }}
+                  className="px-3 py-2 bg-blue-100 hover:bg-blue-200 rounded-lg text-blue-700 text-sm transition"
+                >
+                  切換帳號
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg text-gray-700 text-sm transition"
+                >
+                  登出
+                </button>
+              </div>
             </div>
           ) : (
             <div className="text-center">

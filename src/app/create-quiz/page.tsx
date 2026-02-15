@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { initTheme } from '@/lib/theme';
 
 export default function CreateQuizPage() {
   const router = useRouter();
@@ -11,6 +12,10 @@ export default function CreateQuizPage() {
   const [quizName, setQuizName] = useState('');
   const [generated, setGenerated] = useState(false);
   const [quizLink, setQuizLink] = useState('');
+
+  useEffect(() => {
+    initTheme();
+  }, []);
 
   const generateQuiz = () => {
     // 產生一個唯一的測驗 ID
