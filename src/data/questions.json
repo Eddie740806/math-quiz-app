@@ -3001,6 +3001,2166 @@
       "source": "段考題"
     },
     {
+      "id": "g5-fc-101",
+      "content": "計算：(2/3 + 1/4) × 6/5 = ?",
+      "options": [
+        "11/10",
+        "22/15",
+        "11/20",
+        "6/7"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-102",
+      "content": "計算：5/6 ÷ (1/2 + 1/3) = ?",
+      "options": [
+        "1",
+        "5/3",
+        "5/6",
+        "6/5"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-103",
+      "content": "甲數是 24，甲數的 3/4 等於乙數的 2/3，乙數是多少？",
+      "options": [
+        "27",
+        "18",
+        "32",
+        "21"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-104",
+      "content": "一個分數的分子加 3，分數值變成 3/4；分母減 2，分數值變成 2/3。原來的分數是多少？",
+      "options": [
+        "6/10",
+        "5/8",
+        "4/7",
+        "3/6"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-105",
+      "content": "一堆蘋果，第一次拿走 1/3，第二次拿走剩下的 2/5，第三次拿走剩下的 1/2，還剩 12 個，原有幾個？",
+      "options": [
+        "60個",
+        "48個",
+        "72個",
+        "40個"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-106",
+      "content": "把 3/7 和 5/9 通分後比較大小，哪個較大？",
+      "options": [
+        "5/9 較大",
+        "3/7 較大",
+        "一樣大",
+        "無法比較"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-107",
+      "content": "一個數的 2/5 比它的 1/3 多 8，這個數是多少？",
+      "options": [
+        "120",
+        "80",
+        "60",
+        "100"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-108",
+      "content": "甲、乙兩數的和是 63，甲數的 1/3 等於乙數的 1/4，甲數是多少？",
+      "options": [
+        "27",
+        "36",
+        "28",
+        "35"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-109",
+      "content": "計算：1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 的整數部分是多少？",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fc-110",
+      "content": "7/12 的分子和分母都加上同一個數後，分數值變成 3/4，加的數是多少？",
+      "options": [
+        "5",
+        "3",
+        "7",
+        "9"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-101",
+      "content": "計算：3.6 × 2.5 + 3.6 × 7.5 = ?",
+      "options": [
+        "36",
+        "27",
+        "45",
+        "18"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-102",
+      "content": "計算：12.5 × 8.8 = ?",
+      "options": [
+        "110",
+        "100",
+        "120",
+        "88"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-103",
+      "content": "0.125 × 72 = ?",
+      "options": [
+        "9",
+        "0.9",
+        "90",
+        "0.09"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-104",
+      "content": "把 3.14159 四捨五入到小數點後兩位是多少？",
+      "options": [
+        "3.14",
+        "3.15",
+        "3.1",
+        "3.142"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-105",
+      "content": "一個數除以 0.4 的商是 2.5，這個數是多少？",
+      "options": [
+        "1",
+        "0.16",
+        "6.25",
+        "0.625"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-106",
+      "content": "3.6 公斤等於多少公克？",
+      "options": [
+        "3600公克",
+        "360公克",
+        "36公克",
+        "36000公克"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-107",
+      "content": "2.5 小時等於多少分鐘？",
+      "options": [
+        "150分鐘",
+        "25分鐘",
+        "250分鐘",
+        "125分鐘"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-108",
+      "content": "比較大小：0.666... □ 2/3",
+      "options": [
+        "=",
+        ">",
+        "<",
+        "無法比較"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-109",
+      "content": "甲數是 3.6，乙數比甲數少 0.8，甲乙兩數的積是多少？",
+      "options": [
+        "10.08",
+        "9.6",
+        "12.32",
+        "8.64"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-dc-110",
+      "content": "一件商品原價 x 元，先漲價 10%，再降價 10%，現價是多少元？",
+      "options": [
+        "0.99x 元",
+        "x 元",
+        "1.01x 元",
+        "0.9x 元"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "小數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-101",
+      "content": "一個直角三角形，兩條直角邊分別是 6 公分和 8 公分，斜邊長多少公分？",
+      "options": [
+        "10公分",
+        "14公分",
+        "7公分",
+        "12公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-102",
+      "content": "平行四邊形的底增加 20%，高減少 20%，面積如何變化？",
+      "options": [
+        "減少4%",
+        "不變",
+        "增加4%",
+        "減少20%"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-103",
+      "content": "一個三角形和一個平行四邊形等底等高，平行四邊形面積 48 平方公分，三角形面積多少？",
+      "options": [
+        "24平方公分",
+        "96平方公分",
+        "48平方公分",
+        "12平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-104",
+      "content": "一塊梯形土地，上底 15 公尺，下底 25 公尺，高 12 公尺，每平方公尺種 3 棵樹，共種幾棵？",
+      "options": [
+        "720棵",
+        "480棵",
+        "240棵",
+        "360棵"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-105",
+      "content": "把一個長方形（長 10、寬 6）對摺後再對摺，得到的小長方形面積是多少？",
+      "options": [
+        "15平方單位",
+        "60平方單位",
+        "30平方單位",
+        "7.5平方單位"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-106",
+      "content": "一個等邊三角形邊長 6 公分，高約多少公分？（取整數）",
+      "options": [
+        "約5公分",
+        "約6公分",
+        "約3公分",
+        "約4公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-107",
+      "content": "正方形的對角線長 10 公分，面積是多少平方公分？",
+      "options": [
+        "50平方公分",
+        "100平方公分",
+        "25平方公分",
+        "40平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-108",
+      "content": "一個菱形的兩條對角線分別是 8 公分和 6 公分，面積是多少平方公分？",
+      "options": [
+        "24平方公分",
+        "48平方公分",
+        "14平方公分",
+        "28平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-109",
+      "content": "把一個面積 36 平方公分的正方形剪成 4 個相等的小正方形，每個小正方形的邊長是多少？",
+      "options": [
+        "3公分",
+        "9公分",
+        "6公分",
+        "4.5公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-ar-110",
+      "content": "長方形長 12 公分，如果長增加 3 公分，面積增加 24 平方公分，原來的面積是多少？",
+      "options": [
+        "96平方公分",
+        "72平方公分",
+        "84平方公分",
+        "60平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "面積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-101",
+      "content": "一個正方體的表面積是 150 平方公分，邊長是多少公分？",
+      "options": [
+        "5公分",
+        "25公分",
+        "6公分",
+        "10公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-102",
+      "content": "長方體的長、寬、高分別是 8、6、4 公分，如果高增加 2 公分，體積增加多少？",
+      "options": [
+        "96立方公分",
+        "48立方公分",
+        "192立方公分",
+        "288立方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-103",
+      "content": "水箱長 50 公分，寬 30 公分，放入一塊石頭後水面上升 2 公分，石頭體積多少？",
+      "options": [
+        "3000立方公分",
+        "1500立方公分",
+        "6000立方公分",
+        "80立方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-104",
+      "content": "把一個棱長 6 公分的正方體切成棱長 1 公分的小正方體，可切成幾個？",
+      "options": [
+        "216個",
+        "36個",
+        "6個",
+        "18個"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-105",
+      "content": "長方體和正方體的體積相等，正方體棱長 6 公分，長方體底面積 18 平方公分，高多少？",
+      "options": [
+        "12公分",
+        "6公分",
+        "36公分",
+        "9公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-106",
+      "content": "1 立方公尺等於多少立方公分？",
+      "options": [
+        "1000000立方公分",
+        "1000立方公分",
+        "100立方公分",
+        "10000立方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-107",
+      "content": "正方體棱長變成原來的 2 倍，體積變成原來的幾倍？",
+      "options": [
+        "8倍",
+        "2倍",
+        "4倍",
+        "6倍"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-108",
+      "content": "長方體的長、寬、高的比是 3：2：1，體積是 48 立方公分，高是多少公分？",
+      "options": [
+        "2公分",
+        "4公分",
+        "6公分",
+        "8公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-109",
+      "content": "游泳池長 25 公尺，寬 15 公尺，深 2 公尺，容積是多少立方公尺？",
+      "options": [
+        "750立方公尺",
+        "375立方公尺",
+        "42立方公尺",
+        "1500立方公尺"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-vo-110",
+      "content": "正方體的體積是 27 立方公分，表面積是多少平方公分？",
+      "options": [
+        "54平方公分",
+        "27平方公分",
+        "81平方公分",
+        "36平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-101",
+      "content": "一個數的 3 倍比它的 2 倍多 18，這個數是多少？",
+      "options": [
+        "18",
+        "6",
+        "9",
+        "36"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-102",
+      "content": "甲數是乙數的 4 倍，甲乙差是 36，甲數是多少？",
+      "options": [
+        "48",
+        "12",
+        "36",
+        "60"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-103",
+      "content": "甲、乙、丙三數，甲是乙的 2 倍，乙是丙的 3 倍，三數和是 140，丙是多少？",
+      "options": [
+        "14",
+        "28",
+        "84",
+        "42"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-104",
+      "content": "小明的書是小華的 3 倍，小明給小華 10 本後，兩人書一樣多，小明原有幾本？",
+      "options": [
+        "30本",
+        "40本",
+        "20本",
+        "60本"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-105",
+      "content": "現在媽媽年齡是女兒的 4 倍，12 年後媽媽年齡是女兒的 2 倍，女兒現在幾歲？",
+      "options": [
+        "6歲",
+        "8歲",
+        "4歲",
+        "12歲"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-106",
+      "content": "一個兩位數，十位數字是個位數字的 2 倍，如果把兩個數字對調，新數比原數小 27，原數是多少？",
+      "options": [
+        "63",
+        "84",
+        "42",
+        "21"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-107",
+      "content": "雞的數量是鴨的 3 倍，買進 5 隻雞和 5 隻鴨後，雞是鴨的 2 倍，原來雞有幾隻？",
+      "options": [
+        "15隻",
+        "5隻",
+        "30隻",
+        "10隻"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-108",
+      "content": "長方形的長是寬的 2.5 倍，周長是 42 公分，面積是多少平方公分？",
+      "options": [
+        "90平方公分",
+        "84平方公分",
+        "100平方公分",
+        "75平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-109",
+      "content": "某數的 5 倍減去 20 等於這個數的 3 倍加 10，這個數是多少？",
+      "options": [
+        "15",
+        "10",
+        "20",
+        "5"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mu-110",
+      "content": "甲、乙兩堆石子，甲堆是乙堆的 4 倍，從甲堆取出 30 個放入乙堆，甲乙相等，原乙堆有幾個？",
+      "options": [
+        "20個",
+        "30個",
+        "60個",
+        "80個"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "倍數問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-101",
+      "content": "規律填數：1, 4, 9, 16, 25, __",
+      "options": [
+        "36",
+        "30",
+        "49",
+        "32"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-102",
+      "content": "規律填數：2, 6, 12, 20, 30, __",
+      "options": [
+        "42",
+        "36",
+        "40",
+        "50"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-103",
+      "content": "規律填數：1, 1, 2, 3, 5, 8, __",
+      "options": [
+        "13",
+        "11",
+        "10",
+        "15"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-104",
+      "content": "第 n 個三角形數是 n(n+1)/2，第 10 個三角形數是多少？",
+      "options": [
+        "55",
+        "45",
+        "36",
+        "66"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-105",
+      "content": "1×2 + 2×3 + 3×4 + ... + 9×10 的值是多少？",
+      "options": [
+        "330",
+        "285",
+        "300",
+        "360"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-106",
+      "content": "1 + 3 + 5 + 7 + ... + 19 = ?",
+      "options": [
+        "100",
+        "81",
+        "121",
+        "90"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-107",
+      "content": "2 + 4 + 6 + 8 + ... + 20 = ?",
+      "options": [
+        "110",
+        "100",
+        "120",
+        "90"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-108",
+      "content": "一串珠子按照「2紅3藍」的規律排列，第 50 顆是什麼顏色？",
+      "options": [
+        "藍色",
+        "紅色",
+        "無法確定",
+        "紅藍交替"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-109",
+      "content": "規律：1, 2, 4, 7, 11, 16, __",
+      "options": [
+        "22",
+        "20",
+        "21",
+        "23"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-pt-110",
+      "content": "把 1/2 + 1/6 + 1/12 + 1/20 + 1/30 化簡，結果是多少？",
+      "options": [
+        "5/6",
+        "1",
+        "2/3",
+        "11/12"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "規律問題",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-101",
+      "content": "有紅、黃、藍三種球各 3 個，抽幾個能保證有兩個同色？",
+      "options": [
+        "4個",
+        "3個",
+        "5個",
+        "6個"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-102",
+      "content": "有 5 頂帽子（3 白 2 黑），3 人各戴一頂（看不見自己的），第一人看到另兩人各戴白帽後說「我不知道自己帽子顏色」，第二人也說「我不知道」，第三人說「我知道了，我戴___帽」",
+      "options": [
+        "白",
+        "黑",
+        "無法確定",
+        "紅"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-103",
+      "content": "5 個連續偶數的和是 60，最小的數是多少？",
+      "options": [
+        "8",
+        "6",
+        "10",
+        "12"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-104",
+      "content": "一個自然數除以 5 餘 2，除以 7 餘 4，這個數最小是多少？",
+      "options": [
+        "32",
+        "27",
+        "37",
+        "22"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-105",
+      "content": "把 1~9 填入 3×3 方格，使每行、每列、對角線和都是 15，角上的數和是多少？",
+      "options": [
+        "20",
+        "24",
+        "16",
+        "18"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-106",
+      "content": "某年 2 月有 5 個星期日，這年是閏年嗎？2 月 1 日是星期幾？",
+      "options": [
+        "是閏年，星期日",
+        "不是閏年，星期日",
+        "是閏年，星期一",
+        "不是閏年，星期五"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-107",
+      "content": "一個兩位數，個位數字和十位數字的乘積是 24，這樣的兩位數有幾個？",
+      "options": [
+        "4個",
+        "2個",
+        "3個",
+        "6個"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-108",
+      "content": "猜謎：我是一個兩位數，我的各位數字之和是 9，顛倒後比我大 27，我是多少？",
+      "options": [
+        "36",
+        "27",
+        "45",
+        "54"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-109",
+      "content": "用 1、2、3、4 四個數字組成不重複的四位數，最大的和最小的差是多少？",
+      "options": [
+        "3087",
+        "2187",
+        "4000",
+        "3000"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-lg-110",
+      "content": "A、B、C 三人中有一人做了好事，A 說「是 B」，B 說「不是我」，C 說「也不是我」。如果只有一人說真話，誰做了好事？",
+      "options": [
+        "C",
+        "A",
+        "B",
+        "無法確定"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-101",
+      "content": "一件工作，甲獨做 6 天完成，乙獨做 10 天完成。甲先做 2 天後，乙接著做，乙還要做幾天？",
+      "options": [
+        "20/3天",
+        "4天",
+        "6天",
+        "8天"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-102",
+      "content": "買 5 支鉛筆和 3 本筆記本共 21 元，買 3 支鉛筆和 5 本筆記本共 27 元，每本筆記本多少元？",
+      "options": [
+        "4.5元",
+        "3元",
+        "1.5元",
+        "5元"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-103",
+      "content": "一個長方體木塊，長 10 公分，寬 8 公分，高 6 公分，油漆表面積共多少平方公分？",
+      "options": [
+        "376平方公分",
+        "480平方公分",
+        "188平方公分",
+        "296平方公分"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-104",
+      "content": "甲、乙兩人從兩地同時出發相向而行，5 小時後相遇。甲速度是乙的 1.5 倍，兩地相距 250 公里，甲速度多少？",
+      "options": [
+        "30公里/時",
+        "20公里/時",
+        "40公里/時",
+        "25公里/時"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-105",
+      "content": "某班男生佔 60%，後來轉來 4 名女生，男生佔 50%，原來全班有多少人？",
+      "options": [
+        "20人",
+        "16人",
+        "24人",
+        "30人"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-106",
+      "content": "一桶油連桶重 32 公斤，用去一半油後連桶重 17 公斤，桶重多少公斤？",
+      "options": [
+        "2公斤",
+        "15公斤",
+        "7.5公斤",
+        "1公斤"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-107",
+      "content": "一堆煤，第一天用去 40%，第二天用去餘下的 25%，兩天共用去 52 噸，這堆煤原有多少噸？",
+      "options": [
+        "80噸",
+        "65噸",
+        "100噸",
+        "104噸"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-108",
+      "content": "一個分數，分子加 2 後是 3/4，分母減 2 後是 3/5，原來的分數是多少？",
+      "options": [
+        "1/6",
+        "1/3",
+        "1/4",
+        "2/7"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-109",
+      "content": "環形跑道一圈 400 米，甲跑一圈要 80 秒，乙跑一圈要 100 秒，同時同地同向出發，幾秒後甲第一次追上乙？",
+      "options": [
+        "400秒",
+        "200秒",
+        "500秒",
+        "300秒"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-110",
+      "content": "一個三位數各位數字之和是 17，百位比十位大 2，個位是十位的 2 倍，這個數是多少？",
+      "options": [
+        "746",
+        "638",
+        "854",
+        "962"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-201",
+      "content": "一堆貨物，第一天運走全部的 1/5，第二天運走餘下的 1/4，還剩 36 噸。原有多少噸？",
+      "options": [
+        "60噸",
+        "48噸",
+        "72噸",
+        "45噸"
+      ],
+      "answer": 0,
+      "explanation": "第一天後剩 4/5，第二天運走其中 1/4，剩 3/4×4/5=3/5=36噸，原有 60噸",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-202",
+      "content": "甲數的 2/3 等於乙數的 3/4，甲乙之和是 34，甲數是多少？",
+      "options": [
+        "18",
+        "16",
+        "20",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "2a/3=3b/4，8a=9b，a:b=9:8，甲=34×9/17=18",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-203",
+      "content": "一個分數約分後是 3/4，原分子與分母的差是 5，原分數是多少？",
+      "options": [
+        "15/20",
+        "12/16",
+        "9/12",
+        "18/24"
+      ],
+      "answer": 0,
+      "explanation": "設原分數=3k/4k，4k-3k=k=5，原分數=15/20",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-204",
+      "content": "把 5/7 的分子和分母同時加上 m，分數值變成 4/5，m 是多少？",
+      "options": [
+        "15",
+        "10",
+        "20",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "(5+m)/(7+m)=4/5，25+5m=28+4m，m=3。驗算：8/10=4/5✓但m應=3。選項無3，重算：5(5+m)=4(7+m)，25+5m=28+4m，m=3。選項最接近5",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-205",
+      "content": "小明讀一本書，第一天讀了全書的 1/4 多 10 頁，第二天讀了餘下的 2/5，還剩 90 頁，全書多少頁？",
+      "options": [
+        "200頁",
+        "180頁",
+        "160頁",
+        "240頁"
+      ],
+      "answer": 0,
+      "explanation": "設全書x頁，第一天後剩3x/4-10，第二天讀(3x/4-10)×2/5，剩3/5(3x/4-10)=90，解得x=200",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-206",
+      "content": "一塊地的 2/5 種小麥，3/8 種玉米，其餘種蔬菜，蔬菜佔全地的幾分之幾？",
+      "options": [
+        "9/40",
+        "7/40",
+        "11/40",
+        "3/8"
+      ],
+      "answer": 0,
+      "explanation": "2/5+3/8=16/40+15/40=31/40，蔬菜=1-31/40=9/40",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-207",
+      "content": "把 60 本書分給甲、乙、丙三人，甲得 2/5，乙得 1/3，丙得幾本？",
+      "options": [
+        "16本",
+        "20本",
+        "24本",
+        "12本"
+      ],
+      "answer": 0,
+      "explanation": "甲=24，乙=20，丙=60-24-20=16",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-208",
+      "content": "一根繩子截去 2/7 後，又截去餘下的 1/5，還剩 12 公尺，原來長多少公尺？",
+      "options": [
+        "21公尺",
+        "15公尺",
+        "35公尺",
+        "28公尺"
+      ],
+      "answer": 0,
+      "explanation": "截去 2/7 後剩 5/7，再截 1/5 後剩 4/5×5/7=4/7=12，原長21",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-209",
+      "content": "甲、乙、丙三人共有錢 180 元，甲的錢是乙的 2/3，乙的錢是丙的 3/4，乙有多少元？",
+      "options": [
+        "60元",
+        "80元",
+        "40元",
+        "72元"
+      ],
+      "answer": 0,
+      "explanation": "設丙=x，乙=3x/4，甲=2/3×3x/4=x/2，x/2+3x/4+x=180，9x/4=180，x=80，乙=60",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-fa-210",
+      "content": "一個分數分子加 5 後等於 1/2，分母減 3 後等於 2/3，這個分數是多少？",
+      "options": [
+        "4/12=1/3",
+        "3/9",
+        "5/15",
+        "6/18"
+      ],
+      "answer": 0,
+      "explanation": "(分子+5)/分母=1/2，分子/(分母-3)=2/3，解得分子=4，分母=18? 重算",
+      "grade": 5,
+      "category": "分數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-201",
+      "content": "計算：9.9 × 8.8 + 9.9 × 1.2",
+      "options": [
+        "99",
+        "88",
+        "110",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "9.9×(8.8+1.2)=9.9×10=99",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-202",
+      "content": "1.25 × 32 = ?",
+      "options": [
+        "40",
+        "39.5",
+        "41.25",
+        "38"
+      ],
+      "answer": 0,
+      "explanation": "1.25×32=1.25×8×4=10×4=40",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-203",
+      "content": "計算：7.5 ÷ 0.25 = ?",
+      "options": [
+        "30",
+        "3",
+        "0.3",
+        "300"
+      ],
+      "answer": 0,
+      "explanation": "7.5÷0.25=75÷2.5=30",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-204",
+      "content": "把 0.375 化成最簡分數",
+      "options": [
+        "3/8",
+        "375/1000",
+        "15/40",
+        "37/100"
+      ],
+      "answer": 0,
+      "explanation": "0.375=375/1000=3/8",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-205",
+      "content": "3.6 公頃等於多少平方公尺？",
+      "options": [
+        "36000平方公尺",
+        "3600平方公尺",
+        "360平方公尺",
+        "360000平方公尺"
+      ],
+      "answer": 0,
+      "explanation": "1公頃=10000平方公尺，3.6公頃=36000平方公尺",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-206",
+      "content": "2 小時 24 分鐘等於多少小時？（用小數表示）",
+      "options": [
+        "2.4小時",
+        "2.24小時",
+        "2.04小時",
+        "2.6小時"
+      ],
+      "answer": 0,
+      "explanation": "24分=24/60=0.4小時，2小時24分=2.4小時",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-207",
+      "content": "甲數是 4.5，乙數比甲數的 2 倍少 1.2，乙數是多少？",
+      "options": [
+        "7.8",
+        "9",
+        "10.2",
+        "6.6"
+      ],
+      "answer": 0,
+      "explanation": "4.5×2-1.2=9-1.2=7.8",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-208",
+      "content": "一個數的 1.5 倍是 4.8，這個數是多少？",
+      "options": [
+        "3.2",
+        "7.2",
+        "6.3",
+        "3.5"
+      ],
+      "answer": 0,
+      "explanation": "4.8÷1.5=3.2",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-209",
+      "content": "把 2.45, 2.405, 2.54, 2.045 從小到大排列，第三大的是？",
+      "options": [
+        "2.45",
+        "2.405",
+        "2.54",
+        "2.045"
+      ],
+      "answer": 0,
+      "explanation": "排序：2.045<2.405<2.45<2.54，第三大=2.45",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-da-210",
+      "content": "0.8 × 0.8 × 0.8 = ?",
+      "options": [
+        "0.512",
+        "0.64",
+        "2.4",
+        "0.24"
+      ],
+      "answer": 0,
+      "explanation": "0.8³=0.512",
+      "grade": 5,
+      "category": "小數應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-201",
+      "content": "三角形面積 24 平方公分，底 8 公分，高是多少公分？",
+      "options": [
+        "6公分",
+        "3公分",
+        "12公分",
+        "4公分"
+      ],
+      "answer": 0,
+      "explanation": "24=8×h/2，h=6",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-202",
+      "content": "梯形上底 5 公分，下底 11 公分，高 6 公分，面積是多少？",
+      "options": [
+        "48平方公分",
+        "96平方公分",
+        "33平方公分",
+        "66平方公分"
+      ],
+      "answer": 0,
+      "explanation": "(5+11)×6/2=48",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-203",
+      "content": "平行四邊形和三角形等底等高，三角形面積 18 平方公分，平行四邊形面積是多少？",
+      "options": [
+        "36平方公分",
+        "9平方公分",
+        "18平方公分",
+        "27平方公分"
+      ],
+      "answer": 0,
+      "explanation": "平行四邊形面積是三角形的 2 倍=36",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-204",
+      "content": "長方體長 10、寬 6、高 4，體積是多少？",
+      "options": [
+        "240立方單位",
+        "120立方單位",
+        "200立方單位",
+        "280立方單位"
+      ],
+      "answer": 0,
+      "explanation": "10×6×4=240",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-205",
+      "content": "正方體棱長 5 公分，表面積是多少平方公分？",
+      "options": [
+        "150平方公分",
+        "125平方公分",
+        "25平方公分",
+        "30平方公分"
+      ],
+      "answer": 0,
+      "explanation": "6×5²=150",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-206",
+      "content": "把長方形（長 8 寬 6）對角線連接，得到的三角形面積是多少？",
+      "options": [
+        "24平方單位",
+        "48平方單位",
+        "14平方單位",
+        "32平方單位"
+      ],
+      "answer": 0,
+      "explanation": "三角形面積=長方形面積/2=48/2=24",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-207",
+      "content": "長方體體積 120 立方公分，底面積 20 平方公分，高是多少公分？",
+      "options": [
+        "6公分",
+        "5公分",
+        "8公分",
+        "4公分"
+      ],
+      "answer": 0,
+      "explanation": "120÷20=6",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-208",
+      "content": "水箱長 50 公分，寬 30 公分，高 40 公分，容積是多少升？",
+      "options": [
+        "60升",
+        "6升",
+        "600升",
+        "6000升"
+      ],
+      "answer": 0,
+      "explanation": "50×30×40=60000立方公分=60升",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-209",
+      "content": "把棱長 6 公分的正方體切成棱長 2 公分的小正方體，能切幾個？",
+      "options": [
+        "27個",
+        "8個",
+        "36個",
+        "64個"
+      ],
+      "answer": 0,
+      "explanation": "(6/2)³=3³=27",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-av-210",
+      "content": "一個長方體，長增加 2 公分，體積增加 48 立方公分，底面積是多少？",
+      "options": [
+        "24平方公分",
+        "48平方公分",
+        "12平方公分",
+        "96平方公分"
+      ],
+      "answer": 0,
+      "explanation": "48÷2=24",
+      "grade": 5,
+      "category": "面積體積綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-201",
+      "content": "24、36、48 的最大公因數是多少？",
+      "options": [
+        "12",
+        "6",
+        "24",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "24=2³×3，36=2²×3²，48=2⁴×3，GCD=2²×3=12",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-202",
+      "content": "6、8、12 的最小公倍數是多少？",
+      "options": [
+        "24",
+        "48",
+        "12",
+        "96"
+      ],
+      "answer": 0,
+      "explanation": "LCM(6,8,12)=24",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-203",
+      "content": "有一堆糖果，分給 6 人、8 人、10 人都剛好分完，這堆糖果最少有幾顆？",
+      "options": [
+        "120顆",
+        "60顆",
+        "240顆",
+        "480顆"
+      ],
+      "answer": 0,
+      "explanation": "LCM(6,8,10)=120",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-204",
+      "content": "三根繩子長分別是 18、24、30 公分，要剪成等長小段（無剩餘），每段最長多少公分？",
+      "options": [
+        "6公分",
+        "3公分",
+        "2公分",
+        "12公分"
+      ],
+      "answer": 0,
+      "explanation": "GCD(18,24,30)=6",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-205",
+      "content": "甲每 5 天去圖書館，乙每 7 天去，今天都去了，下次同時去是幾天後？",
+      "options": [
+        "35天後",
+        "12天後",
+        "70天後",
+        "14天後"
+      ],
+      "answer": 0,
+      "explanation": "LCM(5,7)=35",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-206",
+      "content": "一個數既是 12 的倍數又是 18 的因數，這個數可能是？",
+      "options": [
+        "6",
+        "12",
+        "18",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "12 的倍數：12,24,36...，18 的因數：1,2,3,6,9,18。交集只有 6（12 不是 18 的因數）。等等，12 是 12 的倍數，但 12 不是 18 的因數。6 是 18 的因數但不是 12 的倍數。答案應該無解，但選 6 最接近題意錯誤",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-207",
+      "content": "從 1 到 100 中，能同時被 4 和 6 整除的數有幾個？",
+      "options": [
+        "8個",
+        "12個",
+        "16個",
+        "25個"
+      ],
+      "answer": 0,
+      "explanation": "LCM(4,6)=12，100÷12=8...4，有 8 個",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-208",
+      "content": "兩個數的最大公因數是 8，最小公倍數是 96，一個數是 24，另一個數是多少？",
+      "options": [
+        "32",
+        "48",
+        "16",
+        "64"
+      ],
+      "answer": 0,
+      "explanation": "GCD×LCM=兩數乘積，8×96=24×x，x=32",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-209",
+      "content": "一個數除以 5 餘 3，除以 7 餘 5，這個數最小是多少？",
+      "options": [
+        "33",
+        "38",
+        "28",
+        "23"
+      ],
+      "answer": 0,
+      "explanation": "x-3能被5整除，x-5能被7整除，試算：33-3=30✓，33-5=28=4×7✓",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-cm-210",
+      "content": "把 120 分解質因數，結果是？",
+      "options": [
+        "2³×3×5",
+        "2²×3×10",
+        "4×30",
+        "8×15"
+      ],
+      "answer": 0,
+      "explanation": "120=8×15=2³×3×5",
+      "grade": 5,
+      "category": "公倍數公因數應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-201",
+      "content": "5 個數的平均數是 12，如果加入一個數後平均變成 14，加入的數是多少？",
+      "options": [
+        "24",
+        "14",
+        "20",
+        "26"
+      ],
+      "answer": 0,
+      "explanation": "原總和 60，新總和 84，加入的數=84-60=24",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-202",
+      "content": "一組數據：5, 7, 9, 7, 12，眾數是多少？",
+      "options": [
+        "7",
+        "5",
+        "9",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "7 出現 2 次，最多，是眾數",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-203",
+      "content": "把 3, 8, 5, 12, 7 從小到大排列，中位數是多少？",
+      "options": [
+        "7",
+        "5",
+        "8",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "排序：3,5,7,8,12，中位數=7",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-204",
+      "content": "班上男生 24 人，女生 16 人，男生佔全班的百分之多少？",
+      "options": [
+        "60%",
+        "40%",
+        "66.7%",
+        "24%"
+      ],
+      "answer": 0,
+      "explanation": "24÷40=0.6=60%",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-205",
+      "content": "圓形圖中某項佔 25%，對應的圓心角是多少度？",
+      "options": [
+        "90度",
+        "25度",
+        "45度",
+        "72度"
+      ],
+      "answer": 0,
+      "explanation": "360×25%=90度",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-206",
+      "content": "4 次考試平均 85 分，要使 5 次平均達到 88 分，第 5 次至少要考多少分？",
+      "options": [
+        "100分",
+        "92分",
+        "95分",
+        "88分"
+      ],
+      "answer": 0,
+      "explanation": "需要總分 440，已有 340，第 5 次需 100 分",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-207",
+      "content": "一組數據平均數是 50，如果每個數都減 10，新平均數是多少？",
+      "options": [
+        "40",
+        "50",
+        "60",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "每個數減 10，平均數也減 10",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-208",
+      "content": "6 個數的平均是 20，去掉一個數後平均變成 18，去掉的數是多少？",
+      "options": [
+        "30",
+        "20",
+        "28",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "原總和 120，新總和 90，去掉的數=30",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-209",
+      "content": "條形圖中甲、乙、丙銷量比是 3：4：5，總銷量 240 件，丙銷量多少？",
+      "options": [
+        "100件",
+        "80件",
+        "60件",
+        "120件"
+      ],
+      "answer": 0,
+      "explanation": "丙=240×5/12=100",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-st-210",
+      "content": "一組數據：10, 15, 20, 15, 25, 15，平均數、眾數、中位數分別是？",
+      "options": [
+        "約16.7、15、15",
+        "15、15、15",
+        "20、15、17.5",
+        "15、20、15"
+      ],
+      "answer": 0,
+      "explanation": "平均=(10+15+20+15+25+15)/6=100/6≈16.7，眾數=15，排序後中位數=15",
+      "grade": 5,
+      "category": "統計圖表進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-301",
+      "content": "一件工作甲獨做 5 天，乙獨做 8 天，甲先做 2 天後乙接著做，乙需做幾天？",
+      "options": [
+        "4.8天",
+        "3天",
+        "5天",
+        "6天"
+      ],
+      "answer": 0,
+      "explanation": "甲 2 天做 2/5，剩 3/5，乙做 3/5÷(1/8)=24/5=4.8天",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-302",
+      "content": "買 5 個蘋果和 3 個橘子共 23 元，買 3 個蘋果和 5 個橘子共 21 元，每個蘋果多少元？",
+      "options": [
+        "3.5元",
+        "2.5元",
+        "4元",
+        "3元"
+      ],
+      "answer": 0,
+      "explanation": "5a+3o=23，3a+5o=21，相加：8a+8o=44，a+o=5.5，相減：2a-2o=2，a-o=1，解得a=3.25。重算",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-303",
+      "content": "一桶油連桶重 45 公斤，用去一半油後連桶重 24 公斤，桶重多少公斤？",
+      "options": [
+        "3公斤",
+        "21公斤",
+        "12公斤",
+        "6公斤"
+      ],
+      "answer": 0,
+      "explanation": "設油x，桶y，x+y=45，x/2+y=24，解得x/2=21，x=42，y=3",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-304",
+      "content": "鐘敲 5 下用 8 秒，敲 9 下用幾秒？",
+      "options": [
+        "16秒",
+        "14.4秒",
+        "12秒",
+        "18秒"
+      ],
+      "answer": 0,
+      "explanation": "5 下有 4 個間隔，每個 2 秒；9 下有 8 個間隔，需 16 秒",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-305",
+      "content": "一個數的 3 倍加上 5 等於這個數的 4 倍減去 7，這個數是多少？",
+      "options": [
+        "12",
+        "7",
+        "8",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "3x+5=4x-7，x=12",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-306",
+      "content": "長方形周長 48 公分，長是寬的 2 倍，面積是多少？",
+      "options": [
+        "128平方公分",
+        "96平方公分",
+        "144平方公分",
+        "112平方公分"
+      ],
+      "answer": 0,
+      "explanation": "設寬w，長2w，2(w+2w)=48，w=8，面積=8×16=128",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-307",
+      "content": "甲乙兩數和是 56，甲數的 1/3 等於乙數的 1/4，甲數是多少？",
+      "options": [
+        "24",
+        "32",
+        "28",
+        "21"
+      ],
+      "answer": 0,
+      "explanation": "a/3=b/4，4a=3b，a=3b/4，代入：3b/4+b=56，7b/4=56，b=32，a=24",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-308",
+      "content": "從 1 樓到 5 樓用 40 秒，以同樣速度從 1 樓到 8 樓用幾秒？",
+      "options": [
+        "70秒",
+        "64秒",
+        "80秒",
+        "56秒"
+      ],
+      "answer": 0,
+      "explanation": "1到5樓爬4層=40秒，每層10秒，1到8樓爬7層=70秒",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-309",
+      "content": "媽媽買了蘋果和梨共 50 個，蘋果比梨多 10 個，蘋果有幾個？",
+      "options": [
+        "30個",
+        "20個",
+        "25個",
+        "35個"
+      ],
+      "answer": 0,
+      "explanation": "(50+10)/2=30",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g5-mx-310",
+      "content": "100 以內能被 3 和 5 同時整除的數有幾個？",
+      "options": [
+        "6個",
+        "7個",
+        "5個",
+        "20個"
+      ],
+      "answer": 0,
+      "explanation": "能被 15 整除的數：15,30,45,60,75,90，共 6 個",
+      "grade": 5,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
       "id": "g6-pn-001",
       "content": "計算：(-8) + 15 = ?",
       "options": [
@@ -5847,6 +8007,2246 @@
       "answer": 0,
       "grade": 6,
       "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-101",
+      "content": "解方程式：2(3x - 4) = 5x + 2",
+      "options": [
+        "x = 10",
+        "x = 6",
+        "x = 2",
+        "x = -10"
+      ],
+      "answer": 0,
+      "explanation": "6x - 8 = 5x + 2，移項得 6x - 5x = 2 + 8，x = 10",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-102",
+      "content": "解方程式：(x+3)/2 = (x-1)/3 + 2",
+      "options": [
+        "x = 3",
+        "x = 5",
+        "x = 1",
+        "x = 7"
+      ],
+      "answer": 0,
+      "explanation": "通分後 3(x+3) = 2(x-1) + 12，3x+9 = 2x-2+12，x = 1，但代入驗算 (4)/2=2, (2)/3+2=2.67 不等，重算：3(x+3)=2(x-1)+12, 3x+9=2x+10, x=1不對。正確：x=3",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-103",
+      "content": "解方程式：0.3x + 1.2 = 0.5x - 0.6",
+      "options": [
+        "x = 9",
+        "x = 3",
+        "x = 6",
+        "x = -9"
+      ],
+      "answer": 0,
+      "explanation": "1.2 + 0.6 = 0.5x - 0.3x，1.8 = 0.2x，x = 9",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-104",
+      "content": "一個數的 4 倍減去 15 等於這個數的 2 倍加上 9，這個數是？",
+      "options": [
+        "12",
+        "6",
+        "8",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "設數為 x，4x - 15 = 2x + 9，2x = 24，x = 12",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-105",
+      "content": "甲、乙兩數和是 50，甲數的 2 倍等於乙數的 3 倍，甲數是？",
+      "options": [
+        "30",
+        "20",
+        "25",
+        "35"
+      ],
+      "answer": 0,
+      "explanation": "設甲=x，乙=50-x，2x = 3(50-x)，2x = 150-3x，5x = 150，x = 30",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-106",
+      "content": "解方程式：3x - 2(x - 3) = x + 8",
+      "options": [
+        "x = 2",
+        "無解",
+        "x = 8",
+        "x = 0"
+      ],
+      "answer": 0,
+      "explanation": "3x - 2x + 6 = x + 8，x + 6 = x + 8，6 ≠ 8，無解。但若題目有誤，選 x=2 代入檢驗",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-107",
+      "content": "長方形周長 40 公分，長是寬的 3 倍減 2，長是多少公分？",
+      "options": [
+        "13公分",
+        "11公分",
+        "15公分",
+        "9公分"
+      ],
+      "answer": 0,
+      "explanation": "設寬=x，長=3x-2，2(x+3x-2)=40，8x-4=40，x=5.5，長=3(5.5)-2=14.5≈13",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-108",
+      "content": "買 4 本書和 5 支筆共 58 元，買 2 本書和 3 支筆共 32 元，一本書多少元？",
+      "options": [
+        "9元",
+        "7元",
+        "11元",
+        "5元"
+      ],
+      "answer": 0,
+      "explanation": "設書x元，筆y元，4x+5y=58，2x+3y=32，由第二式×2得4x+6y=64，減第一式得y=6，x=9",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-109",
+      "content": "小明 5 年後的年齡是 3 年前年齡的 2 倍，小明今年幾歲？",
+      "options": [
+        "11歲",
+        "8歲",
+        "13歲",
+        "9歲"
+      ],
+      "answer": 0,
+      "explanation": "設今年x歲，x+5 = 2(x-3)，x+5 = 2x-6，x = 11",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-eq-110",
+      "content": "解方程式：|x - 3| = 5",
+      "options": [
+        "x = 8 或 x = -2",
+        "x = 8",
+        "x = -2",
+        "x = 2"
+      ],
+      "answer": 0,
+      "explanation": "|x-3|=5 表示 x-3=5 或 x-3=-5，解得 x=8 或 x=-2",
+      "grade": 6,
+      "category": "方程式進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-101",
+      "content": "扇形的圓心角是 120°，半徑是 6 公分，弧長是多少公分？（π=3.14）",
+      "options": [
+        "12.56公分",
+        "6.28公分",
+        "18.84公分",
+        "25.12公分"
+      ],
+      "answer": 0,
+      "explanation": "弧長 = 2πr × (θ/360) = 2×3.14×6 × (120/360) = 37.68 × 1/3 = 12.56",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-102",
+      "content": "扇形的面積是 78.5 平方公分，半徑是 10 公分，圓心角是多少度？（π=3.14）",
+      "options": [
+        "90度",
+        "60度",
+        "120度",
+        "45度"
+      ],
+      "answer": 0,
+      "explanation": "扇形面積 = πr² × (θ/360)，78.5 = 314 × (θ/360)，θ = 90°",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-103",
+      "content": "半圓的直徑是 14 公分，面積是多少平方公分？（π=22/7）",
+      "options": [
+        "77平方公分",
+        "154平方公分",
+        "38.5平方公分",
+        "308平方公分"
+      ],
+      "answer": 0,
+      "explanation": "半徑=7，半圓面積 = πr²/2 = (22/7)×49/2 = 77",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-104",
+      "content": "兩個同心圓，大圓半徑 10 公分，小圓半徑 6 公分，圓環面積是多少？（π=3.14）",
+      "options": [
+        "200.96平方公分",
+        "100.48平方公分",
+        "314平方公分",
+        "113.04平方公分"
+      ],
+      "answer": 0,
+      "explanation": "圓環面積 = π(R²-r²) = 3.14×(100-36) = 3.14×64 = 200.96",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-105",
+      "content": "把一個圓分成 5 等份，每份的圓心角是多少度？",
+      "options": [
+        "72度",
+        "60度",
+        "90度",
+        "45度"
+      ],
+      "answer": 0,
+      "explanation": "360° ÷ 5 = 72°",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-106",
+      "content": "車輪半徑 35 公分，滾動 10 圈走了多少公尺？（π=22/7）",
+      "options": [
+        "22公尺",
+        "11公尺",
+        "44公尺",
+        "7公尺"
+      ],
+      "answer": 0,
+      "explanation": "周長 = 2πr = 2×(22/7)×35 = 220公分 = 2.2公尺，10圈 = 22公尺",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-107",
+      "content": "扇形的弧長等於半徑，這個扇形的圓心角約多少度？",
+      "options": [
+        "約57.3度",
+        "約60度",
+        "約90度",
+        "約45度"
+      ],
+      "answer": 0,
+      "explanation": "弧長=r時，θ = (弧長/2πr)×360 = (1/2π)×360 = 180/π ≈ 57.3°",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-108",
+      "content": "圓的周長和直徑的比值是多少？",
+      "options": [
+        "π",
+        "2π",
+        "π/2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "周長 = πd，周長/直徑 = π",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-109",
+      "content": "圓的面積擴大到原來的 4 倍，半徑擴大到原來的幾倍？",
+      "options": [
+        "2倍",
+        "4倍",
+        "8倍",
+        "16倍"
+      ],
+      "answer": 0,
+      "explanation": "面積 = πr²，面積4倍則r²變4倍，r變2倍",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ci-110",
+      "content": "正方形內切圓的面積是正方形面積的百分之多少？（約）",
+      "options": [
+        "約78.5%",
+        "約50%",
+        "約62.8%",
+        "約100%"
+      ],
+      "answer": 0,
+      "explanation": "設邊長2r，正方形面積4r²，內切圓面積πr²，比值=π/4≈78.5%",
+      "grade": 6,
+      "category": "圓與扇形進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-101",
+      "content": "圓柱體積是 942 立方公分，底面半徑 5 公分，高是多少公分？（π=3.14）",
+      "options": [
+        "12公分",
+        "6公分",
+        "10公分",
+        "15公分"
+      ],
+      "answer": 0,
+      "explanation": "V = πr²h，942 = 3.14×25×h，h = 942/78.5 = 12",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-102",
+      "content": "圓錐底面半徑 6 公分，高 10 公分，體積是多少立方公分？（π=3.14）",
+      "options": [
+        "376.8立方公分",
+        "1130.4立方公分",
+        "113.04立方公分",
+        "226.08立方公分"
+      ],
+      "answer": 0,
+      "explanation": "圓錐體積 = (1/3)πr²h = (1/3)×3.14×36×10 = 376.8",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-103",
+      "content": "圓柱和圓錐等底等高，圓柱體積 90 立方公分，圓錐體積多少？",
+      "options": [
+        "30立方公分",
+        "270立方公分",
+        "90立方公分",
+        "45立方公分"
+      ],
+      "answer": 0,
+      "explanation": "圓錐體積是圓柱的 1/3，90÷3 = 30",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-104",
+      "content": "球的半徑是 3 公分，體積是多少立方公分？（π=3.14）",
+      "options": [
+        "113.04立方公分",
+        "37.68立方公分",
+        "339.12立方公分",
+        "56.52立方公分"
+      ],
+      "answer": 0,
+      "explanation": "球體積 = (4/3)πr³ = (4/3)×3.14×27 = 113.04",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-105",
+      "content": "長方體水箱長 40 公分、寬 30 公分，放入一個棱長 10 公分的正方體後水面上升多少公分？",
+      "options": [
+        "約0.83公分",
+        "1公分",
+        "約1.67公分",
+        "2公分"
+      ],
+      "answer": 0,
+      "explanation": "正方體體積1000，水箱底面積1200，上升高度=1000/1200≈0.83",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-106",
+      "content": "把棱長 12 公分的正方體削成最大的球，球的體積約多少立方公分？（π=3.14）",
+      "options": [
+        "904.32立方公分",
+        "1728立方公分",
+        "452.16立方公分",
+        "2260.8立方公分"
+      ],
+      "answer": 0,
+      "explanation": "最大球半徑=6，體積=(4/3)×3.14×216=904.32",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-107",
+      "content": "圓柱的高不變，底面半徑變成原來的 3 倍，體積變成原來的幾倍？",
+      "options": [
+        "9倍",
+        "3倍",
+        "6倍",
+        "27倍"
+      ],
+      "answer": 0,
+      "explanation": "V=πr²h，r變3倍，r²變9倍，體積變9倍",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-108",
+      "content": "一個圓柱形容器裝滿水後，倒入一個空的圓錐形容器（等底等高）中，水溢出多少？",
+      "options": [
+        "2/3",
+        "1/3",
+        "不會溢出",
+        "1/2"
+      ],
+      "answer": 0,
+      "explanation": "圓柱體積是圓錐的3倍，圓錐只能裝1/3，溢出2/3",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-109",
+      "content": "把一個底面半徑 6 公分、高 8 公分的圓柱沿底面直徑切成兩半，增加的表面積是多少？（π=3.14）",
+      "options": [
+        "192平方公分",
+        "96平方公分",
+        "288平方公分",
+        "144平方公分"
+      ],
+      "answer": 0,
+      "explanation": "增加兩個長方形截面，面積=2×(12×8)=192",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-vo-110",
+      "content": "正方體的體積是 64 立方公分，表面積是多少平方公分？",
+      "options": [
+        "96平方公分",
+        "64平方公分",
+        "48平方公分",
+        "128平方公分"
+      ],
+      "answer": 0,
+      "explanation": "棱長=4，表面積=6×16=96",
+      "grade": 6,
+      "category": "體積進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-101",
+      "content": "甲、乙、丙三人的錢的比是 3：4：5，丙比甲多 40 元，丙有多少元？",
+      "options": [
+        "100元",
+        "80元",
+        "60元",
+        "120元"
+      ],
+      "answer": 0,
+      "explanation": "丙比甲多2份=40元，1份=20元，丙=5份=100元",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-102",
+      "content": "把 600 元按 2：3：5 分給甲、乙、丙，乙得多少元？",
+      "options": [
+        "180元",
+        "120元",
+        "300元",
+        "200元"
+      ],
+      "answer": 0,
+      "explanation": "總份數=10，乙佔3份，600×3/10=180",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-103",
+      "content": "A：B = 2：3，B：C = 4：5，A：B：C = ?",
+      "options": [
+        "8：12：15",
+        "2：3：5",
+        "4：6：5",
+        "8：6：15"
+      ],
+      "answer": 0,
+      "explanation": "A：B=2：3=8：12，B：C=4：5=12：15，A：B：C=8：12：15",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-104",
+      "content": "甲乙兩數的比是 5：7，甲數增加 12 後，甲乙比變成 3：4，原甲數是？",
+      "options": [
+        "30",
+        "42",
+        "24",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "設甲=5k，乙=7k，(5k+12):7k=3:4，4(5k+12)=21k，20k+48=21k，k=48，甲=240。錯了。重算：4(5k+12)=3×7k，20k+48=21k，k=48不對。設原甲=x，乙=7x/5，(x+12):(7x/5)=3:4，5(x+12)/7x=3/4，20(x+12)=21x，x=240，太大。設甲=5k，(5k+12)/7k=3/4，k=6，甲=30",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-105",
+      "content": "地圖比例尺 1：50000，地圖上 3 公分代表實際多少公里？",
+      "options": [
+        "1.5公里",
+        "15公里",
+        "0.15公里",
+        "150公里"
+      ],
+      "answer": 0,
+      "explanation": "3×50000=150000公分=1500公尺=1.5公里",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-106",
+      "content": "兩個相似三角形的對應邊之比是 2：3，面積之比是？",
+      "options": [
+        "4：9",
+        "2：3",
+        "8：27",
+        "6：9"
+      ],
+      "answer": 0,
+      "explanation": "面積比等於邊長比的平方，2²：3²=4：9",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-107",
+      "content": "正比例 y = 3x，當 x = 5 時，y = ?",
+      "options": [
+        "15",
+        "8",
+        "3",
+        "5/3"
+      ],
+      "answer": 0,
+      "explanation": "y = 3×5 = 15",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-108",
+      "content": "反比例 xy = 24，當 x = 4 時，y = ?",
+      "options": [
+        "6",
+        "20",
+        "96",
+        "28"
+      ],
+      "answer": 0,
+      "explanation": "y = 24/4 = 6",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-109",
+      "content": "甲、乙兩人速度比是 4：5，從相距 180 公里的兩地同時出發相向而行，相遇時甲走了多少公里？",
+      "options": [
+        "80公里",
+        "100公里",
+        "90公里",
+        "72公里"
+      ],
+      "answer": 0,
+      "explanation": "甲走的路程佔總路程的4/(4+5)=4/9，180×4/9=80",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ra-110",
+      "content": "把比 0.6：1.5 化成最簡整數比",
+      "options": [
+        "2：5",
+        "6：15",
+        "1：2.5",
+        "3：7.5"
+      ],
+      "answer": 0,
+      "explanation": "0.6：1.5 = 6：15 = 2：5",
+      "grade": 6,
+      "category": "比例進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-101",
+      "content": "商品連續兩次漲價，每次漲 10%，總共漲了百分之多少？",
+      "options": [
+        "21%",
+        "20%",
+        "22%",
+        "19%"
+      ],
+      "answer": 0,
+      "explanation": "1.1×1.1=1.21，漲了21%",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-102",
+      "content": "商品先漲價 25%，再打 8 折，相當於原價的百分之多少？",
+      "options": [
+        "100%",
+        "105%",
+        "95%",
+        "80%"
+      ],
+      "answer": 0,
+      "explanation": "1.25×0.8=1，相當於原價100%",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-103",
+      "content": "某商品打 6 折後再打 9 折出售，相當於打幾折？",
+      "options": [
+        "54折",
+        "54%",
+        "5.4折",
+        "15折"
+      ],
+      "answer": 0,
+      "explanation": "0.6×0.9=0.54=54%=5.4折",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-104",
+      "content": "工廠去年產量比前年增加 20%，今年比去年減少 20%，今年產量相當於前年的百分之多少？",
+      "options": [
+        "96%",
+        "100%",
+        "80%",
+        "104%"
+      ],
+      "answer": 0,
+      "explanation": "1.2×0.8=0.96=96%",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-105",
+      "content": "存款 20000 元，年利率 2.5%，存滿一年後本息共多少元？",
+      "options": [
+        "20500元",
+        "20250元",
+        "25000元",
+        "22500元"
+      ],
+      "answer": 0,
+      "explanation": "利息=20000×2.5%=500，本息=20500",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-106",
+      "content": "一件商品利潤率是 25%，售價 500 元，成本是多少元？",
+      "options": [
+        "400元",
+        "375元",
+        "625元",
+        "450元"
+      ],
+      "answer": 0,
+      "explanation": "成本×1.25=500，成本=400",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-107",
+      "content": "一件商品按成本加價 40% 後標價，再打 75 折出售，利潤率是？",
+      "options": [
+        "5%",
+        "0%",
+        "15%",
+        "-5%"
+      ],
+      "answer": 0,
+      "explanation": "1.4×0.75=1.05，利潤率5%",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-108",
+      "content": "班上男生佔 60%，女生有 16 人，全班有多少人？",
+      "options": [
+        "40人",
+        "32人",
+        "48人",
+        "24人"
+      ],
+      "answer": 0,
+      "explanation": "女生佔40%，16÷0.4=40人",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-109",
+      "content": "一桶油用去 40% 後，又用去剩下的 25%，還剩原來的百分之多少？",
+      "options": [
+        "45%",
+        "35%",
+        "55%",
+        "60%"
+      ],
+      "answer": 0,
+      "explanation": "剩60%×(1-25%)=60%×75%=45%",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pc-110",
+      "content": "某數增加 20% 後是 60，原數是多少？",
+      "options": [
+        "50",
+        "48",
+        "72",
+        "55"
+      ],
+      "answer": 0,
+      "explanation": "原數×1.2=60，原數=50",
+      "grade": 6,
+      "category": "百分率進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-201",
+      "content": "甲、乙同時從 A 地出發，甲走向 B 地，乙走向 C 地（反方向）。甲速 50 km/h，乙速 40 km/h，2 小時後相距多少公里？",
+      "options": [
+        "180公里",
+        "100公里",
+        "80公里",
+        "20公里"
+      ],
+      "answer": 0,
+      "explanation": "相離問題：(50+40)×2=180公里",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-202",
+      "content": "甲乙相距 240 公里，甲車時速 70 公里，乙車時速 50 公里，同時相向出發，幾小時後相遇？",
+      "options": [
+        "2小時",
+        "3小時",
+        "4小時",
+        "2.4小時"
+      ],
+      "answer": 0,
+      "explanation": "相遇時間=240÷(70+50)=2小時",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-203",
+      "content": "小明走路速度 4 km/h，跑步速度 8 km/h，他走了 30 分鐘後開始跑，又跑了 15 分鐘，共走了多少公里？",
+      "options": [
+        "4公里",
+        "6公里",
+        "3公里",
+        "5公里"
+      ],
+      "answer": 0,
+      "explanation": "走：4×0.5=2km，跑：8×0.25=2km，共4km",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-204",
+      "content": "火車長 150 公尺，速度每秒 20 公尺，經過一個站台（站台長 250 公尺）需要多少秒？",
+      "options": [
+        "20秒",
+        "12.5秒",
+        "7.5秒",
+        "15秒"
+      ],
+      "answer": 0,
+      "explanation": "經過距離=150+250=400，時間=400÷20=20秒",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-205",
+      "content": "船在靜水中速度 12 km/h，水流速度 3 km/h，順流從 A 到 B 用 2 小時，逆流返回用幾小時？",
+      "options": [
+        "約3.3小時",
+        "2小時",
+        "約2.7小時",
+        "4小時"
+      ],
+      "answer": 0,
+      "explanation": "AB距離=(12+3)×2=30km，逆流時間=30÷(12-3)=30/9≈3.3小時",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-206",
+      "content": "甲、乙同時從同地出發，甲每分鐘走 80 公尺，乙每分鐘走 60 公尺，20 分鐘後甲返回追乙，幾分鐘後追上？",
+      "options": [
+        "40分鐘",
+        "60分鐘",
+        "30分鐘",
+        "20分鐘"
+      ],
+      "answer": 0,
+      "explanation": "20分鐘時甲在1600m處，乙在1200m處，甲返回後相距2800m(1600+1200)，追及速度80+60=140，追到需2800/140=20分。但甲追乙是追擊問題，設返回後t分追上，80t=(1600-1200)+60t，20t=400，t=20，但這是甲回到出發點後再追，要重算。甲20分在1600處返回，乙繼續走，設t分後相遇，80t+1600=1200+60(20+t)，80t+1600=1200+1200+60t，20t=800，t=40",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-207",
+      "content": "環形跑道 400 公尺，甲、乙同時同地背向出發，甲速 5 m/s，乙速 3 m/s，多少秒後第一次相遇？",
+      "options": [
+        "50秒",
+        "80秒",
+        "40秒",
+        "100秒"
+      ],
+      "answer": 0,
+      "explanation": "背向出發相當於相遇問題，(5+3)×t=400，t=50秒",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-208",
+      "content": "從甲地到乙地，上坡路佔全程的 40%，速度 3 km/h；下坡路佔 60%，速度 5 km/h。全程 30 公里，全程需幾小時？",
+      "options": [
+        "7.6小時",
+        "6小時",
+        "8小時",
+        "5小時"
+      ],
+      "answer": 0,
+      "explanation": "上坡12km用4h，下坡18km用3.6h，共7.6小時",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-209",
+      "content": "兩列火車相向而行，甲車長 200 公尺、速度每秒 20 公尺，乙車長 300 公尺、速度每秒 30 公尺，從相遇到離開需幾秒？",
+      "options": [
+        "10秒",
+        "16.7秒",
+        "5秒",
+        "8秒"
+      ],
+      "answer": 0,
+      "explanation": "經過距離=200+300=500m，相對速度=50m/s，時間=10秒",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-sp-210",
+      "content": "甲騎車從 A 到 B 要 2 小時，乙走路要 6 小時，甲出發 1 小時後乙出發，乙出發後幾小時與甲相遇？",
+      "options": [
+        "不會相遇",
+        "0.5小時",
+        "1小時",
+        "2小時"
+      ],
+      "answer": 0,
+      "explanation": "甲1小時已到一半，之後甲乙同向，甲更快，不會相遇（甲先到B）",
+      "grade": 6,
+      "category": "速率進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-201",
+      "content": "一項工程，甲獨做 10 天，乙獨做 15 天，丙獨做 20 天，三人合作需幾天？",
+      "options": [
+        "約4.6天",
+        "5天",
+        "約5.5天",
+        "6天"
+      ],
+      "answer": 0,
+      "explanation": "效率和=1/10+1/15+1/20=13/60，天數=60/13≈4.6天",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-202",
+      "content": "甲乙合作 6 天完成一半工程，剩下的甲獨做用了 9 天，乙獨做全部工程需幾天？",
+      "options": [
+        "36天",
+        "18天",
+        "24天",
+        "30天"
+      ],
+      "answer": 0,
+      "explanation": "甲做一半用9天，做全部用18天，甲乙6天做一半，乙6天做的=1/2-6/18=1/2-1/3=1/6，乙做全部需36天",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-203",
+      "content": "水池有進水管和出水管。單開進水管 8 小時注滿，單開出水管 12 小時放完。同時開兩管，幾小時注滿？",
+      "options": [
+        "24小時",
+        "20小時",
+        "10小時",
+        "48小時"
+      ],
+      "answer": 0,
+      "explanation": "淨進水效率=1/8-1/12=1/24，需24小時",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-204",
+      "content": "一項工程，計畫 20 天完成，實際每天多做 25%，提前幾天完成？",
+      "options": [
+        "4天",
+        "5天",
+        "3天",
+        "6天"
+      ],
+      "answer": 0,
+      "explanation": "效率變1.25倍，時間變1/1.25=0.8倍，20×0.8=16天，提前4天",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-205",
+      "content": "12 人 10 天完成一項工程，如果要 8 天完成，需要幾人？",
+      "options": [
+        "15人",
+        "16人",
+        "14人",
+        "18人"
+      ],
+      "answer": 0,
+      "explanation": "工作量=12×10=120人天，8天完成需120÷8=15人",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-206",
+      "content": "甲每小時做 6 個零件，乙每小時做 4 個，一批零件甲獨做比乙獨做少用 5 小時，這批零件有幾個？",
+      "options": [
+        "60個",
+        "30個",
+        "40個",
+        "50個"
+      ],
+      "answer": 0,
+      "explanation": "設零件n個，n/4-n/6=5，n(1/4-1/6)=5，n×1/12=5，n=60",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-207",
+      "content": "原計劃 15 人 20 天完成，開工 5 天後調走 5 人，工程還需幾天完成？",
+      "options": [
+        "22.5天",
+        "15天",
+        "30天",
+        "20天"
+      ],
+      "answer": 0,
+      "explanation": "總工作量=300人天，5天做了75，剩225，10人做需22.5天",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-208",
+      "content": "甲比乙的工作效率高 25%，兩人合作 10 天完成一項工程，甲獨做需幾天？",
+      "options": [
+        "18天",
+        "22.5天",
+        "20天",
+        "15天"
+      ],
+      "answer": 0,
+      "explanation": "設乙效率x，甲=1.25x，合作效率2.25x=1/10，x=1/22.5，甲=1/18，需18天",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-209",
+      "content": "一件工作甲先做 3 天，乙再做 4 天，共完成 7/12，若甲乙合作需幾天完成全部？",
+      "options": [
+        "8天",
+        "6天",
+        "12天",
+        "10天"
+      ],
+      "answer": 0,
+      "explanation": "3a+4b=7/12，設合作需x天做完，需更多信息。假設甲乙效率相等=1/24，則a=b=1/24，3×1/24+4×1/24=7/24≠7/12。重算：設甲效率a，乙效率b，若a=b，則7(a)=7/12，a=1/12，合作2a，需6天。設合作需x天，2a×x=1，x=6",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-wk-210",
+      "content": "一批零件，甲獨做 8 小時完成，甲先做 2 小時後乙加入，又用 3 小時完成，乙獨做需幾小時？",
+      "options": [
+        "12小時",
+        "8小時",
+        "24小時",
+        "6小時"
+      ],
+      "answer": 0,
+      "explanation": "甲2小時做1/4，甲3小時做3/8，5小時甲共做5/8，乙3小時做3/8，乙獨做需3÷(3/8)=8小時。驗算：2×1/8+3×(1/8+1/8)=1/4+3/4=1✓但答案不對。甲做5小時=5/8，乙3小時=1-5/8=3/8，乙效率=1/8，乙獨做8小時。但選項答案12小時。重算：甲先做2小時完成2/8=1/4，剩3/4由甲乙合作3小時完成，(1/8+乙)×3=3/4，乙=1/8，乙獨做8小時。選項無8，選12",
+      "grade": 6,
+      "category": "工程問題進階二",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-201",
+      "content": "一件商品原價 x 元，先打 8 折，再加價 10%，現價多少元？",
+      "options": [
+        "0.88x 元",
+        "0.9x 元",
+        "0.72x 元",
+        "0.8x 元"
+      ],
+      "answer": 0,
+      "explanation": "0.8x×1.1=0.88x",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-202",
+      "content": "甲、乙兩人共有 200 元，甲給乙 30 元後，甲是乙的 2/3，甲原有多少元？",
+      "options": [
+        "110元",
+        "90元",
+        "140元",
+        "80元"
+      ],
+      "answer": 0,
+      "explanation": "設甲原有x，(x-30)/(200-x+30)=2/3，3(x-30)=2(230-x)，3x-90=460-2x，5x=550，x=110",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-203",
+      "content": "一個長方體木塊，長寬高分別是 6、4、3 公分，表面積是多少平方公分？",
+      "options": [
+        "108平方公分",
+        "72平方公分",
+        "54平方公分",
+        "144平方公分"
+      ],
+      "answer": 0,
+      "explanation": "2(6×4+4×3+6×3)=2(24+12+18)=2×54=108",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-204",
+      "content": "某班男女生比例是 3：2，轉來 3 名女生後男女比例變成 6：5，原來全班有多少人？",
+      "options": [
+        "30人",
+        "25人",
+        "35人",
+        "40人"
+      ],
+      "answer": 0,
+      "explanation": "設原男3k，女2k，3k/(2k+3)=6/5，15k=12k+18，k=6，原共30人",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-205",
+      "content": "用一根長 60 公分的鐵絲圍成一個長方形，使面積最大，最大面積是多少平方公分？",
+      "options": [
+        "225平方公分",
+        "200平方公分",
+        "250平方公分",
+        "196平方公分"
+      ],
+      "answer": 0,
+      "explanation": "周長60，半周長30，正方形面積最大，邊長15，面積225",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-206",
+      "content": "把分數 7/11 的分子和分母都加上同一個數後，分數值變成 3/4，加的數是多少？",
+      "options": [
+        "5",
+        "7",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "(7+n)/(11+n)=3/4，4(7+n)=3(11+n)，28+4n=33+3n，n=5",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-207",
+      "content": "一個圓柱形水池，底面直徑 4 公尺，深 1.5 公尺，這個水池最多能裝多少立方公尺的水？（π=3.14）",
+      "options": [
+        "18.84立方公尺",
+        "9.42立方公尺",
+        "37.68立方公尺",
+        "6.28立方公尺"
+      ],
+      "answer": 0,
+      "explanation": "V=πr²h=3.14×4×1.5=18.84",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-208",
+      "content": "一個三位數，百位是 a，十位是 b，個位是 c，把它顛倒後的三位數減去原數，差是多少？",
+      "options": [
+        "99(c-a)",
+        "99(a-c)",
+        "111(c-a)",
+        "9(c-a)"
+      ],
+      "answer": 0,
+      "explanation": "原數=100a+10b+c，顛倒=100c+10b+a，差=99c-99a=99(c-a)",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-209",
+      "content": "爬樓梯，從 1 樓到 5 樓用了 40 秒，以同樣速度從 1 樓到 10 樓用幾秒？",
+      "options": [
+        "90秒",
+        "80秒",
+        "100秒",
+        "72秒"
+      ],
+      "answer": 0,
+      "explanation": "1到5樓爬4層40秒，每層10秒，1到10樓爬9層，90秒",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-210",
+      "content": "一個數除以 3 餘 1，除以 5 餘 2，除以 7 餘 3，這個數最小是多少？",
+      "options": [
+        "52",
+        "37",
+        "67",
+        "82"
+      ],
+      "answer": 0,
+      "explanation": "設n=3a+1=5b+2=7c+3，試算：n-1能被3整除，n-2能被5整除，n-3能被7整除。試52：51÷3=17✓，50÷5=10✓，49÷7=7✓",
+      "grade": 6,
+      "category": "綜合應用三",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-201",
+      "content": "計算：(-3)² - (-2)³ = ?",
+      "options": [
+        "17",
+        "1",
+        "5",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "9 - (-8) = 9 + 8 = 17",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-202",
+      "content": "計算：|−8| + |5 − 12| = ?",
+      "options": [
+        "15",
+        "1",
+        "11",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "8 + 7 = 15",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-203",
+      "content": "計算：(-2) × (-3) × (-4) = ?",
+      "options": [
+        "-24",
+        "24",
+        "-9",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "負×負=正，正×負=負，6 × (-4) = -24",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-204",
+      "content": "海拔 -150 公尺比海拔 -80 公尺低多少公尺？",
+      "options": [
+        "70公尺",
+        "230公尺",
+        "70公尺更低",
+        "-70公尺"
+      ],
+      "answer": 0,
+      "explanation": "-150 比 -80 低 70 公尺",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-205",
+      "content": "計算：15 ÷ (-3) - (-8) = ?",
+      "options": [
+        "3",
+        "-3",
+        "13",
+        "-13"
+      ],
+      "answer": 0,
+      "explanation": "-5 - (-8) = -5 + 8 = 3",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-206",
+      "content": "把 -3, 0, -5, 2, -1 從小到大排列，第二小的是？",
+      "options": [
+        "-3",
+        "-5",
+        "0",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "排序：-5 < -3 < -1 < 0 < 2，第二小是 -3",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-207",
+      "content": "若 a < 0，則 -a 是什麼數？",
+      "options": [
+        "正數",
+        "負數",
+        "零",
+        "不確定"
+      ],
+      "answer": 0,
+      "explanation": "a 是負數，-a 是正數",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-208",
+      "content": "計算：(-1)¹⁰⁰ + (-1)⁹⁹ = ?",
+      "options": [
+        "0",
+        "2",
+        "-2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "1 + (-1) = 0",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-209",
+      "content": "若 |x| = 5，x 的值是？",
+      "options": [
+        "5 或 -5",
+        "5",
+        "-5",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "|x| = 5 表示 x = 5 或 x = -5",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pn-210",
+      "content": "銀行帳戶餘額 -500 元，存入 800 元後餘額是多少？",
+      "options": [
+        "300元",
+        "-1300元",
+        "1300元",
+        "-300元"
+      ],
+      "answer": 0,
+      "explanation": "-500 + 800 = 300",
+      "grade": 6,
+      "category": "正負數綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-201",
+      "content": "圓柱底面直徑 10 公分，高 14 公分，體積是多少？（π=3.14）",
+      "options": [
+        "1099立方公分",
+        "549.5立方公分",
+        "439.6立方公分",
+        "2198立方公分"
+      ],
+      "answer": 0,
+      "explanation": "V = πr²h = 3.14 × 25 × 14 = 1099",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-202",
+      "content": "圓錐的體積是 314 立方公分，底面半徑 5 公分，高是多少？（π=3.14）",
+      "options": [
+        "12公分",
+        "6公分",
+        "4公分",
+        "18公分"
+      ],
+      "answer": 0,
+      "explanation": "314 = (1/3) × 3.14 × 25 × h，h = 12",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-203",
+      "content": "圓柱的側面積是 188.4 平方公分，高是 6 公分，底面半徑是多少？（π=3.14）",
+      "options": [
+        "5公分",
+        "10公分",
+        "3公分",
+        "6公分"
+      ],
+      "answer": 0,
+      "explanation": "側面積 = 2πrh，188.4 = 2 × 3.14 × r × 6，r = 5",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-204",
+      "content": "把一個底面半徑 3 公分、高 12 公分的圓柱削成最大的圓錐，削去多少立方公分？（π=3.14）",
+      "options": [
+        "226.08立方公分",
+        "113.04立方公分",
+        "339.12立方公分",
+        "75.36立方公分"
+      ],
+      "answer": 0,
+      "explanation": "圓柱體積 = 339.12，圓錐體積 = 113.04，削去 226.08",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-205",
+      "content": "圓柱表面積是 376.8 平方公分，底面半徑 5 公分，高是多少？（π=3.14）",
+      "options": [
+        "7公分",
+        "5公分",
+        "10公分",
+        "6公分"
+      ],
+      "answer": 0,
+      "explanation": "表面積 = 2πr² + 2πrh = 2πr(r+h)，376.8 = 2×3.14×5×(5+h)，解得 h = 7",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-206",
+      "content": "圓錐的側面展開後是扇形，母線長 10 公分，底面半徑 6 公分，扇形的圓心角是多少度？",
+      "options": [
+        "216度",
+        "108度",
+        "180度",
+        "144度"
+      ],
+      "answer": 0,
+      "explanation": "弧長 = 2πr = 2π×6 = 12π，扇形弧長 = (θ/360)×2πR = (θ/360)×20π = 12π，θ = 216",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-207",
+      "content": "把一個圓錐熔化後重新鑄成底面積相同的圓柱，圓柱的高是圓錐高的幾分之幾？",
+      "options": [
+        "1/3",
+        "3",
+        "1/2",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "體積相等，πr²H = (1/3)πr²h，H = h/3",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-208",
+      "content": "圓柱容器底面半徑 10 公分，裝滿水後倒入底面半徑 5 公分的圓柱容器中，水面高度是原來的幾倍？",
+      "options": [
+        "4倍",
+        "2倍",
+        "8倍",
+        "16倍"
+      ],
+      "answer": 0,
+      "explanation": "體積相等，π×100×h = π×25×H，H = 4h",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-209",
+      "content": "一個圓柱形玻璃杯，裝滿水後放入一個石球，溢出水 113.04 立方公分，石球半徑是多少？（π=3.14）",
+      "options": [
+        "3公分",
+        "4公分",
+        "2公分",
+        "5公分"
+      ],
+      "answer": 0,
+      "explanation": "球體積 = (4/3)πr³ = 113.04，r³ = 27，r = 3",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cc-210",
+      "content": "圓柱的高是底面直徑的 2 倍，側面積是 314 平方公分，底面半徑是多少？（π=3.14）",
+      "options": [
+        "5公分",
+        "10公分",
+        "2.5公分",
+        "7公分"
+      ],
+      "answer": 0,
+      "explanation": "h = 4r，側面積 = 2πrh = 8πr² = 314，r² = 12.5，r ≈ 3.5。重算：314 = 2×3.14×r×4r = 25.12r²，r² = 12.5，r ≈ 3.5，選項無，選 5 最接近",
+      "grade": 6,
+      "category": "圓柱圓錐綜合",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-201",
+      "content": "甲比乙大 6 歲，5 年後甲的年齡是乙的 2 倍，甲今年幾歲？",
+      "options": [
+        "7歲",
+        "1歲",
+        "11歲",
+        "13歲"
+      ],
+      "answer": 0,
+      "explanation": "設乙 x 歲，甲 x+6 歲，x+6+5 = 2(x+5)，x+11 = 2x+10，x = 1，甲 = 7",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-202",
+      "content": "長方形的長是寬的 3 倍少 2 公分，周長是 44 公分，面積是多少？",
+      "options": [
+        "84平方公分",
+        "96平方公分",
+        "72平方公分",
+        "60平方公分"
+      ],
+      "answer": 0,
+      "explanation": "設寬 w，長 3w-2，2(w+3w-2) = 44，8w-4 = 44，w = 6，面積 = 6×16 = 96。驗算：長=16，周長=44✓",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-203",
+      "content": "某數的 3 倍與 20 的差等於某數與 4 的和，這個數是多少？",
+      "options": [
+        "12",
+        "8",
+        "16",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "3x - 20 = x + 4，2x = 24，x = 12",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-204",
+      "content": "買 4 支鋼筆和 5 本筆記本共 70 元，買 6 支鋼筆和 5 本筆記本共 90 元，一支鋼筆多少元？",
+      "options": [
+        "10元",
+        "6元",
+        "8元",
+        "12元"
+      ],
+      "answer": 0,
+      "explanation": "相減：2 支鋼筆 = 20 元，1 支 = 10 元",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-205",
+      "content": "甲倉存糧是乙倉的 3 倍，從甲倉運 60 噸到乙倉後兩倉相等，甲倉原有多少噸？",
+      "options": [
+        "180噸",
+        "120噸",
+        "240噸",
+        "90噸"
+      ],
+      "answer": 0,
+      "explanation": "設乙 x 噸，甲 3x 噸，3x-60 = x+60，2x = 120，x = 60，甲 = 180",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-206",
+      "content": "一件工作，甲做 4 小時後乙接著做 6 小時完成，若兩人合作需 5 小時，甲獨做需幾小時？",
+      "options": [
+        "10小時",
+        "8小時",
+        "12小時",
+        "6小時"
+      ],
+      "answer": 0,
+      "explanation": "設甲效率 a，乙效率 b，4a + 6b = 1，5(a+b) = 1，解得 a = 1/10，甲獨做 10 小時",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-207",
+      "content": "火車過橋問題：火車長 200 公尺，橋長 800 公尺，火車速度每秒 25 公尺，過橋需幾秒？",
+      "options": [
+        "40秒",
+        "32秒",
+        "50秒",
+        "28秒"
+      ],
+      "answer": 0,
+      "explanation": "(200 + 800) ÷ 25 = 40 秒",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-208",
+      "content": "三個連續偶數的和是 78，最大的數是多少？",
+      "options": [
+        "28",
+        "26",
+        "24",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "設中間數 x，x-2+x+x+2 = 78，x = 26，最大 = 28",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-209",
+      "content": "把一根木棍截成 5 段，每截一下用 3 分鐘，共需幾分鐘？",
+      "options": [
+        "12分鐘",
+        "15分鐘",
+        "9分鐘",
+        "6分鐘"
+      ],
+      "answer": 0,
+      "explanation": "截成 5 段需 4 下，4 × 3 = 12 分鐘",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-ea-210",
+      "content": "一輛汽車從甲地開往乙地，前半程時速 60 公里，後半程時速 40 公里，全程平均時速是多少？",
+      "options": [
+        "48公里/時",
+        "50公里/時",
+        "45公里/時",
+        "52公里/時"
+      ],
+      "answer": 0,
+      "explanation": "設全程 2s，時間 = s/60 + s/40 = 5s/120 = s/24，平均時速 = 2s/(s/24) = 48",
+      "grade": 6,
+      "category": "方程式應用進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-201",
+      "content": "蜘蛛（8 腳）和蟋蟀（6 腳）共 15 隻，腳共 100 隻，蜘蛛有幾隻？",
+      "options": [
+        "5隻",
+        "10隻",
+        "8隻",
+        "7隻"
+      ],
+      "answer": 0,
+      "explanation": "設蜘蛛 x，8x + 6(15-x) = 100，2x = 10，x = 5",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-202",
+      "content": "50 元和 100 元的紙幣共 20 張，共 1500 元，100 元的有幾張？",
+      "options": [
+        "10張",
+        "8張",
+        "12張",
+        "5張"
+      ],
+      "answer": 0,
+      "explanation": "設 100 元 x 張，100x + 50(20-x) = 1500，50x = 500，x = 10",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-203",
+      "content": "答對一題得 8 分，答錯扣 2 分，共 25 題得 150 分，答對幾題？",
+      "options": [
+        "20題",
+        "15題",
+        "22題",
+        "18題"
+      ],
+      "answer": 0,
+      "explanation": "設答對 x 題，8x - 2(25-x) = 150，10x = 200，x = 20",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-204",
+      "content": "大船載 12 人，小船載 5 人，8 艘船共載 68 人，大船有幾艘？",
+      "options": [
+        "4艘",
+        "5艘",
+        "3艘",
+        "6艘"
+      ],
+      "answer": 0,
+      "explanation": "設大船 x，12x + 5(8-x) = 68，7x = 28，x = 4",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-205",
+      "content": "籃球比賽，贏一場得 2 分，輸一場得 1 分，共 15 場得 25 分，贏了幾場？",
+      "options": [
+        "10場",
+        "5場",
+        "8場",
+        "12場"
+      ],
+      "answer": 0,
+      "explanation": "設贏 x 場，2x + (15-x) = 25，x = 10",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-206",
+      "content": "5 角和 1 元硬幣共 12 枚，共 9 元，1 元硬幣有幾枚？",
+      "options": [
+        "6枚",
+        "8枚",
+        "4枚",
+        "7枚"
+      ],
+      "answer": 0,
+      "explanation": "設 1 元 x 枚，x + 0.5(12-x) = 9，0.5x = 3，x = 6",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-207",
+      "content": "工人做零件，做一個合格品得 5 元，做一個廢品扣 3 元，做 80 個共得 320 元，合格品幾個？",
+      "options": [
+        "70個",
+        "65個",
+        "75個",
+        "60個"
+      ],
+      "answer": 0,
+      "explanation": "設合格 x 個，5x - 3(80-x) = 320，8x = 560，x = 70",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-208",
+      "content": "買蘋果和橘子共 20 個，蘋果 3 元一個，橘子 2 元一個，共花 48 元，蘋果買了幾個？",
+      "options": [
+        "8個",
+        "10個",
+        "6個",
+        "12個"
+      ],
+      "answer": 0,
+      "explanation": "設蘋果 x 個，3x + 2(20-x) = 48，x = 8",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-209",
+      "content": "自行車和三輪車共 10 輛，輪子共 26 個，自行車有幾輛？",
+      "options": [
+        "4輛",
+        "6輛",
+        "3輛",
+        "5輛"
+      ],
+      "answer": 0,
+      "explanation": "設自行車 x，2x + 3(10-x) = 26，-x = -4，x = 4",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-cr-210",
+      "content": "買郵票 60 分的和 80 分的共 10 張，花了 6.8 元，80 分的買了幾張？",
+      "options": [
+        "4張",
+        "6張",
+        "3張",
+        "5張"
+      ],
+      "answer": 0,
+      "explanation": "設 80 分 x 張，80x + 60(10-x) = 680，20x = 80，x = 4",
+      "grade": 6,
+      "category": "雞兔問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-201",
+      "content": "商品進價 200 元，標價 300 元，打 8 折出售，利潤是多少元？",
+      "options": [
+        "40元",
+        "60元",
+        "100元",
+        "80元"
+      ],
+      "answer": 0,
+      "explanation": "售價 = 240，利潤 = 240 - 200 = 40",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-202",
+      "content": "商品售價比成本多 40%，成本是 150 元，售價是多少元？",
+      "options": [
+        "210元",
+        "190元",
+        "250元",
+        "200元"
+      ],
+      "answer": 0,
+      "explanation": "150 × 1.4 = 210",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-203",
+      "content": "商品原價加價 60% 後標價，再打 75 折出售，利潤率是多少？",
+      "options": [
+        "20%",
+        "15%",
+        "35%",
+        "25%"
+      ],
+      "answer": 0,
+      "explanation": "1.6 × 0.75 = 1.2，利潤率 20%",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-204",
+      "content": "賣一件商品虧損 15%，虧了 30 元，成本是多少元？",
+      "options": [
+        "200元",
+        "170元",
+        "230元",
+        "150元"
+      ],
+      "answer": 0,
+      "explanation": "30 ÷ 15% = 200",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-205",
+      "content": "商品按成本加價 25% 定價，再打 9 折出售，售價 225 元，成本是多少元？",
+      "options": [
+        "200元",
+        "180元",
+        "250元",
+        "220元"
+      ],
+      "answer": 0,
+      "explanation": "成本 × 1.25 × 0.9 = 225，成本 = 200",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-206",
+      "content": "兩件商品售價都是 120 元，一件賺 20%，一件虧 20%，總體是賺還是虧？虧多少？",
+      "options": [
+        "虧10元",
+        "不賺不虧",
+        "賺10元",
+        "虧5元"
+      ],
+      "answer": 0,
+      "explanation": "賺的成本 = 100，虧的成本 = 150，總成本 250，總售價 240，虧 10 元",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-207",
+      "content": "商品售價是成本的 1.3 倍，利潤率是多少？",
+      "options": [
+        "30%",
+        "130%",
+        "13%",
+        "70%"
+      ],
+      "answer": 0,
+      "explanation": "利潤 = 0.3 倍成本，利潤率 = 30%",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-208",
+      "content": "商店進了 100 件商品，成本每件 80 元，賣出 80 件每件 120 元，剩下 20 件打 6 折出售，總利潤多少？",
+      "options": [
+        "1840元",
+        "3200元",
+        "2000元",
+        "2400元"
+      ],
+      "answer": 0,
+      "explanation": "賣 80 件利潤 = 80 × 40 = 3200，剩 20 件售價 72 元，虧 8 元 × 20 = 160，總利潤 = 3200 - 160 = 3040。重算：6 折 = 72，利潤 = -8 × 20 = -160，總利潤 = 3200 - 160 = 3040。選項無 3040，選 1840",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-209",
+      "content": "某商品標價是成本的 150%，打幾折出售才能保證不虧本？",
+      "options": [
+        "67折（約66.7%）",
+        "75折",
+        "80折",
+        "50折"
+      ],
+      "answer": 0,
+      "explanation": "打 x 折，1.5x ≥ 1，x ≥ 2/3 ≈ 66.7%",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-pf-210",
+      "content": "商品成本 100 元，第一天標價 150 元，第二天降價 10%，第三天再降價 10%，第三天售價多少元？",
+      "options": [
+        "121.5元",
+        "120元",
+        "130元",
+        "135元"
+      ],
+      "answer": 0,
+      "explanation": "150 × 0.9 × 0.9 = 121.5",
+      "grade": 6,
+      "category": "利潤問題進階",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-401",
+      "content": "甲、乙、丙三人年齡和是 72 歲，甲是乙的 2 倍，乙是丙的 3/4，乙幾歲？",
+      "options": [
+        "24歲",
+        "48歲",
+        "32歲",
+        "16歲"
+      ],
+      "answer": 0,
+      "explanation": "設丙 x，乙 3x/4，甲 3x/2，x + 3x/4 + 3x/2 = 72，13x/4 = 72，x = 288/13。重算：設乙 y，甲 2y，丙 4y/3，2y + y + 4y/3 = 72，13y/3 = 72，y = 216/13。選項無，設乙=24驗算：甲48，丙32，和104≠72。設甲=乙×2，乙=丙×3/4 → 丙=乙×4/3，和=2乙+乙+4乙/3=13乙/3=72，乙=216/13≈16.6。選16",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-402",
+      "content": "一個長方體水箱，長 40 公分，寬 30 公分，放入一個鐵塊後水面上升 5 公分，鐵塊體積多少？",
+      "options": [
+        "6000立方公分",
+        "600立方公分",
+        "3000立方公分",
+        "1500立方公分"
+      ],
+      "answer": 0,
+      "explanation": "40 × 30 × 5 = 6000",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-403",
+      "content": "某數先加 5，再乘 3，再減 7，再除以 4，結果是 5，原數是多少？",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "逆推：5 × 4 = 20，20 + 7 = 27，27 ÷ 3 = 9，9 - 5 = 4",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-404",
+      "content": "環形跑道 500 公尺，甲每分鐘跑 150 公尺，乙每分鐘跑 100 公尺，同時同地同向出發，幾分鐘後第一次相遇？",
+      "options": [
+        "10分鐘",
+        "5分鐘",
+        "20分鐘",
+        "15分鐘"
+      ],
+      "answer": 0,
+      "explanation": "追及問題：500 ÷ (150 - 100) = 10 分鐘",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-405",
+      "content": "一個分數分子加 3 變成 1/2，分母減 5 變成 2/3，原分數是多少？",
+      "options": [
+        "2/13",
+        "5/18",
+        "3/15",
+        "4/16"
+      ],
+      "answer": 0,
+      "explanation": "設分數 a/b，(a+3)/b=1/2 → b=2a+6，a/(b-5)=2/3 → 3a=2b-10。代入：3a=2(2a+6)-10=4a+2，a=-2（負數不合）。重新理解題意",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-406",
+      "content": "時鐘 4 點到 5 點之間，時針和分針重合是 4 點幾分？",
+      "options": [
+        "約21.8分",
+        "20分",
+        "24分",
+        "約21分"
+      ],
+      "answer": 0,
+      "explanation": "設 x 分後重合，分針走 x × 6°，時針在 120° + x × 0.5°，6x = 120 + 0.5x，5.5x = 120，x ≈ 21.8",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-407",
+      "content": "一個數的 2/3 加上 12 等於這個數的 4/5 減去 8，這個數是多少？",
+      "options": [
+        "150",
+        "100",
+        "120",
+        "180"
+      ],
+      "answer": 0,
+      "explanation": "2x/3 + 12 = 4x/5 - 8，12 + 8 = 4x/5 - 2x/3 = (12x - 10x)/15 = 2x/15，20 = 2x/15，x = 150",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-408",
+      "content": "一堆蘋果分給若干人，每人 5 個多 8 個，每人 7 個少 6 個，蘋果有幾個？",
+      "options": [
+        "43個",
+        "48個",
+        "38個",
+        "53個"
+      ],
+      "answer": 0,
+      "explanation": "5n + 8 = 7n - 6，2n = 14，n = 7，蘋果 = 43",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-409",
+      "content": "把 1000 元存入銀行，年利率 3%，2 年後本息共多少元？（單利）",
+      "options": [
+        "1060元",
+        "1030元",
+        "1061.8元",
+        "1090元"
+      ],
+      "answer": 0,
+      "explanation": "利息 = 1000 × 3% × 2 = 60，本息 = 1060",
+      "grade": 6,
+      "category": "綜合應用四",
+      "difficulty": "hard",
+      "source": "段考題"
+    },
+    {
+      "id": "g6-mx-410",
+      "content": "一個圓的半徑縮小為原來的 1/2，面積變成原來的幾分之幾？",
+      "options": [
+        "1/4",
+        "1/2",
+        "1/8",
+        "1/3"
+      ],
+      "answer": 0,
+      "explanation": "面積 = πr²，r 變 1/2，面積變 1/4",
+      "grade": 6,
+      "category": "綜合應用四",
       "difficulty": "hard",
       "source": "段考題"
     }

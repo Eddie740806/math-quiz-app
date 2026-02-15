@@ -8,8 +8,12 @@ const dataDir = path.join(__dirname, '../src/data');
 const files = [
   'questions-grade5.json',
   'questions-grade5-part2.json',
+  'questions-grade5-part3.json',
+  'questions-grade5-part4.json',
   'questions-grade6.json',
-  'questions-grade6-part2.json'
+  'questions-grade6-part2.json',
+  'questions-grade6-part3.json',
+  'questions-grade6-part4.json'
 ];
 
 const allQuestions = [];
