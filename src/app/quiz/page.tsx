@@ -41,6 +41,20 @@ function QuizContent() {
   const [showComboEffect, setShowComboEffect] = useState(false);
   const [wrongQuestions, setWrongQuestions] = useState<Question[]>([]);
   const [skippedCount, setSkippedCount] = useState(0);
+  const [questionStartTime, setQuestionStartTime] = useState(Date.now());
+  const [totalTime, setTotalTime] = useState(0);
+  const [currentQuestionTime, setCurrentQuestionTime] = useState(0);
+
+  // 計時器
+  useEffect(() => {
+    if (showCountSelector || quizFinished) return;
+    
+    const timer = setInterval(() => {
+      setCurrentQuestionTime(Math.floor((Date.now() - questionStartTime) / 1000));
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, [questionStartTime, showCountSelector, quizFinished]);
 
   useEffect(() => {
     const currentUser = getCurrentUser();
@@ -85,6 +99,10 @@ function QuizContent() {
   const handleSubmit = () => {
     if (selectedAnswer === null || !user || !currentQuestion) return;
     
+    // 記錄這題花的時間
+    const questionTime = Math.floor((Date.now() - questionStartTime) / 1000);
+    setTotalTime(prev => prev + questionTime);
+    
     const correct = selectedAnswer === currentQuestion.answer;
     setIsCorrect(correct);
     setShowResult(true);
@@ -121,9 +139,12 @@ function QuizContent() {
     setCurrentIndex(prev => prev + 1);
     setSelectedAnswer(null);
     setShowResult(false);
+    setQuestionStartTime(Date.now());
+    setCurrentQuestionTime(0);
   };
 
   const handleSkip = () => {
+    setTotalTime(prev => prev + Math.floor((Date.now() - questionStartTime) / 1000));
     setSkippedCount(prev => prev + 1);
     setCombo(0);
     handleNext();
@@ -261,12 +282,20 @@ function QuizContent() {
                 <div className="text-gray-500 text-sm">最高連擊</div>
               </div>
             </div>
-            {(wrongQuestions.length > 0 || skippedCount > 0) && (
-              <div className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500">
-                {wrongQuestions.length > 0 && <span className="mr-3">❌ 錯 {wrongQuestions.length} 題</span>}
-                {skippedCount > 0 && <span>⏭️ 跳過 {skippedCount} 題</span>}
+            <div className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500">
+              <div className="mb-2">
+                ⏱️ 總用時：{Math.floor(totalTime / 60)}分{totalTime % 60}秒
+                {answeredCount > 0 && (
+                  <span className="ml-2">（平均 {Math.round(totalTime / answeredCount)} 秒/題）</span>
+                )}
               </div>
-            )}
+              {(wrongQuestions.length > 0 || skippedCount > 0) && (
+                <div>
+                  {wrongQuestions.length > 0 && <span className="mr-3">❌ 錯 {wrongQuestions.length} 題</span>}
+                  {skippedCount > 0 && <span>⏭️ 跳過 {skippedCount} 題</span>}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex gap-4 mb-4">
@@ -297,7 +326,8 @@ function QuizContent() {
           {/* 分享按鈕 */}
           <button
             onClick={() => {
-              const text = `📐 國小數學題庫\n${grade}年級 ${questions.length}題\n✅ 得分：${score}\n📊 正確率：${accuracy}%\n🔥 最高連擊：${maxCombo}`;
+              const timeStr = `${Math.floor(totalTime / 60)}分${totalTime % 60}秒`;
+              const text = `📐 國小數學題庫\n${grade}年級 ${questions.length}題\n✅ 得分：${score}\n📊 正確率：${accuracy}%\n🔥 最高連擊：${maxCombo}\n⏱️ 用時：${timeStr}`;
               navigator.clipboard.writeText(text);
               alert('成績已複製！可以貼給爸媽看 📋');
             }}
@@ -329,8 +359,9 @@ function QuizContent() {
           >
             ← 返回
           </button>
-          <div className="text-white">
-            <span className="font-bold">{grade}</span> 年級數學
+          <div className="text-white text-center">
+            <div className="font-bold">{grade} 年級數學</div>
+            <div className="text-sm opacity-80">⏱️ {currentQuestionTime}秒</div>
           </div>
           <div className="text-white font-bold flex items-center gap-3">
             {combo >= 3 && (
