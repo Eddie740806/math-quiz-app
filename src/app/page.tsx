@@ -260,52 +260,55 @@ export default function Home() {
         </div>
 
         {/* 功能區塊 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
           {/* 排行榜 */}
           <div
             onClick={() => router.push('/leaderboard')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
           >
-            <div className="text-3xl mb-1">🏆</div>
-            <div className="font-bold text-gray-800 text-sm">排行榜</div>
+            <div className="text-2xl mb-1">🏆</div>
+            <div className="font-bold text-gray-800 text-xs">排行榜</div>
           </div>
 
           {/* 成就 */}
           <div
             onClick={() => router.push('/achievements')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
           >
-            <div className="text-3xl mb-1">🏅</div>
-            <div className="font-bold text-gray-800 text-sm">成就 {achievementCount > 0 && `(${achievementCount})`}</div>
+            <div className="text-2xl mb-1">🏅</div>
+            <div className="font-bold text-gray-800 text-xs">成就</div>
           </div>
 
           {/* 錯題本 */}
           <div
             onClick={() => user ? router.push('/wrong-answers') : router.push('/login')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20 relative"
           >
-            <div className="text-3xl mb-1">📝</div>
-            <div className="font-bold text-gray-800 text-sm">
-              錯題本 {progress && progress.wrongRecords.length > 0 && `(${progress.wrongRecords.length})`}
-            </div>
+            <div className="text-2xl mb-1">📝</div>
+            <div className="font-bold text-gray-800 text-xs">錯題本</div>
+            {progress && progress.wrongRecords.length > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {progress.wrongRecords.length}
+              </span>
+            )}
           </div>
 
           {/* 出卷 */}
           <div
             onClick={() => router.push('/create-quiz')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
           >
-            <div className="text-3xl mb-1">📋</div>
-            <div className="font-bold text-gray-800 text-sm">出卷</div>
+            <div className="text-2xl mb-1">📋</div>
+            <div className="font-bold text-gray-800 text-xs">出卷</div>
           </div>
 
           {/* 家長查看 */}
           <div
             onClick={() => router.push('/parent-view')}
-            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center md:col-span-2"
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
           >
-            <div className="text-3xl mb-1">👨‍👩‍👧</div>
-            <div className="font-bold text-gray-800 text-sm">家長查看孩子進度</div>
+            <div className="text-2xl mb-1">👨‍👩‍👧</div>
+            <div className="font-bold text-gray-800 text-xs">家長</div>
           </div>
         </div>
 
