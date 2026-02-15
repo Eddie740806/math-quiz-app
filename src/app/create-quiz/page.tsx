@@ -8,7 +8,7 @@ export default function CreateQuizPage() {
   const router = useRouter();
   const [grade, setGrade] = useState<5 | 6>(5);
   const [count, setCount] = useState(10);
-  const [difficulty, setDifficulty] = useState<'' | 'easy' | 'hard'>('');
+  const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'hard'>('mixed');
   const [quizName, setQuizName] = useState('');
   const [generated, setGenerated] = useState(false);
   const [quizLink, setQuizLink] = useState('');
@@ -107,9 +107,9 @@ export default function CreateQuizPage() {
                     🌱 基礎
                   </button>
                   <button
-                    onClick={() => setDifficulty('')}
+                    onClick={() => setDifficulty('mixed')}
                     className={`py-2 px-3 rounded-lg text-sm font-medium transition ${
-                      difficulty === ''
+                      difficulty === 'mixed'
                         ? 'bg-blue-500 text-white'
                         : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
                     }`}
@@ -163,7 +163,7 @@ export default function CreateQuizPage() {
                 <div className="text-6xl mb-4">✅</div>
                 <h2 className="text-xl font-bold text-gray-800">測驗已建立！</h2>
                 <p className="text-gray-500 mt-2">
-                  {quizName || `${grade}年級測驗`} · {count}題 · {difficulty === 'easy' ? '基礎' : difficulty === 'hard' ? '挑戰' : '綜合'}
+                  {quizName || `${grade}年級測驗`} · {count}題 · {difficulty === 'easy' ? '基礎' : difficulty === 'hard' ? '挑戰' : difficulty === 'mixed' ? '綜合' : '綜合'}
                 </p>
               </div>
 

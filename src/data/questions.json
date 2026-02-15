@@ -13,7 +13,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "先通分，找到公分母，再進行加法運算。結果如為假分數需化為帶分數。答案是 1又5/12"
     },
     {
       "id": "g5-fr-002",
@@ -28,7 +29,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "先通分，找到公分母，再進行減法運算。答案是 7/12"
     },
     {
       "id": "g5-fr-003",
@@ -43,7 +45,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 7/20"
     },
     {
       "id": "g5-fr-004",
@@ -58,7 +61,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "先通分，找到公分母，再進行加法運算。結果如為假分數需化為帶分數。答案是 6又1/6"
     },
     {
       "id": "g5-fr-005",
@@ -73,7 +77,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "先通分，找到公分母，再進行減法運算。答案是 2又7/8"
     },
     {
       "id": "g5-fr-006",
@@ -88,7 +93,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 17/20公升"
     },
     {
       "id": "g5-fr-007",
@@ -103,7 +109,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 2又1/2公尺"
     },
     {
       "id": "g5-fr-008",
@@ -118,7 +125,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 1又5/12公斤"
     },
     {
       "id": "g5-fr-009",
@@ -133,7 +141,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "先通分，找到公分母，再進行加法運算。結果如為假分數需化為帶分數。答案是 1又1/8"
     },
     {
       "id": "g5-fr-010",
@@ -148,7 +157,8 @@
       "grade": 5,
       "category": "分數加減",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 1又13/20公升"
     },
     {
       "id": "g5-fm-001",
@@ -163,7 +173,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 3/10"
     },
     {
       "id": "g5-fm-002",
@@ -178,7 +189,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數除法：除以一個分數等於乘以它的倒數。計算後約分得到答案 1又1/4"
     },
     {
       "id": "g5-fm-003",
@@ -193,7 +205,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 1/4公尺"
     },
     {
       "id": "g5-fm-004",
@@ -208,7 +221,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 1/2公升"
     },
     {
       "id": "g5-fm-005",
@@ -223,7 +237,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 3"
     },
     {
       "id": "g5-fm-006",
@@ -238,7 +253,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 3/5公尺"
     },
     {
       "id": "g5-fm-007",
@@ -253,7 +269,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 6公斤"
     },
     {
       "id": "g5-fm-008",
@@ -268,7 +285,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數除法：除以一個分數等於乘以它的倒數。計算後約分得到答案 4"
     },
     {
       "id": "g5-fm-009",
@@ -283,7 +301,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 10段"
     },
     {
       "id": "g5-fm-010",
@@ -298,7 +317,8 @@
       "grade": 5,
       "category": "分數乘除",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 1又7/20公尺"
     },
     {
       "id": "g5-de-001",
@@ -313,7 +333,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數加法：對齊小數點，從右往左依次相加。答案是 6.23"
     },
     {
       "id": "g5-de-002",
@@ -328,7 +349,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數減法：對齊小數點，從右往左依次相減，不夠借位。答案是 4.78"
     },
     {
       "id": "g5-de-003",
@@ -343,7 +365,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數乘法：先按整數乘法計算，再數小數位數點小數點。答案是 8.5"
     },
     {
       "id": "g5-de-004",
@@ -358,7 +381,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數除法：移動小數點使除數變成整數，被除數也移動相同位數。答案是 12.6"
     },
     {
       "id": "g5-de-005",
@@ -373,7 +397,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 10元"
     },
     {
       "id": "g5-de-006",
@@ -388,7 +413,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 1.8公尺"
     },
     {
       "id": "g5-de-007",
@@ -403,7 +429,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 4.25公斤"
     },
     {
       "id": "g5-de-008",
@@ -418,7 +445,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數除法：移動小數點使除數變成整數，被除數也移動相同位數。答案是 130"
     },
     {
       "id": "g5-de-009",
@@ -433,7 +461,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 316.2平方公尺"
     },
     {
       "id": "g5-de-010",
@@ -448,7 +477,8 @@
       "grade": 5,
       "category": "小數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 62.5元"
     },
     {
       "id": "g5-fb-001",
@@ -463,7 +493,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 9"
     },
     {
       "id": "g5-fb-002",
@@ -478,7 +509,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出兩數的所有因數，取共同因數中最大的。答案是 12"
     },
     {
       "id": "g5-fb-003",
@@ -493,7 +525,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出兩數的倍數，取共同倍數中最小的。答案是 60"
     },
     {
       "id": "g5-fb-004",
@@ -508,7 +541,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 10個"
     },
     {
       "id": "g5-fb-005",
@@ -523,7 +557,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 6公分"
     },
     {
       "id": "g5-fb-006",
@@ -538,7 +573,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 24天後"
     },
     {
       "id": "g5-fb-007",
@@ -553,7 +589,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 2個"
     },
     {
       "id": "g5-fb-008",
@@ -568,7 +605,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出兩數的所有因數，取共同因數中最大的。答案是 18"
     },
     {
       "id": "g5-fb-009",
@@ -583,7 +621,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 36"
     },
     {
       "id": "g5-fb-010",
@@ -598,7 +637,8 @@
       "grade": 5,
       "category": "因數與倍數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 24顆"
     },
     {
       "id": "g5-pc-001",
@@ -613,7 +653,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 17"
     },
     {
       "id": "g5-pc-002",
@@ -628,7 +669,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 15"
     },
     {
       "id": "g5-pc-003",
@@ -643,7 +685,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 2個"
     },
     {
       "id": "g5-pc-004",
@@ -658,7 +701,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 2²×3×5"
     },
     {
       "id": "g5-pc-005",
@@ -673,7 +717,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 1"
     },
     {
       "id": "g5-pc-006",
@@ -688,7 +733,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 2²×3×7"
     },
     {
       "id": "g5-pc-007",
@@ -703,7 +749,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 47"
     },
     {
       "id": "g5-pc-008",
@@ -718,7 +765,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 2, 3, 5, 7"
     },
     {
       "id": "g5-pc-009",
@@ -733,7 +781,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 5和7"
     },
     {
       "id": "g5-pc-010",
@@ -748,7 +797,8 @@
       "grade": 5,
       "category": "質數與合數",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 2個"
     },
     {
       "id": "g5-ar-001",
@@ -763,7 +813,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 48平方公分"
     },
     {
       "id": "g5-ar-002",
@@ -778,7 +829,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "平行四邊形面積 = 底 × 高。代入數值計算得到答案 135平方公分"
     },
     {
       "id": "g5-ar-003",
@@ -793,7 +845,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "梯形面積 = (上底 + 下底) × 高 ÷ 2。代入數值計算得到答案 60平方公分"
     },
     {
       "id": "g5-ar-004",
@@ -808,7 +861,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 8公分"
     },
     {
       "id": "g5-ar-005",
@@ -823,7 +877,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "平行四邊形面積 = 底 × 高。代入數值計算得到答案 12公分"
     },
     {
       "id": "g5-ar-006",
@@ -838,7 +893,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 180平方公尺"
     },
     {
       "id": "g5-ar-007",
@@ -853,7 +909,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "梯形面積 = (上底 + 下底) × 高 ÷ 2。代入數值計算得到答案 10公分"
     },
     {
       "id": "g5-ar-008",
@@ -868,7 +925,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "平行四邊形面積 = 底 × 高。代入數值計算得到答案 1080株"
     },
     {
       "id": "g5-ar-009",
@@ -883,7 +941,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形面積 = 長 × 寬。代入數值計算得到答案 48平方公分"
     },
     {
       "id": "g5-ar-010",
@@ -898,7 +957,8 @@
       "grade": 5,
       "category": "面積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 60平方公分"
     },
     {
       "id": "g5-pe-001",
@@ -913,7 +973,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形周長 = 邊長 × 4。代入數值計算得到答案 60公分"
     },
     {
       "id": "g5-pe-002",
@@ -928,7 +989,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形周長 = (長 + 寬) × 2。代入數值計算得到答案 60公分"
     },
     {
       "id": "g5-pe-003",
@@ -943,7 +1005,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形周長 = 邊長 × 4。代入數值計算得到答案 12公分"
     },
     {
       "id": "g5-pe-004",
@@ -958,7 +1021,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形周長 = (長 + 寬) × 2。代入數值計算得到答案 10公分"
     },
     {
       "id": "g5-pe-005",
@@ -973,7 +1037,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形周長 = (長 + 寬) × 2。代入數值計算得到答案 1200公尺"
     },
     {
       "id": "g5-pe-006",
@@ -988,7 +1053,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形周長 = 邊長 × 4。代入數值計算得到答案 20棵"
     },
     {
       "id": "g5-pe-007",
@@ -1003,7 +1069,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形周長 = 邊長 × 4。代入數值計算得到答案 256平方公分"
     },
     {
       "id": "g5-pe-008",
@@ -1018,7 +1085,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形周長 = (長 + 寬) × 2。代入數值計算得到答案 12公分"
     },
     {
       "id": "g5-pe-009",
@@ -1033,7 +1101,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形周長 = (長 + 寬) × 2。代入數值計算得到答案 10公分"
     },
     {
       "id": "g5-pe-010",
@@ -1048,7 +1117,8 @@
       "grade": 5,
       "category": "周長計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "周長是圖形所有邊的總長度。計算得到答案 4800元"
     },
     {
       "id": "g5-tm-001",
@@ -1063,7 +1133,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 4小時40分鐘"
     },
     {
       "id": "g5-tm-002",
@@ -1078,7 +1149,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 12:10"
     },
     {
       "id": "g5-tm-003",
@@ -1093,7 +1165,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 16:25"
     },
     {
       "id": "g5-tm-004",
@@ -1108,7 +1181,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 10:15"
     },
     {
       "id": "g5-tm-005",
@@ -1123,7 +1197,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 8.5小時"
     },
     {
       "id": "g5-tm-006",
@@ -1138,7 +1213,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 225分鐘"
     },
     {
       "id": "g5-tm-007",
@@ -1153,7 +1229,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 4小時10分鐘"
     },
     {
       "id": "g5-tm-008",
@@ -1168,7 +1245,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 8:15"
     },
     {
       "id": "g5-tm-009",
@@ -1183,7 +1261,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 8小時15分鐘"
     },
     {
       "id": "g5-tm-010",
@@ -1198,7 +1277,8 @@
       "grade": 5,
       "category": "時間計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "注意時間單位換算：1小時 = 60分鐘，1分鐘 = 60秒。計算得到答案 11:00"
     },
     {
       "id": "g5-vo-001",
@@ -1213,7 +1293,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 125立方公分"
     },
     {
       "id": "g5-vo-002",
@@ -1228,7 +1309,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 160立方公分"
     },
     {
       "id": "g5-vo-003",
@@ -1243,7 +1325,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 6公分"
     },
     {
       "id": "g5-vo-004",
@@ -1258,7 +1341,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 7公分"
     },
     {
       "id": "g5-vo-005",
@@ -1273,7 +1357,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據體積公式計算，答案是 60公升"
     },
     {
       "id": "g5-vo-006",
@@ -1288,7 +1373,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 1公克"
     },
     {
       "id": "g5-vo-007",
@@ -1303,7 +1389,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 125個"
     },
     {
       "id": "g5-vo-008",
@@ -1318,7 +1405,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 5公分"
     },
     {
       "id": "g5-vo-009",
@@ -1333,7 +1421,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 64立方公分"
     },
     {
       "id": "g5-vo-010",
@@ -1348,7 +1437,8 @@
       "grade": 5,
       "category": "體積計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據體積公式計算，答案是 5公分"
     },
     {
       "id": "g5-ra-001",
@@ -1363,7 +1453,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 2：3"
     },
     {
       "id": "g5-ra-002",
@@ -1378,7 +1469,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 3/5"
     },
     {
       "id": "g5-ra-003",
@@ -1393,7 +1485,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 2：3"
     },
     {
       "id": "g5-ra-004",
@@ -1408,7 +1501,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 35"
     },
     {
       "id": "g5-ra-005",
@@ -1423,7 +1517,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 300毫升"
     },
     {
       "id": "g5-ra-006",
@@ -1438,7 +1533,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 20公分"
     },
     {
       "id": "g5-ra-007",
@@ -1453,7 +1549,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 4：5"
     },
     {
       "id": "g5-ra-008",
@@ -1468,7 +1565,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 50公克"
     },
     {
       "id": "g5-ra-009",
@@ -1483,7 +1581,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 30"
     },
     {
       "id": "g5-ra-010",
@@ -1498,7 +1597,8 @@
       "grade": 5,
       "category": "比與比值",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 2：3"
     },
     {
       "id": "g5-pc-001",
@@ -1513,7 +1613,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 75%"
     },
     {
       "id": "g5-pc-002",
@@ -1528,7 +1629,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 9/20"
     },
     {
       "id": "g5-pc-003",
@@ -1543,7 +1645,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 35%"
     },
     {
       "id": "g5-pc-004",
@@ -1558,7 +1661,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 20"
     },
     {
       "id": "g5-pc-005",
@@ -1573,7 +1677,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 90"
     },
     {
       "id": "g5-pc-006",
@@ -1588,7 +1693,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 40%"
     },
     {
       "id": "g5-pc-007",
@@ -1603,7 +1709,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 75%"
     },
     {
       "id": "g5-pc-008",
@@ -1618,7 +1725,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 160元"
     },
     {
       "id": "g5-pc-009",
@@ -1633,7 +1741,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 >"
     },
     {
       "id": "g5-pc-010",
@@ -1648,7 +1757,8 @@
       "grade": 5,
       "category": "百分比基礎",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 約13.3%"
     },
     {
       "id": "g5-rv-001",
@@ -1663,7 +1773,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 24顆"
     },
     {
       "id": "g5-rv-002",
@@ -1678,7 +1789,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 10公升"
     },
     {
       "id": "g5-rv-003",
@@ -1693,7 +1805,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 600元"
     },
     {
       "id": "g5-rv-004",
@@ -1708,7 +1821,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 28公尺"
     },
     {
       "id": "g5-rv-005",
@@ -1723,7 +1837,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 45公斤"
     },
     {
       "id": "g5-rv-006",
@@ -1738,7 +1853,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 120頁"
     },
     {
       "id": "g5-rv-007",
@@ -1753,7 +1869,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 480件"
     },
     {
       "id": "g5-rv-008",
@@ -1768,7 +1885,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 750公尺"
     },
     {
       "id": "g5-rv-009",
@@ -1783,7 +1901,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 150元"
     },
     {
       "id": "g5-rv-010",
@@ -1798,7 +1917,8 @@
       "grade": 5,
       "category": "分數逆推問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 23隻"
     },
     {
       "id": "g5-sp-001",
@@ -1813,7 +1933,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 900公尺"
     },
     {
       "id": "g5-sp-002",
@@ -1828,7 +1949,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 60公里/時"
     },
     {
       "id": "g5-sp-003",
@@ -1843,7 +1965,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 1.6小時"
     },
     {
       "id": "g5-sp-004",
@@ -1858,7 +1981,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 10:00"
     },
     {
       "id": "g5-sp-005",
@@ -1873,7 +1997,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 500公尺"
     },
     {
       "id": "g5-sp-006",
@@ -1888,7 +2013,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 100公里"
     },
     {
       "id": "g5-sp-007",
@@ -1903,7 +2029,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 50秒"
     },
     {
       "id": "g5-sp-008",
@@ -1918,7 +2045,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 45公里/時"
     },
     {
       "id": "g5-sp-009",
@@ -1933,7 +2061,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 4分鐘"
     },
     {
       "id": "g5-sp-010",
@@ -1948,7 +2077,8 @@
       "grade": 5,
       "category": "速率問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 150公尺"
     },
     {
       "id": "g5-sd-001",
@@ -1963,7 +2093,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 50"
     },
     {
       "id": "g5-sd-002",
@@ -1978,7 +2109,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 100"
     },
     {
       "id": "g5-sd-003",
@@ -1993,7 +2125,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 32個"
     },
     {
       "id": "g5-sd-004",
@@ -2008,7 +2141,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 110元"
     },
     {
       "id": "g5-sd-005",
@@ -2023,7 +2157,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 40"
     },
     {
       "id": "g5-sd-006",
@@ -2038,7 +2173,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 192平方公分"
     },
     {
       "id": "g5-sd-007",
@@ -2053,7 +2189,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 40歲"
     },
     {
       "id": "g5-sd-008",
@@ -2068,7 +2205,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 40"
     },
     {
       "id": "g5-sd-009",
@@ -2083,7 +2221,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 54元"
     },
     {
       "id": "g5-sd-010",
@@ -2098,7 +2237,8 @@
       "grade": 5,
       "category": "和差問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "和差問題公式：大數 = (和 + 差) ÷ 2，小數 = (和 - 差) ÷ 2。計算得到答案 33"
     },
     {
       "id": "g5-sh-001",
@@ -2113,7 +2253,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 68元"
     },
     {
       "id": "g5-sh-002",
@@ -2128,7 +2269,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 310元"
     },
     {
       "id": "g5-sh-003",
@@ -2143,7 +2285,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 每斤40元，8斤320元"
     },
     {
       "id": "g5-sh-004",
@@ -2158,7 +2301,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 360元"
     },
     {
       "id": "g5-sh-005",
@@ -2173,7 +2317,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 30元"
     },
     {
       "id": "g5-sh-006",
@@ -2188,7 +2333,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 140元"
     },
     {
       "id": "g5-sh-007",
@@ -2203,7 +2349,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 800元"
     },
     {
       "id": "g5-sh-008",
@@ -2218,7 +2365,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 315元"
     },
     {
       "id": "g5-sh-009",
@@ -2233,7 +2381,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 1512元"
     },
     {
       "id": "g5-sh-010",
@@ -2248,7 +2397,8 @@
       "grade": 5,
       "category": "購物應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據單價和數量的關係：總價 = 單價 × 數量。計算得到答案 買3盒便宜15元"
     },
     {
       "id": "g5-tr-001",
@@ -2263,7 +2413,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 21棵"
     },
     {
       "id": "g5-tr-002",
@@ -2278,7 +2429,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 20棵"
     },
     {
       "id": "g5-tr-003",
@@ -2293,7 +2445,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 20棵"
     },
     {
       "id": "g5-tr-004",
@@ -2308,7 +2461,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 96公尺"
     },
     {
       "id": "g5-tr-005",
@@ -2323,7 +2477,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 24棵"
     },
     {
       "id": "g5-tr-006",
@@ -2338,7 +2493,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 84公尺"
     },
     {
       "id": "g5-tr-007",
@@ -2353,7 +2509,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 20棵"
     },
     {
       "id": "g5-tr-008",
@@ -2368,7 +2525,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 2棵"
     },
     {
       "id": "g5-tr-009",
@@ -2383,7 +2541,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 80階"
     },
     {
       "id": "g5-tr-010",
@@ -2398,7 +2557,8 @@
       "grade": 5,
       "category": "植樹問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "植樹問題：兩端都種棵數 = 間隔數 + 1；一端種棵數 = 間隔數；兩端不種棵數 = 間隔數 - 1。答案是 18秒"
     },
     {
       "id": "g5-ag-001",
@@ -2413,7 +2573,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 6年後"
     },
     {
       "id": "g5-ag-002",
@@ -2428,7 +2589,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 7年前"
     },
     {
       "id": "g5-ag-003",
@@ -2443,7 +2605,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 16歲"
     },
     {
       "id": "g5-ag-004",
@@ -2458,7 +2621,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 10歲"
     },
     {
       "id": "g5-ag-005",
@@ -2473,7 +2637,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 18年後"
     },
     {
       "id": "g5-ag-006",
@@ -2488,7 +2653,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 12歲"
     },
     {
       "id": "g5-ag-007",
@@ -2503,7 +2669,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 39歲"
     },
     {
       "id": "g5-ag-008",
@@ -2518,7 +2685,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 3年前"
     },
     {
       "id": "g5-ag-009",
@@ -2533,7 +2701,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 32歲"
     },
     {
       "id": "g5-ag-010",
@@ -2548,7 +2717,8 @@
       "grade": 5,
       "category": "年齡問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 12歲"
     },
     {
       "id": "g5-wk-001",
@@ -2563,7 +2733,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 6小時"
     },
     {
       "id": "g5-wk-002",
@@ -2578,7 +2749,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 4.8天"
     },
     {
       "id": "g5-wk-003",
@@ -2593,7 +2765,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 40/3天"
     },
     {
       "id": "g5-wk-004",
@@ -2608,7 +2781,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 1.6小時"
     },
     {
       "id": "g5-wk-005",
@@ -2623,7 +2797,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 10/3小時"
     },
     {
       "id": "g5-wk-006",
@@ -2638,7 +2813,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 4天"
     },
     {
       "id": "g5-wk-007",
@@ -2653,7 +2829,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 5天"
     },
     {
       "id": "g5-wk-008",
@@ -2668,7 +2845,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 15天"
     },
     {
       "id": "g5-wk-009",
@@ -2683,7 +2861,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 16人"
     },
     {
       "id": "g5-wk-010",
@@ -2698,7 +2877,8 @@
       "grade": 5,
       "category": "工作問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 22天"
     },
     {
       "id": "g5-st-001",
@@ -2713,7 +2893,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 37.5%"
     },
     {
       "id": "g5-st-002",
@@ -2728,7 +2909,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 120件"
     },
     {
       "id": "g5-st-003",
@@ -2743,7 +2925,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 54萬"
     },
     {
       "id": "g5-st-004",
@@ -2758,7 +2941,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 40人"
     },
     {
       "id": "g5-st-005",
@@ -2773,7 +2957,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 90分"
     },
     {
       "id": "g5-st-006",
@@ -2788,7 +2973,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 8"
     },
     {
       "id": "g5-st-007",
@@ -2803,7 +2989,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 6"
     },
     {
       "id": "g5-st-008",
@@ -2818,7 +3005,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 54度"
     },
     {
       "id": "g5-st-009",
@@ -2833,7 +3021,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 35"
     },
     {
       "id": "g5-st-010",
@@ -2848,7 +3037,8 @@
       "grade": 5,
       "category": "統計圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 56"
     },
     {
       "id": "g5-mx-001",
@@ -2863,7 +3053,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 45"
     },
     {
       "id": "g5-mx-002",
@@ -2878,7 +3069,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 40"
     },
     {
       "id": "g5-mx-003",
@@ -2893,7 +3085,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 96平方公分"
     },
     {
       "id": "g5-mx-004",
@@ -2908,7 +3101,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 4元"
     },
     {
       "id": "g5-mx-005",
@@ -2923,7 +3117,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 144%"
     },
     {
       "id": "g5-mx-006",
@@ -2938,7 +3133,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 5小時"
     },
     {
       "id": "g5-mx-007",
@@ -2953,7 +3149,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 750公尺"
     },
     {
       "id": "g5-mx-008",
@@ -2968,7 +3165,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 10分鐘"
     },
     {
       "id": "g5-mx-009",
@@ -2983,7 +3181,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 100a+10b+c"
     },
     {
       "id": "g5-mx-010",
@@ -2998,7 +3197,8 @@
       "grade": 5,
       "category": "混合應用題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 約1.41"
     },
     {
       "id": "g5-fc-101",
@@ -3013,7 +3213,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 11/10"
     },
     {
       "id": "g5-fc-102",
@@ -3028,7 +3229,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數除法：除以一個分數等於乘以它的倒數。計算後約分得到答案 1"
     },
     {
       "id": "g5-fc-103",
@@ -3043,7 +3245,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 27"
     },
     {
       "id": "g5-fc-104",
@@ -3058,7 +3261,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 6/10"
     },
     {
       "id": "g5-fc-105",
@@ -3073,7 +3277,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 60個"
     },
     {
       "id": "g5-fc-106",
@@ -3088,7 +3293,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 5/9 較大"
     },
     {
       "id": "g5-fc-107",
@@ -3103,7 +3309,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 120"
     },
     {
       "id": "g5-fc-108",
@@ -3118,7 +3325,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 27"
     },
     {
       "id": "g5-fc-109",
@@ -3133,7 +3341,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 0"
     },
     {
       "id": "g5-fc-110",
@@ -3148,7 +3357,8 @@
       "grade": 5,
       "category": "分數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 5"
     },
     {
       "id": "g5-dc-101",
@@ -3163,7 +3373,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數加法：對齊小數點，從右往左依次相加。答案是 36"
     },
     {
       "id": "g5-dc-102",
@@ -3178,7 +3389,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數乘法：先按整數乘法計算，再數小數位數點小數點。答案是 110"
     },
     {
       "id": "g5-dc-103",
@@ -3193,7 +3405,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "小數乘法：先按整數乘法計算，再數小數位數點小數點。答案是 9"
     },
     {
       "id": "g5-dc-104",
@@ -3208,7 +3421,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 3.14"
     },
     {
       "id": "g5-dc-105",
@@ -3223,7 +3437,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 1"
     },
     {
       "id": "g5-dc-106",
@@ -3238,7 +3453,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 3600公克"
     },
     {
       "id": "g5-dc-107",
@@ -3253,7 +3469,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 150分鐘"
     },
     {
       "id": "g5-dc-108",
@@ -3268,7 +3485,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 ="
     },
     {
       "id": "g5-dc-109",
@@ -3283,7 +3501,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 10.08"
     },
     {
       "id": "g5-dc-110",
@@ -3298,7 +3517,8 @@
       "grade": 5,
       "category": "小數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 0.99x 元"
     },
     {
       "id": "g5-ar-101",
@@ -3313,7 +3533,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 10公分"
     },
     {
       "id": "g5-ar-102",
@@ -3328,7 +3549,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "平行四邊形面積 = 底 × 高。代入數值計算得到答案 減少4%"
     },
     {
       "id": "g5-ar-103",
@@ -3343,7 +3565,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 24平方公分"
     },
     {
       "id": "g5-ar-104",
@@ -3358,7 +3581,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "梯形面積 = (上底 + 下底) × 高 ÷ 2。代入數值計算得到答案 720棵"
     },
     {
       "id": "g5-ar-105",
@@ -3373,7 +3597,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形面積 = 長 × 寬。代入數值計算得到答案 15平方單位"
     },
     {
       "id": "g5-ar-106",
@@ -3388,7 +3613,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "三角形面積 = 底 × 高 ÷ 2。代入數值計算得到答案 約5公分"
     },
     {
       "id": "g5-ar-107",
@@ -3403,7 +3629,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形面積 = 邊長 × 邊長。代入數值計算得到答案 50平方公分"
     },
     {
       "id": "g5-ar-108",
@@ -3418,7 +3645,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據圖形面積公式計算，答案是 24平方公分"
     },
     {
       "id": "g5-ar-109",
@@ -3433,7 +3661,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方形面積 = 邊長 × 邊長。代入數值計算得到答案 3公分"
     },
     {
       "id": "g5-ar-110",
@@ -3448,7 +3677,8 @@
       "grade": 5,
       "category": "面積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方形面積 = 長 × 寬。代入數值計算得到答案 96平方公分"
     },
     {
       "id": "g5-vo-101",
@@ -3463,7 +3693,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 5公分"
     },
     {
       "id": "g5-vo-102",
@@ -3478,7 +3709,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 96立方公分"
     },
     {
       "id": "g5-vo-103",
@@ -3493,7 +3725,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據體積公式計算，答案是 3000立方公分"
     },
     {
       "id": "g5-vo-104",
@@ -3508,7 +3741,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 216個"
     },
     {
       "id": "g5-vo-105",
@@ -3523,7 +3757,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 12公分"
     },
     {
       "id": "g5-vo-106",
@@ -3538,7 +3773,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據體積公式計算，答案是 1000000立方公分"
     },
     {
       "id": "g5-vo-107",
@@ -3553,7 +3789,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 8倍"
     },
     {
       "id": "g5-vo-108",
@@ -3568,7 +3805,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 2公分"
     },
     {
       "id": "g5-vo-109",
@@ -3583,7 +3821,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據體積公式計算，答案是 750立方公尺"
     },
     {
       "id": "g5-vo-110",
@@ -3598,7 +3837,8 @@
       "grade": 5,
       "category": "體積綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正方體體積 = 邊長 × 邊長 × 邊長。代入數值計算得到答案 54平方公分"
     },
     {
       "id": "g5-mu-101",
@@ -3613,7 +3853,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 18"
     },
     {
       "id": "g5-mu-102",
@@ -3628,7 +3869,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 48"
     },
     {
       "id": "g5-mu-103",
@@ -3643,7 +3885,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 14"
     },
     {
       "id": "g5-mu-104",
@@ -3658,7 +3901,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 30本"
     },
     {
       "id": "g5-mu-105",
@@ -3673,7 +3917,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 6歲"
     },
     {
       "id": "g5-mu-106",
@@ -3688,7 +3933,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 63"
     },
     {
       "id": "g5-mu-107",
@@ -3703,7 +3949,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 15隻"
     },
     {
       "id": "g5-mu-108",
@@ -3718,7 +3965,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 90平方公分"
     },
     {
       "id": "g5-mu-109",
@@ -3733,7 +3981,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 15"
     },
     {
       "id": "g5-mu-110",
@@ -3748,7 +3997,8 @@
       "grade": 5,
       "category": "倍數問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數列方程式，根據倍數關係求解。答案是 20個"
     },
     {
       "id": "g5-pt-101",
@@ -3763,7 +4013,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 36"
     },
     {
       "id": "g5-pt-102",
@@ -3778,7 +4029,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 42"
     },
     {
       "id": "g5-pt-103",
@@ -3793,7 +4045,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 13"
     },
     {
       "id": "g5-pt-104",
@@ -3808,7 +4061,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 55"
     },
     {
       "id": "g5-pt-105",
@@ -3823,7 +4077,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 330"
     },
     {
       "id": "g5-pt-106",
@@ -3838,7 +4093,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 100"
     },
     {
       "id": "g5-pt-107",
@@ -3853,7 +4109,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 110"
     },
     {
       "id": "g5-pt-108",
@@ -3868,7 +4125,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 藍色"
     },
     {
       "id": "g5-pt-109",
@@ -3883,7 +4141,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 22"
     },
     {
       "id": "g5-pt-110",
@@ -3898,7 +4157,8 @@
       "grade": 5,
       "category": "規律問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "找出數列或圖形的規律，根據規律推算答案。答案是 5/6"
     },
     {
       "id": "g5-lg-101",
@@ -3913,7 +4173,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 4個"
     },
     {
       "id": "g5-lg-102",
@@ -3928,7 +4189,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 白"
     },
     {
       "id": "g5-lg-103",
@@ -3943,7 +4205,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 8"
     },
     {
       "id": "g5-lg-104",
@@ -3958,7 +4221,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 32"
     },
     {
       "id": "g5-lg-105",
@@ -3973,7 +4237,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 20"
     },
     {
       "id": "g5-lg-106",
@@ -3988,7 +4253,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 是閏年，星期日"
     },
     {
       "id": "g5-lg-107",
@@ -4003,7 +4269,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 4個"
     },
     {
       "id": "g5-lg-108",
@@ -4018,7 +4285,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 36"
     },
     {
       "id": "g5-lg-109",
@@ -4033,7 +4301,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 3087"
     },
     {
       "id": "g5-lg-110",
@@ -4048,7 +4317,8 @@
       "grade": 5,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 C"
     },
     {
       "id": "g5-mx-101",
@@ -4063,7 +4333,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 20/3天"
     },
     {
       "id": "g5-mx-102",
@@ -4078,7 +4349,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 4.5元"
     },
     {
       "id": "g5-mx-103",
@@ -4093,7 +4365,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 376平方公分"
     },
     {
       "id": "g5-mx-104",
@@ -4108,7 +4381,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 30公里/時"
     },
     {
       "id": "g5-mx-105",
@@ -4123,7 +4397,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 20人"
     },
     {
       "id": "g5-mx-106",
@@ -4138,7 +4413,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 2公斤"
     },
     {
       "id": "g5-mx-107",
@@ -4153,7 +4429,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 80噸"
     },
     {
       "id": "g5-mx-108",
@@ -4168,7 +4445,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 1/6"
     },
     {
       "id": "g5-mx-109",
@@ -4183,7 +4461,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 400秒"
     },
     {
       "id": "g5-mx-110",
@@ -4198,7 +4477,8 @@
       "grade": 5,
       "category": "綜合應用二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 746"
     },
     {
       "id": "g5-fa-201",
@@ -7733,7 +8013,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 7"
     },
     {
       "id": "g6-pn-002",
@@ -7748,7 +8029,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5"
     },
     {
       "id": "g6-pn-003",
@@ -7763,7 +8045,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 15"
     },
     {
       "id": "g6-pn-004",
@@ -7778,7 +8061,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -4"
     },
     {
       "id": "g6-pn-005",
@@ -7793,7 +8077,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5"
     },
     {
       "id": "g6-pn-006",
@@ -7808,7 +8093,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -10"
     },
     {
       "id": "g6-pn-007",
@@ -7823,7 +8109,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -1°C"
     },
     {
       "id": "g6-pn-008",
@@ -7838,7 +8125,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 5樓"
     },
     {
       "id": "g6-pn-009",
@@ -7853,7 +8141,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -15"
     },
     {
       "id": "g6-pn-010",
@@ -7868,7 +8157,8 @@
       "grade": 6,
       "category": "正負數運算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -8"
     },
     {
       "id": "g6-eq-001",
@@ -7883,7 +8173,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 8"
     },
     {
       "id": "g6-eq-002",
@@ -7898,7 +8189,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 9"
     },
     {
       "id": "g6-eq-003",
@@ -7913,7 +8205,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 8"
     },
     {
       "id": "g6-eq-004",
@@ -7928,7 +8221,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 6"
     },
     {
       "id": "g6-eq-005",
@@ -7943,7 +8237,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 7"
     },
     {
       "id": "g6-eq-006",
@@ -7958,7 +8253,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 9"
     },
     {
       "id": "g6-eq-007",
@@ -7973,7 +8269,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 11"
     },
     {
       "id": "g6-eq-008",
@@ -7988,7 +8285,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 9"
     },
     {
       "id": "g6-eq-009",
@@ -8003,7 +8301,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 4"
     },
     {
       "id": "g6-eq-010",
@@ -8018,7 +8317,8 @@
       "grade": 6,
       "category": "一元一次方程式",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 x = 5"
     },
     {
       "id": "g6-ci-001",
@@ -8033,7 +8333,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓周長 = 2 × π × 半徑 = π × 直徑。代入數值計算得到答案 44公分"
     },
     {
       "id": "g6-ci-002",
@@ -8048,7 +8349,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 314平方公分"
     },
     {
       "id": "g6-ci-003",
@@ -8063,7 +8365,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓周長 = 2 × π × 半徑 = π × 直徑。代入數值計算得到答案 10公分"
     },
     {
       "id": "g6-ci-004",
@@ -8078,7 +8381,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 14公分"
     },
     {
       "id": "g6-ci-005",
@@ -8093,7 +8397,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓周長 = 2 × π × 半徑 = π × 直徑。代入數值計算得到答案 51.4公分"
     },
     {
       "id": "g6-ci-006",
@@ -8108,7 +8413,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 200.96平方公分"
     },
     {
       "id": "g6-ci-007",
@@ -8123,7 +8429,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 60度，231平方公分"
     },
     {
       "id": "g6-ci-008",
@@ -8138,7 +8445,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 188.57平方公尺"
     },
     {
       "id": "g6-ci-009",
@@ -8153,7 +8461,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓面積 = π × 半徑²。代入數值計算得到答案 4倍"
     },
     {
       "id": "g6-ci-010",
@@ -8168,7 +8477,8 @@
       "grade": 6,
       "category": "圓的周長與面積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題意分析數量關係，列式計算得到答案 220公尺"
     },
     {
       "id": "g6-cy-001",
@@ -8183,7 +8493,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 785立方公分"
     },
     {
       "id": "g6-cy-002",
@@ -8198,7 +8509,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 1540立方公分"
     },
     {
       "id": "g6-cy-003",
@@ -8213,7 +8525,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 12公分"
     },
     {
       "id": "g6-cy-004",
@@ -8228,7 +8541,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 37.68公升"
     },
     {
       "id": "g6-cy-005",
@@ -8243,7 +8557,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 628立方公分"
     },
     {
       "id": "g6-cy-006",
@@ -8258,7 +8573,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 308平方公分"
     },
     {
       "id": "g6-cy-007",
@@ -8273,7 +8589,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 250平方公分"
     },
     {
       "id": "g6-cy-008",
@@ -8288,7 +8605,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 10公分"
     },
     {
       "id": "g6-cy-009",
@@ -8303,7 +8621,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "長方體體積 = 長 × 寬 × 高。代入數值計算得到答案 376.8平方公分"
     },
     {
       "id": "g6-cy-010",
@@ -8318,7 +8637,8 @@
       "grade": 6,
       "category": "圓柱體積",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "圓柱體積 = π × 半徑² × 高。代入數值計算得到答案 12倍"
     },
     {
       "id": "g6-rt-001",
@@ -8333,7 +8653,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 60"
     },
     {
       "id": "g6-rt-002",
@@ -8348,7 +8669,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 60"
     },
     {
       "id": "g6-rt-003",
@@ -8363,7 +8685,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 48人"
     },
     {
       "id": "g6-rt-004",
@@ -8378,7 +8701,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 60元"
     },
     {
       "id": "g6-rt-005",
@@ -8393,7 +8717,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 1：2500000"
     },
     {
       "id": "g6-rt-006",
@@ -8408,7 +8733,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 2：3"
     },
     {
       "id": "g6-rt-007",
@@ -8423,7 +8749,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 60人"
     },
     {
       "id": "g6-rt-008",
@@ -8438,7 +8765,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 240平方公分"
     },
     {
       "id": "g6-rt-009",
@@ -8453,7 +8781,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 150元"
     },
     {
       "id": "g6-rt-010",
@@ -8468,7 +8797,8 @@
       "grade": 6,
       "category": "比與比值應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "比的化簡：找最大公因數約分。比值 = 前項 ÷ 後項。答案是 20：21"
     },
     {
       "id": "g6-pe-001",
@@ -8483,7 +8813,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 600元"
     },
     {
       "id": "g6-pe-002",
@@ -8498,7 +8829,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 600元"
     },
     {
       "id": "g6-pe-003",
@@ -8513,7 +8845,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 480元"
     },
     {
       "id": "g6-pe-004",
@@ -8528,7 +8861,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 10300元"
     },
     {
       "id": "g6-pe-005",
@@ -8543,7 +8877,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 900元"
     },
     {
       "id": "g6-pe-006",
@@ -8558,7 +8893,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 94%"
     },
     {
       "id": "g6-pe-007",
@@ -8573,7 +8909,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 原價"
     },
     {
       "id": "g6-pe-008",
@@ -8588,7 +8925,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 81%"
     },
     {
       "id": "g6-pe-009",
@@ -8603,7 +8941,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 300元"
     },
     {
       "id": "g6-pe-010",
@@ -8618,7 +8957,8 @@
       "grade": 6,
       "category": "百分率應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "百分比 = (部分 ÷ 整體) × 100%。根據題意計算得到答案 5150元"
     },
     {
       "id": "g6-sp-001",
@@ -8633,7 +8973,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 300公里"
     },
     {
       "id": "g6-sp-002",
@@ -8648,7 +8989,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 4.8小時"
     },
     {
       "id": "g6-sp-003",
@@ -8663,7 +9005,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 10分鐘"
     },
     {
       "id": "g6-sp-004",
@@ -8678,7 +9021,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 40秒"
     },
     {
       "id": "g6-sp-005",
@@ -8693,7 +9037,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 8秒"
     },
     {
       "id": "g6-sp-006",
@@ -8708,7 +9053,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 6分鐘"
     },
     {
       "id": "g6-sp-007",
@@ -8723,7 +9069,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 3小時"
     },
     {
       "id": "g6-sp-008",
@@ -8738,7 +9085,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 48公里/時"
     },
     {
       "id": "g6-sp-009",
@@ -8753,7 +9101,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 150公里"
     },
     {
       "id": "g6-sp-010",
@@ -8768,7 +9117,8 @@
       "grade": 6,
       "category": "速率問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "速率公式：速率 = 距離 ÷ 時間，距離 = 速率 × 時間，時間 = 距離 ÷ 速率。計算得到答案 5公里/時"
     },
     {
       "id": "g6-ap-001",
@@ -8783,7 +9133,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 39"
     },
     {
       "id": "g6-ap-002",
@@ -8798,7 +9149,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 3"
     },
     {
       "id": "g6-ap-003",
@@ -8813,7 +9165,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 62"
     },
     {
       "id": "g6-ap-004",
@@ -8828,7 +9181,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 5050"
     },
     {
       "id": "g6-ap-005",
@@ -8843,7 +9197,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 650"
     },
     {
       "id": "g6-ap-006",
@@ -8858,7 +9213,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 82個"
     },
     {
       "id": "g6-ap-007",
@@ -8873,7 +9229,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 1070個"
     },
     {
       "id": "g6-ap-008",
@@ -8888,7 +9245,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 120根"
     },
     {
       "id": "g6-ap-009",
@@ -8903,7 +9261,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 17項"
     },
     {
       "id": "g6-ap-010",
@@ -8918,7 +9277,8 @@
       "grade": 6,
       "category": "等差數列",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "等差數列：第 n 項 = 首項 + (n-1) × 公差；項數 = (末項 - 首項) ÷ 公差 + 1；總和 = (首項 + 末項) × 項數 ÷ 2。答案是 2500"
     },
     {
       "id": "g6-ag-001",
@@ -8933,7 +9293,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 20年後"
     },
     {
       "id": "g6-ag-002",
@@ -8948,7 +9309,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 3年前"
     },
     {
       "id": "g6-ag-003",
@@ -8963,7 +9325,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 29歲"
     },
     {
       "id": "g6-ag-004",
@@ -8978,7 +9341,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 10歲"
     },
     {
       "id": "g6-ag-005",
@@ -8993,7 +9357,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 12歲"
     },
     {
       "id": "g6-ag-006",
@@ -9008,7 +9373,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 12歲"
     },
     {
       "id": "g6-ag-007",
@@ -9023,7 +9389,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 39歲"
     },
     {
       "id": "g6-ag-008",
@@ -9038,7 +9405,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 25歲"
     },
     {
       "id": "g6-ag-009",
@@ -9053,7 +9421,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 2年前"
     },
     {
       "id": "g6-ag-010",
@@ -9068,7 +9437,8 @@
       "grade": 6,
       "category": "年齡問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "年齡問題關鍵：年齡差不變。設未知數，列方程式求解。答案是 40歲"
     },
     {
       "id": "g6-wk-001",
@@ -9083,7 +9453,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 7.2天"
     },
     {
       "id": "g6-wk-002",
@@ -9098,7 +9469,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 5天"
     },
     {
       "id": "g6-wk-003",
@@ -9113,7 +9485,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 9天"
     },
     {
       "id": "g6-wk-004",
@@ -9128,7 +9501,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 2.4小時"
     },
     {
       "id": "g6-wk-005",
@@ -9143,7 +9517,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 24小時"
     },
     {
       "id": "g6-wk-006",
@@ -9158,7 +9533,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 18天"
     },
     {
       "id": "g6-wk-007",
@@ -9173,7 +9549,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 15天"
     },
     {
       "id": "g6-wk-008",
@@ -9188,7 +9565,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 16天"
     },
     {
       "id": "g6-wk-009",
@@ -9203,7 +9581,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 約8.3天"
     },
     {
       "id": "g6-wk-010",
@@ -9218,7 +9597,8 @@
       "grade": 6,
       "category": "工程問題進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "工作問題：設工作總量為 1，工作效率 = 1 ÷ 完成時間。合作時效率相加。答案是 11.25天"
     },
     {
       "id": "g6-fc-001",
@@ -9233,7 +9613,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 4公尺"
     },
     {
       "id": "g6-fc-002",
@@ -9248,7 +9629,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 120噸"
     },
     {
       "id": "g6-fc-003",
@@ -9263,7 +9645,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 200頁"
     },
     {
       "id": "g6-fc-004",
@@ -9278,7 +9661,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 150元"
     },
     {
       "id": "g6-fc-005",
@@ -9293,7 +9677,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 20公升"
     },
     {
       "id": "g6-fc-006",
@@ -9308,7 +9693,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 1428.57公尺"
     },
     {
       "id": "g6-fc-007",
@@ -9323,7 +9709,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 42個"
     },
     {
       "id": "g6-fc-008",
@@ -9338,7 +9725,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 50"
     },
     {
       "id": "g6-fc-009",
@@ -9353,7 +9741,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 60"
     },
     {
       "id": "g6-fc-010",
@@ -9368,7 +9757,8 @@
       "grade": 6,
       "category": "分數連續計算",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "分數乘法：分子乘分子，分母乘分母，最後約分。答案是 4公尺"
     },
     {
       "id": "g6-st-001",
@@ -9383,7 +9773,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 108度"
     },
     {
       "id": "g6-st-002",
@@ -9398,7 +9789,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 20%"
     },
     {
       "id": "g6-st-003",
@@ -9413,7 +9805,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 80"
     },
     {
       "id": "g6-st-004",
@@ -9428,7 +9821,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 8"
     },
     {
       "id": "g6-st-005",
@@ -9443,7 +9837,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 5"
     },
     {
       "id": "g6-st-006",
@@ -9458,7 +9853,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 85分"
     },
     {
       "id": "g6-st-007",
@@ -9473,7 +9869,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 65"
     },
     {
       "id": "g6-st-008",
@@ -9488,7 +9885,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 80"
     },
     {
       "id": "g6-st-009",
@@ -9503,7 +9901,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 90度"
     },
     {
       "id": "g6-st-010",
@@ -9518,7 +9917,8 @@
       "grade": 6,
       "category": "統計與圖表",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細閱讀圖表數據，根據題意進行計算或比較。答案是 24"
     },
     {
       "id": "g6-cn-001",
@@ -9533,7 +9933,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 10%"
     },
     {
       "id": "g6-cn-002",
@@ -9548,7 +9949,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 40克"
     },
     {
       "id": "g6-cn-003",
@@ -9563,7 +9965,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 200克"
     },
     {
       "id": "g6-cn-004",
@@ -9578,7 +9981,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 30%"
     },
     {
       "id": "g6-cn-005",
@@ -9593,7 +9997,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 15%"
     },
     {
       "id": "g6-cn-006",
@@ -9608,7 +10013,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 50克"
     },
     {
       "id": "g6-cn-007",
@@ -9623,7 +10029,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 17%"
     },
     {
       "id": "g6-cn-008",
@@ -9638,7 +10045,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 50克"
     },
     {
       "id": "g6-cn-009",
@@ -9653,7 +10061,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 約16.67%"
     },
     {
       "id": "g6-cn-010",
@@ -9668,7 +10077,8 @@
       "grade": 6,
       "category": "濃度問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "濃度 = 溶質 ÷ 溶液 × 100%。根據題意列式計算得到答案 2%"
     },
     {
       "id": "g6-pf-001",
@@ -9683,7 +10093,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 25%"
     },
     {
       "id": "g6-pf-002",
@@ -9698,7 +10109,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 260元"
     },
     {
       "id": "g6-pf-003",
@@ -9713,7 +10125,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 120元"
     },
     {
       "id": "g6-pf-004",
@@ -9728,7 +10141,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 20%"
     },
     {
       "id": "g6-pf-005",
@@ -9743,7 +10157,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 300元"
     },
     {
       "id": "g6-pf-006",
@@ -9758,7 +10173,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 660元"
     },
     {
       "id": "g6-pf-007",
@@ -9773,7 +10189,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 20%"
     },
     {
       "id": "g6-pf-008",
@@ -9788,7 +10205,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 35%"
     },
     {
       "id": "g6-pf-009",
@@ -9803,7 +10221,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 300元"
     },
     {
       "id": "g6-pf-010",
@@ -9818,7 +10237,8 @@
       "grade": 6,
       "category": "利潤問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "利潤 = 售價 - 成本，利潤率 = 利潤 ÷ 成本 × 100%。計算得到答案 500元"
     },
     {
       "id": "g6-cr-001",
@@ -9833,7 +10253,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 12隻"
     },
     {
       "id": "g6-cr-002",
@@ -9848,7 +10269,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 12隻"
     },
     {
       "id": "g6-cr-003",
@@ -9863,7 +10285,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 10支"
     },
     {
       "id": "g6-cr-004",
@@ -9878,7 +10301,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 4艘"
     },
     {
       "id": "g6-cr-005",
@@ -9893,7 +10317,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 16題"
     },
     {
       "id": "g6-cr-006",
@@ -9908,7 +10333,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 12輛"
     },
     {
       "id": "g6-cr-007",
@@ -9923,7 +10349,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 4隻"
     },
     {
       "id": "g6-cr-008",
@@ -9938,7 +10365,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 9張"
     },
     {
       "id": "g6-cr-009",
@@ -9953,7 +10381,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 6輛"
     },
     {
       "id": "g6-cr-010",
@@ -9968,7 +10397,8 @@
       "grade": 6,
       "category": "雞兔問題",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "雞兔問題：假設全是雞（或兔），算出腳數差，再根據腳數差求出兔（或雞）的數量。答案是 85個"
     },
     {
       "id": "g6-ea-001",
@@ -9983,7 +10413,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 6"
     },
     {
       "id": "g6-ea-002",
@@ -9998,7 +10429,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 20歲"
     },
     {
       "id": "g6-ea-003",
@@ -10013,7 +10445,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 72平方公分"
     },
     {
       "id": "g6-ea-004",
@@ -10028,7 +10461,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 6元"
     },
     {
       "id": "g6-ea-005",
@@ -10043,7 +10477,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 600噸"
     },
     {
       "id": "g6-ea-006",
@@ -10058,7 +10493,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 10x + y"
     },
     {
       "id": "g6-ea-007",
@@ -10073,7 +10509,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 6"
     },
     {
       "id": "g6-ea-008",
@@ -10088,7 +10525,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 110元"
     },
     {
       "id": "g6-ea-009",
@@ -10103,7 +10541,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 21"
     },
     {
       "id": "g6-ea-010",
@@ -10118,7 +10557,8 @@
       "grade": 6,
       "category": "方程式應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "設未知數為 x，根據題意列方程式，移項求解。答案是 12天"
     },
     {
       "id": "g6-ge-001",
@@ -10133,7 +10573,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 90度"
     },
     {
       "id": "g6-ge-002",
@@ -10148,7 +10589,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 720度"
     },
     {
       "id": "g6-ge-003",
@@ -10163,7 +10605,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 47.1平方公分"
     },
     {
       "id": "g6-ge-004",
@@ -10178,7 +10621,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 94平方公分"
     },
     {
       "id": "g6-ge-005",
@@ -10193,7 +10637,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 約6.93公分"
     },
     {
       "id": "g6-ge-006",
@@ -10208,7 +10653,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 21%"
     },
     {
       "id": "g6-ge-007",
@@ -10223,7 +10669,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 44%"
     },
     {
       "id": "g6-ge-008",
@@ -10238,7 +10685,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 約244立方公分"
     },
     {
       "id": "g6-ge-009",
@@ -10253,7 +10701,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 12立方公分"
     },
     {
       "id": "g6-ge-010",
@@ -10268,7 +10717,8 @@
       "grade": 6,
       "category": "幾何綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "運用幾何公式和性質，分步計算求解。答案是 64立方公分"
     },
     {
       "id": "g6-lg-001",
@@ -10283,7 +10733,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 乙"
     },
     {
       "id": "g6-lg-002",
@@ -10298,7 +10749,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 9"
     },
     {
       "id": "g6-lg-003",
@@ -10313,7 +10765,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 33"
     },
     {
       "id": "g6-lg-004",
@@ -10328,7 +10781,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 21"
     },
     {
       "id": "g6-lg-005",
@@ -10343,7 +10797,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 約78.5%"
     },
     {
       "id": "g6-lg-006",
@@ -10358,7 +10813,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 10種"
     },
     {
       "id": "g6-lg-007",
@@ -10373,7 +10829,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 546"
     },
     {
       "id": "g6-lg-008",
@@ -10388,7 +10845,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 90度"
     },
     {
       "id": "g6-lg-009",
@@ -10403,7 +10861,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 5"
     },
     {
       "id": "g6-lg-010",
@@ -10418,7 +10877,8 @@
       "grade": 6,
       "category": "邏輯推理",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "根據題目條件，運用邏輯推理，排除錯誤選項。答案是 C"
     },
     {
       "id": "g6-mx-001",
@@ -10433,7 +10893,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 64%"
     },
     {
       "id": "g6-mx-002",
@@ -10448,7 +10909,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 15天"
     },
     {
       "id": "g6-mx-003",
@@ -10463,7 +10925,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 2.4小時"
     },
     {
       "id": "g6-mx-004",
@@ -10478,7 +10941,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 2.8小時"
     },
     {
       "id": "g6-mx-005",
@@ -10493,7 +10957,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 20人"
     },
     {
       "id": "g6-mx-006",
@@ -10508,7 +10973,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 37.68平方公尺"
     },
     {
       "id": "g6-mx-007",
@@ -10523,7 +10989,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 60秒"
     },
     {
       "id": "g6-mx-008",
@@ -10538,7 +11005,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 50個"
     },
     {
       "id": "g6-mx-009",
@@ -10553,7 +11021,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 8倍"
     },
     {
       "id": "g6-mx-010",
@@ -10568,7 +11037,8 @@
       "grade": 6,
       "category": "綜合應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "explanation": "仔細分析題意，找出數量關係，列式計算。答案是 104"
     },
     {
       "id": "g6-eq-101",
