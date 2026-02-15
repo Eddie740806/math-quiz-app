@@ -102,33 +102,52 @@ export default function Home() {
           )}
         </div>
 
-        {/* 一鍵開始 - 今日 10 題 */}
-        {user && (
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <button
-              onClick={() => router.push('/quiz?grade=5&count=10')}
-              className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-sm opacity-80">⚡ 快速開始</div>
-                  <div className="text-xl font-bold">今日 10 題（五年級）</div>
-                </div>
-                <div className="text-4xl">5️⃣</div>
+        {/* 一鍵開始 - 今日 10 題（遊客也能看到） */}
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <button
+            onClick={() => user ? router.push('/quiz?grade=5&count=10') : router.push('/login')}
+            className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-sm opacity-80">⚡ 快速開始</div>
+                <div className="text-xl font-bold">今日 10 題（五年級）</div>
               </div>
-            </button>
-            <button
-              onClick={() => router.push('/quiz?grade=6&count=10')}
-              className="bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-sm opacity-80">⚡ 快速開始</div>
-                  <div className="text-xl font-bold">今日 10 題（六年級）</div>
-                </div>
-                <div className="text-4xl">6️⃣</div>
+              <div className="text-4xl">5️⃣</div>
+            </div>
+          </button>
+          <button
+            onClick={() => user ? router.push('/quiz?grade=6&count=10') : router.push('/login')}
+            className="bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-sm opacity-80">⚡ 快速開始</div>
+                <div className="text-xl font-bold">今日 10 題（六年級）</div>
               </div>
-            </button>
+              <div className="text-4xl">6️⃣</div>
+            </div>
+          </button>
+        </div>
+
+        {/* 本週統計 */}
+        {user && progress && progress.totalAnswered > 0 && (
+          <div className="bg-white rounded-2xl shadow-xl p-4 mb-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="text-3xl">📈</div>
+                <div>
+                  <div className="text-sm text-gray-500">累計練習</div>
+                  <div className="text-xl font-bold text-gray-800">{progress.totalAnswered} 題</div>
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm text-gray-500">正確率</div>
+                <div className="text-xl font-bold text-green-500">
+                  {Math.round(progress.correctCount / progress.totalAnswered * 100)}%
+                </div>
+              </div>
+            </div>
           </div>
         )}
 
@@ -168,7 +187,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-gray-500 mt-4">💡 建議多練習正確率較低的單元</p>
+            <button
+              onClick={() => router.push('/quiz?grade=5&count=10&focus=weak')}
+              className="w-full mt-4 py-3 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl font-medium transition"
+            >
+              🎯 針對弱點練習
+            </button>
           </div>
         )}
 

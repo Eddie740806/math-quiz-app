@@ -22,6 +22,7 @@ function QuizContent() {
   const searchParams = useSearchParams();
   const grade = parseInt(searchParams.get('grade') || '5');
   const countParam = parseInt(searchParams.get('count') || '0');
+  const difficultyParam = searchParams.get('difficulty') || '';
   
   const [user, setUser] = useState<User | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -33,6 +34,7 @@ function QuizContent() {
   const [answeredCount, setAnsweredCount] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
   const [questionCount, setQuestionCount] = useState(countParam || 0);
+  const [difficulty, setDifficulty] = useState(difficultyParam || '');
   const [showCountSelector, setShowCountSelector] = useState(countParam === 0);
   const [combo, setCombo] = useState(0);
   const [maxCombo, setMaxCombo] = useState(0);
@@ -48,15 +50,23 @@ function QuizContent() {
 
     if (questionCount > 0) {
       // 篩選題目並隨機排序
-      const gradeQuestions = questionsData.questions
-        .filter((q: Question) => q.grade === grade)
+      let filtered = questionsData.questions.filter((q: Question) => q.grade === grade);
+      
+      // 難度篩選
+      if (difficulty === 'easy') {
+        filtered = filtered.filter((q: Question) => q.difficulty === 'medium' || q.difficulty === 'easy');
+      } else if (difficulty === 'hard') {
+        filtered = filtered.filter((q: Question) => q.difficulty === 'hard');
+      }
+      
+      const gradeQuestions = filtered
         .sort(() => Math.random() - 0.5)
         .slice(0, questionCount);
       
       setQuestions(gradeQuestions);
       setShowCountSelector(false);
     }
-  }, [grade, router, questionCount]);
+  }, [grade, router, questionCount, difficulty]);
 
   const startWithCount = (count: number) => {
     setQuestionCount(count);
@@ -133,7 +143,7 @@ function QuizContent() {
     );
   }
 
-  // 選擇題數
+  // 選擇題數和難度
   if (showCountSelector) {
     return (
       <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
@@ -141,9 +151,47 @@ function QuizContent() {
           <div className="text-center mb-6">
             <div className="text-5xl mb-4">{grade === 5 ? '5️⃣' : '6️⃣'}</div>
             <h1 className="text-2xl font-bold text-gray-800">{grade} 年級數學</h1>
-            <p className="text-gray-500">選擇要練習的題數</p>
+            <p className="text-gray-500">選擇難度和題數</p>
           </div>
 
+          {/* 難度選擇 */}
+          <div className="mb-6">
+            <p className="text-sm text-gray-600 mb-2">難度</p>
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                onClick={() => setDifficulty('easy')}
+                className={`py-2 px-3 rounded-lg text-sm font-medium transition ${
+                  difficulty === 'easy' 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-green-50 text-green-700 hover:bg-green-100'
+                }`}
+              >
+                🌱 基礎
+              </button>
+              <button
+                onClick={() => setDifficulty('')}
+                className={`py-2 px-3 rounded-lg text-sm font-medium transition ${
+                  difficulty === '' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                }`}
+              >
+                📚 綜合
+              </button>
+              <button
+                onClick={() => setDifficulty('hard')}
+                className={`py-2 px-3 rounded-lg text-sm font-medium transition ${
+                  difficulty === 'hard' 
+                    ? 'bg-red-500 text-white' 
+                    : 'bg-red-50 text-red-700 hover:bg-red-100'
+                }`}
+              >
+                🔥 挑戰
+              </button>
+            </div>
+          </div>
+
+          {/* 題數選擇 */}
           <div className="space-y-3">
             {[10, 20, 30, 50].map((count) => (
               <button
@@ -151,7 +199,7 @@ function QuizContent() {
                 onClick={() => startWithCount(count)}
                 className="w-full py-4 bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 hover:border-blue-400 text-blue-700 rounded-xl font-medium text-lg transition"
               >
-                {count} 題 {count === 10 ? '（快速）' : count === 50 ? '（挑戰）' : ''}
+                {count} 題 {count === 10 ? '（快速）' : count === 50 ? '（馬拉松）' : ''}
               </button>
             ))}
           </div>
@@ -193,7 +241,7 @@ function QuizContent() {
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 mb-4">
             <button
               onClick={handleRestart}
               className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition"
@@ -207,6 +255,18 @@ function QuizContent() {
               返回首頁
             </button>
           </div>
+          
+          {/* 分享按鈕 */}
+          <button
+            onClick={() => {
+              const text = `📐 國小數學題庫\n${grade}年級 ${questions.length}題\n✅ 得分：${score}\n📊 正確率：${accuracy}%\n🔥 最高連擊：${maxCombo}`;
+              navigator.clipboard.writeText(text);
+              alert('成績已複製！可以貼給爸媽看 📋');
+            }}
+            className="w-full py-3 bg-green-50 hover:bg-green-100 text-green-700 rounded-lg font-medium transition"
+          >
+            📤 分享成績
+          </button>
         </div>
       </main>
     );
