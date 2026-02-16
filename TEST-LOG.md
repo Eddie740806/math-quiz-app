@@ -1,545 +1,220 @@
-# 數學題庫系統深度測試日誌
+# 數學題庫系統測試日誌
 
-**測試日期：** 2026-02-16
+**最後更新：** 2026-02-16 18:45
 **測試網址：** https://math-quiz-app-hazel.vercel.app
 **專案位置：** ~/clawd/projects/math-quiz-app
 
 ---
 
-## 第一階段：家長視角測試 (20 種類型)
+## 7 大改進完成狀態
 
-### 1. 忙碌上班族媽媽 - 只有 5 分鐘
-**測試項目：** 能否快速讓孩子開始練習
-**結果：** ✅ 通過
-- 首頁有「⚡ 快速開始」按鈕，一鍵開始 10 題
-- 不需要複雜設定
-
-**發現問題：** 無
-
----
-
-### 2. 焦慮型家長 - 想看數據分析
-**測試項目：** 弱點分析、詳細統計
-**結果：** ✅ 通過（已修復）
-- 首頁有弱點分析 Top 3
-- 家長頁面可查看孩子進度
-
-**發現問題 #1：** ❌ → ✅ 已修復
-- 連續天數在首頁顯示 1，家長頁面顯示 0（不一致）
-- **修復：** 統一使用 `streak || 1` 作為預設值
-
-**發現問題 #2：** ❌ → ✅ 已修復
-- 家長頁面缺少「答對題數」和「最近活動時間」
-- **修復：** 新增這兩個統計項目
+| # | 功能 | 狀態 | 說明 |
+|---|------|------|------|
+| 1 | 排行榜跨設備同步 | ✅ 完成 | 使用 Supabase leaderboard 表 |
+| 2 | 家長專屬帳號 | ✅ 完成 | 新增 /parent-dashboard 頁面 |
+| 3 | 字體大小調整 | ✅ 完成 | 在 /settings 可選 小/中/大/特大 |
+| 4 | 班級管理功能 | ✅ 完成 | 新增 /class-management 頁面 |
+| 5 | 新手引導 tour | ✅ 完成 | Tour 組件，首次使用顯示 |
+| 6 | 雲端同步功能 | ✅ 完成 | 進度同步到 user_progress 表 |
+| 7 | 密碼加密存儲 | ✅ 完成 | SHA-256 hash，舊用戶自動遷移 |
 
 ---
 
-### 3. 科技恐懼型家長 - 介面要直覺
-**測試項目：** 介面是否容易理解
-**結果：** ✅ 通過
-- Emoji 圖示清晰
-- 按鈕文字明確
-- 沒有複雜的選項
+## ⚠️ 重要：需要執行 Supabase SQL
 
-**發現問題：** 無
+**新增的功能需要以下資料表，請在 Supabase Dashboard > SQL Editor 執行：**
 
----
+檔案位置：`supabase-schema-v2.sql`
 
-### 4. 比較型家長 - 想看排行榜
-**測試項目：** 排行榜功能
-**結果：** ✅ 通過
-- 排行榜頁面正常
-- 可按年級篩選
-- 顯示分數、正確率、連擊
+```sql
+-- 1. 排行榜表
+CREATE TABLE IF NOT EXISTS leaderboard (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  username TEXT NOT NULL,
+  score INTEGER NOT NULL,
+  accuracy INTEGER NOT NULL,
+  max_combo INTEGER NOT NULL DEFAULT 0,
+  total_questions INTEGER NOT NULL,
+  grade INTEGER NOT NULL DEFAULT 5,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
 
-**發現問題 #3：** ⚠️ 待改進（需要後端支援）
-- 排行榜是 localStorage 存儲，不同設備看不到其他人成績
-- **建議：** 未來可考慮雲端同步（已有 Supabase 基礎）
+-- 2. 更新用戶表
+ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'student';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS password_hash TEXT;
 
----
+-- 3. 家長-孩子綁定表
+CREATE TABLE IF NOT EXISTS parent_children (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  parent_id UUID REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+  child_id UUID REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(parent_id, child_id)
+);
 
-### 5. 控制型家長 - 想出卷
-**測試項目：** 出卷系統
-**結果：** ✅ 通過（已增強）
+-- 4. 班級表
+CREATE TABLE IF NOT EXISTS classes (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  name TEXT NOT NULL,
+  description TEXT,
+  teacher_id UUID REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+  invite_code TEXT UNIQUE NOT NULL,
+  grade INTEGER DEFAULT 5,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  is_active BOOLEAN DEFAULT TRUE
+);
 
-**發現問題 #4：** ❌ → ✅ 已修復
-- 出卷功能沒有「選擇特定題型」的選項
-- **修復：** 新增題型選擇功能（分數、小數、因數倍數、面積體積、時間計算、應用題）
+-- 5. 班級成員表
+CREATE TABLE IF NOT EXISTS class_members (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  class_id UUID REFERENCES classes(id) ON DELETE CASCADE NOT NULL,
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+  joined_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(class_id, user_id)
+);
 
----
+-- 6. 用戶進度表
+CREATE TABLE IF NOT EXISTS user_progress (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE UNIQUE NOT NULL,
+  total_answered INTEGER DEFAULT 0,
+  correct_count INTEGER DEFAULT 0,
+  streak INTEGER DEFAULT 0,
+  last_practice_date DATE,
+  category_stats JSONB DEFAULT '[]'::jsonb,
+  wrong_records JSONB DEFAULT '[]'::jsonb,
+  achievements JSONB DEFAULT '[]'::jsonb,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
 
-### 6. 放養型家長 - 只想知道孩子有沒有在用
-**測試項目：** 使用狀態追蹤
-**結果：** ✅ 通過（已修復）
-- 家長頁面顯示「最近練習時間」
-- 可看到總答題數
+-- 7. RLS 策略
+ALTER TABLE leaderboard ENABLE ROW LEVEL SECURITY;
+ALTER TABLE parent_children ENABLE ROW LEVEL SECURITY;
+ALTER TABLE classes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE class_members ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_progress ENABLE ROW LEVEL SECURITY;
 
-**發現問題：** 無（已在 #2 修復）
-
----
-
-### 7. 數據控家長 - 要看詳細統計
-**測試項目：** 詳細數據展示
-**結果：** ✅ 通過（已增強）
-
-**發現問題 #5：** ❌ → ✅ 已修復
-- 缺少「今日練習題數」統計
-- **修復：** 首頁今日目標進度條現在使用「今日答題數」而非「累計答題數」
-
----
-
-### 8. 多孩家長 - 有兩個以上孩子
-**測試項目：** 多帳號管理
-**結果：** ⚠️ 部分通過
-- 可以「切換帳號」登入不同孩子
-- 家長頁面可查詢任意用戶名
-
-**發現問題 #6：** ⚠️ 待改進（需要較大改動）
-- 沒有「家長專屬帳號」功能
-- 每次都要輸入孩子用戶名查詢
-- **建議：** 新增家長帳號，可綁定多個孩子
-
----
-
-### 9. 夜貓型家長 - 需要深色模式
-**測試項目：** 深色模式
-**結果：** ✅ 通過（已增強）
-
-**發現問題 #7：** ❌ → ✅ 已修復
-- 深色模式下部分頁面樣式不完整
-- **修復：** 在 globals.css 中添加完整的深色模式樣式
-
----
-
-### 10. 手機用戶家長 - 純手機操作
-**測試項目：** 手機適配
-**結果：** ✅ 通過
-- 使用響應式設計
-- 按鈕足夠大
-- 文字清晰可讀
-
-**發現問題：** 無
+CREATE POLICY "Allow all for leaderboard" ON leaderboard FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow all for parent_children" ON parent_children FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow all for classes" ON classes FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow all for class_members" ON class_members FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow all for user_progress" ON user_progress FOR ALL USING (true) WITH CHECK (true);
+```
 
 ---
 
-### 11. 老花眼長輩 - 字體要夠大
-**測試項目：** 無障礙設計
-**結果：** ⚠️ 部分通過
-- 主要文字夠大
-- 按鈕足夠大
+## 新增頁面
 
-**發現問題 #8：** ⚠️ 待改進
-- 部分小字（如「+18 種題型」）可能看不清
-- **建議：** 提供字體大小調整功能
+### /settings - 設定頁面
+- 字體大小選擇（小/中/大/特大）
+- 主題切換（淺色/深色）
+- 加入班級（輸入邀請碼）
+- 重置新手引導
+- 帳號資訊
 
----
+### /parent-dashboard - 家長專區
+- 綁定孩子帳號
+- 查看所有孩子的學習進度
+- 弱點分析
+- 成就徽章
+- 錯題本統計
 
-### 12. 成就導向家長 - 想看孩子成就
-**測試項目：** 成就系統
-**結果：** ✅ 通過
-- 成就頁面顯示 14 個成就
-- 顯示解鎖狀態和解鎖日期
-- 進度條清晰
-
-**發現問題：** 無
-
----
-
-### 13. 補習班老師 - 追蹤多個學生
-**測試項目：** 批量管理
-**結果：** ⚠️ 部分通過
-- 可以用家長頁面逐一查詢學生
-
-**發現問題 #9：** ⚠️ 待改進（需要較大改動）
-- 沒有「班級管理」功能
-- 無法一次查看多個學生
-- **建議：** 新增班級/批量管理功能
+### /class-management - 班級管理
+- 建立班級
+- 生成邀請碼
+- 查看學生列表
+- 查看學生進度
+- 為班級出卷
 
 ---
 
-### 14. 家教老師 - 針對弱點出題
-**測試項目：** 弱點練習
-**結果：** ✅ 通過（已增強）
-- 首頁有「🎯 針對弱點練習」按鈕
-- 可以看到弱點分析 Top 3
-- 出卷功能現在支援題型選擇
+## 新增檔案
 
-**發現問題：** 無（已在 #4 修復）
-
----
-
-### 15. 新手家長 - 第一次用
-**測試項目：** 新手引導
-**結果：** ⚠️ 部分通過
-- 未登入時首頁有「👋 第一次來嗎？」提示
-
-**發現問題 #10：** ⚠️ 待改進
-- 沒有完整的新手教學流程
-- **建議：** 新增首次使用引導 tour
+| 檔案 | 說明 |
+|------|------|
+| `src/lib/crypto.ts` | 密碼加密工具（SHA-256） |
+| `src/components/Tour.tsx` | 新手引導組件 |
+| `src/app/settings/page.tsx` | 設定頁面 |
+| `src/app/parent-dashboard/page.tsx` | 家長專區 |
+| `src/app/class-management/page.tsx` | 班級管理 |
+| `supabase-schema-v2.sql` | 新增資料表 SQL |
 
 ---
 
-### 16. 回頭用戶家長 - 換裝置回來
-**測試項目：** 數據同步
-**結果：** ⚠️ 部分通過
-- 數據存在 localStorage，換裝置會遺失
-- Supabase 有基礎追蹤但不完整
-
-**發現問題 #11：** ⚠️ 待改進（需要後端支援）
-- 換裝置後所有進度遺失
-- **建議：** 實作完整的雲端同步功能
-
----
-
-### 17. 隱私敏感家長 - 擔心資料安全
-**測試項目：** 隱私保護
-**結果：** ✅ 通過
-- 數據存在本地 localStorage
-- 密碼沒有明文傳輸到外部
-
-**發現問題 #12：** ⚠️ 安全建議
-- 密碼以明文存儲在 localStorage
-- **建議：** 使用密碼雜湊
-
----
-
-### 18. 免費仔家長 - 不想付錢
-**測試項目：** 免費功能完整度
-**結果：** ✅ 通過
-- 全部功能免費
-- 1000+ 題目免費使用
-- 無廣告
-
-**發現問題：** 無
-
----
-
-### 19. 挑剔型家長 - 什麼都要完美
-**測試項目：** 整體品質
-**結果：** ✅ 通過
-- 核心功能完整
-- UI 設計美觀
-- 多項改進已完成
-
-**發現問題：** 參考其他問題
-
----
-
-### 20. 佛系家長 - 孩子開心就好
-**測試項目：** 趣味性
-**結果：** ✅ 通過
-- 有連擊系統 🔥
-- 有成就徽章 🏅
-- 有排行榜競爭
-
-**發現問題：** 無
-
----
-
-## 第二階段：學生視角測試 (20 種類型)
-
-### 1. 資優生 - 想挑戰難題
-**測試項目：** 難度選擇
-**結果：** ✅ 通過
-- 有「🔥 挑戰」難度選項
-- 題目確實有不同難度
-
-**發現問題：** 無
-
----
-
-### 2. 落後生 - 需要鼓勵
-**測試項目：** 正向反饋
-**結果：** ✅ 通過（已增強）
-
-**發現問題 #13：** ❌ → ✅ 已修復
-- 連續答錯時沒有鼓勵訊息
-- **修復：** 新增三種鼓勵訊息：
-  - 「沒關係，錯誤是學習的機會！」
-  - 「加油！看看解題思路，下次一定會！」
-  - 「別灰心！練習越多，進步越快！」
-- emoji 從 😅 改為 💪（更正面）
-
----
-
-### 3. 粗心學生 - 常常選錯
-**測試項目：** 確認機制
-**結果：** ✅ 通過
-- 選擇後需要點「確認答案」
-- 有「跳過此題」選項
-
-**發現問題：** 無
-
----
-
-### 4. 競爭型學生 - 要看排行榜
-**測試項目：** 競爭功能
-**結果：** ✅ 通過
-- 排行榜顯示前 50 名
-- 顯示分數、正確率、連擊
-- 前三名有金銀銅獎牌
-
-**發現問題：** 無
-
----
-
-### 5. 成就控學生 - 想收集所有成就
-**測試項目：** 成就系統
-**結果：** ✅ 通過
-- 14 個成就可收集
-- 進度顯示 X/14
-- 有未解鎖/已解鎖狀態
-
-**發現問題：** 無
-
----
-
-### 6. 被逼來的學生 - 不想做
-**測試項目：** 中途退出
-**結果：** ✅ 通過
-- 可以點「← 返回」離開
-- 有確認提示「確定要離開嗎？」
-- 進度會保留到錯題本
-
-**發現問題：** 無
-
----
-
-### 7. 手殘學生 - 常按錯
-**測試項目：** 按鈕大小
-**結果：** ✅ 通過
-- 選項按鈕足夠大
-- 有足夠間距
-
-**發現問題：** 無
-
----
-
-### 8. 快速學生 - 答很快
-**測試項目：** 計時功能
-**結果：** ✅ 通過
-- 每題有計時顯示「⏱️ X秒」
-- 結束時顯示平均答題時間
-- 有「速算達人」成就
-
-**發現問題：** 無
-
----
-
-### 9. 慢速學生 - 需要時間
-**測試項目：** 無時間壓力
-**結果：** ✅ 通過
-- 沒有強制時間限制
-- 可以慢慢思考
-- 有「跳過」選項
-
-**發現問題：** 無
-
----
-
-### 10. 好奇學生 - 會亂點
-**測試項目：** 容錯性
-**結果：** ✅ 通過
-- 點擊選項可以改變選擇
-- 需要確認才提交
-- 頁面不會崩潰
-
-**發現問題：** 無
-
----
-
-### 11. 五年級新手 - 剛開始用
-**測試項目：** 入門體驗
-**結果：** ✅ 通過
-- 有明確的年級選擇
-- 五年級按鈕突出
-
-**發現問題：** 參考問題 #10
-
----
-
-### 12. 六年級老手 - 用很久了
-**測試項目：** 長期使用
-**結果：** ✅ 通過
-- 有累計統計
-- 連續天數追蹤
-- 進階成就可解鎖
-
-**發現問題：** 無
-
----
-
-### 13. 連擊追求者 - 想要高連擊
-**測試項目：** 連擊系統
-**結果：** ✅ 通過
-- 連續答對顯示「🔥 X 連擊」
-- 3 連擊以上有特效
-- 結束時顯示最高連擊
-
-**發現問題：** 無
-
----
-
-### 14. 錯題複習者 - 專門練錯題
-**測試項目：** 錯題本
-**結果：** ✅ 通過
-- 錯題自動收集
-- 可以「開始複習」
-- 答對後自動移除
-
-**發現問題：** 無
-
----
-
-### 15. 分數敏感學生 - 在意每一分
-**測試項目：** 分數顯示
-**結果：** ✅ 通過
-- 每題 10 分
-- 即時顯示得分
-- 結束時顯示總分
-
-**發現問題：** 無
-
----
-
-### 16. 時間敏感學生 - 趕著做完
-**測試項目：** 效率
-**結果：** ✅ 通過
-- 有快速開始（10 題）
-- 可以跳過題目
-- 進度條清晰
-
-**發現問題：** 無
-
----
-
-### 17. 無聊學生 - 希望有趣
-**測試項目：** 趣味性
-**結果：** ⚠️ 部分通過
-- 有 Emoji 和動畫
-- 有連擊和成就
-
-**發現問題 #14：** ⚠️ 待改進
-- 可以增加更多動畫效果
-- **建議：** 新增音效、更多獎勵動畫
-
----
-
-### 18. 認真學生 - 每題仔細看
-**測試項目：** 詳解功能
-**結果：** ✅ 通過
-- 每題有「💡 解題思路」
-- 答對答錯都顯示解析
-
-**發現問題：** 無
-
----
-
-### 19. 炫耀學生 - 想分享成績
-**測試項目：** 分享功能
-**結果：** ✅ 通過
-- 結束時有「📤 分享成績」按鈕
-- 複製文字格式的成績單
-
-**發現問題：** 無
-
----
-
-### 20. 放棄學生 - 容易放棄
-**測試項目：** 鼓勵機制
-**結果：** ✅ 通過（已增強）
-- 有成就獎勵
-- 有進度條激勵
-- 答錯時有鼓勵訊息
-
-**發現問題：** 無（已在 #13 修復）
-
----
-
-## 測試總結
-
-### ✅ 已修復的問題 (7 個)
-
-| # | 問題描述 | 修復狀態 | 修復檔案 |
-|---|---------|---------|---------|
-| 1 | 連續天數顯示不一致 | ✅ 已修復 | parent-view/page.tsx |
-| 2 | 家長頁面缺少統計資訊 | ✅ 已修復 | parent-view/page.tsx |
-| 4 | 出卷缺少題型選擇 | ✅ 已修復 | create-quiz/page.tsx, quiz/page.tsx |
-| 5 | 今日練習題數統計 | ✅ 已修復 | lib/storage.ts, page.tsx |
-| 7 | 深色模式樣式不完整 | ✅ 已修復 | globals.css |
-| 13 | 答錯缺少鼓勵訊息 | ✅ 已修復 | quiz/page.tsx |
-
-### ⚠️ 待改進的問題 (7 個)
-
-| # | 問題描述 | 建議方案 | 優先級 |
-|---|---------|---------|--------|
-| 3 | 排行榜跨設備同步 | 完整雲端同步 | 中 |
-| 6 | 家長專屬帳號 | 新增家長角色系統 | 低 |
-| 8 | 字體大小調整 | 新增無障礙設定 | 低 |
-| 9 | 班級管理功能 | 新增班級系統 | 中 |
-| 10 | 新手引導 tour | 新增互動教學 | 中 |
-| 11 | 雲端同步功能 | 完善 Supabase 整合 | 高 |
-| 12 | 密碼加密存儲 | 使用密碼雜湊 | 中 |
-| 14 | 更多動畫效果 | 新增音效和動畫 | 低 |
-
----
-
-## 修復記錄
-
-### 2026-02-16
-
-#### 修復 #1：連續天數統一
-**檔案：** `src/app/parent-view/page.tsx`
-**修改：** `childProgress.streak || 0` → `childProgress.streak || 1`
-
-#### 修復 #2：家長頁面新增統計
-**檔案：** `src/app/parent-view/page.tsx`
-**修改：** 
-- 新增「答對題數」統計
-- 新增「最近活動時間」顯示
-- 改為 4 欄式響應式布局
-
-#### 修復 #4：出卷增加題型選擇
-**檔案：** `src/app/create-quiz/page.tsx`, `src/app/quiz/page.tsx`
-**修改：**
-- 新增 CATEGORY_GROUPS 常數定義題型分類
-- 新增題型選擇 UI（可多選）
-- quiz 頁面支援 categories 參數篩選
-
-#### 修復 #5：今日答題數統計
-**檔案：** `src/lib/storage.ts`, `src/app/page.tsx`
-**修改：**
-- 新增 getTodayAnsweredCount 和 incrementTodayCount 函數
-- 首頁今日目標進度條使用今日計數
-
-#### 修復 #7：深色模式樣式完善
-**檔案：** `src/app/globals.css`
-**修改：**
-- 新增彩色背景深色模式樣式（blue-50, green-50, red-50 等）
-- 新增彩色文字深色模式樣式
-- 新增輸入框深色模式樣式
-- 新增 hover 狀態深色模式樣式
-
-#### 修復 #13：答錯鼓勵訊息
-**檔案：** `src/app/quiz/page.tsx`
-**修改：**
-- 將答錯時的 😅 改為 💪
-- 新增三種鼓勵訊息（根據錯誤次數變化）
-- 移除 animate-pulse（太刺眼）
+## 功能詳細說明
+
+### 1. 排行榜跨設備同步
+- 排行榜數據同時存儲在 localStorage 和 Supabase
+- 讀取時優先使用雲端數據
+- 顯示「☁️ 雲端排行榜」或「💾 本地排行榜」標記
+
+### 2. 家長專屬帳號
+- 註冊時可選擇身份：學生/家長/老師
+- 家長登入後自動導向 /parent-dashboard
+- 可綁定多個孩子帳號
+- 綁定後可查看孩子的詳細學習數據
+
+### 3. 字體大小調整
+- 四種大小：小(14px)、中(16px)、大(18px)、特大(22px)
+- 存儲在 localStorage
+- 全站生效
+
+### 4. 班級管理功能
+- 老師可建立班級，自動生成 6 位邀請碼
+- 學生在設定頁面輸入邀請碼加入班級
+- 老師可查看班級所有學生的進度
+- 可針對班級出卷
+
+### 5. 新手引導 tour
+- 6 個步驟的引導教學
+- 使用 tooltip 指引主要功能
+- 可跳過或完成
+- 完成後記錄到 localStorage
+- 可在設定中重置
+
+### 6. 雲端同步功能
+- 用戶進度（答題數、正確數、連續天數等）同步到 Supabase
+- 登入時自動從雲端拉取數據
+- 每 10 題自動同步一次
+- 換設備也能繼續
+
+### 7. 密碼加密存儲
+- 新用戶密碼使用 SHA-256 hash
+- 舊用戶下次登入時自動遷移到 hash
+- 本地和雲端都存儲 hash
 
 ---
 
 ## 部署記錄
 
-- **2026-02-16 17:50** - 部署到 Vercel 成功
-- **Production URL:** https://math-quiz-app-hazel.vercel.app
+- **2026-02-16 18:50** - 部署 7 大改進到 Vercel
+- **Commit:** feat: 完成 7 大改進
 
 ---
 
-## 下一步建議
+## 測試清單
 
-1. **高優先級：** 實作完整的雲端同步功能（使用現有 Supabase）
-2. **中優先級：** 新增新手引導 tour
-3. **中優先級：** 新增班級管理功能（適合補習班使用）
-4. **低優先級：** 新增字體大小調整
-5. **低優先級：** 新增音效和更多動畫效果
+### 基本功能 ✅
+- [x] 學生註冊/登入
+- [x] 家長註冊/登入
+- [x] 老師註冊/登入
+- [x] 快速開始練習
+- [x] 自訂出卷
+
+### 新功能測試（需要執行 SQL 後）
+- [ ] 排行榜雲端同步
+- [ ] 家長綁定孩子
+- [ ] 建立班級
+- [ ] 學生加入班級
+- [ ] 查看班級進度
+- [ ] 字體大小調整
+- [ ] 新手引導 tour
+- [ ] 密碼遷移
+
+---
+
+## 下一步
+
+1. **執行 SQL** - 在 Supabase Dashboard 執行 `supabase-schema-v2.sql`
+2. **功能測試** - 測試所有新功能
+3. **Bug 修復** - 發現問題立即修復
