@@ -128,59 +128,74 @@ export default function ParentViewPage() {
               )}
             </div>
 
-            {/* 弱點分析 */}
-            {childWeakCategories.length > 0 && (
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="font-bold text-gray-800 mb-4">📊 需要加強的單元</h3>
-                <div className="space-y-3">
-                  {childWeakCategories.map((cat, index) => (
-                    <div key={cat.category} className="flex items-center gap-3">
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold ${
-                        cat.accuracy < 50 ? 'bg-red-500' : cat.accuracy < 70 ? 'bg-orange-500' : 'bg-yellow-500'
-                      }`}>
-                        {index + 1}
-                      </span>
-                      <div className="flex-1">
-                        <div className="flex justify-between mb-1">
-                          <span className="text-gray-700">{cat.category}</span>
-                          <span className={`font-bold ${
-                            cat.accuracy < 50 ? 'text-red-500' : cat.accuracy < 70 ? 'text-orange-500' : 'text-yellow-600'
-                          }`}>
-                            {cat.accuracy}%
-                          </span>
-                        </div>
-                        <div className="bg-gray-200 rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full ${
-                              cat.accuracy < 50 ? 'bg-red-500' : cat.accuracy < 70 ? 'bg-orange-500' : 'bg-yellow-500'
-                            }`}
-                            style={{ width: `${cat.accuracy}%` }}
-                          />
+            {/* 弱點分析 Top 3 */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-4">📊 弱點分析 Top 3</h3>
+              {childWeakCategories.length > 0 ? (
+                <>
+                  <div className="space-y-3">
+                    {childWeakCategories.slice(0, 3).map((cat, index) => (
+                      <div key={cat.category} className="flex items-center gap-3">
+                        <span className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold ${
+                          index === 0 ? 'bg-red-500' : index === 1 ? 'bg-orange-500' : 'bg-yellow-500'
+                        }`}>
+                          {index + 1}
+                        </span>
+                        <div className="flex-1">
+                          <div className="flex justify-between mb-1">
+                            <span className="text-gray-700 font-medium">{cat.category}</span>
+                            <span className={`font-bold ${
+                              cat.accuracy < 50 ? 'text-red-500' : cat.accuracy < 70 ? 'text-orange-500' : 'text-yellow-600'
+                            }`}>
+                              {cat.accuracy}% 正確率
+                            </span>
+                          </div>
+                          <div className="bg-gray-200 rounded-full h-3">
+                            <div 
+                              className={`h-3 rounded-full transition-all ${
+                                cat.accuracy < 50 ? 'bg-red-500' : cat.accuracy < 70 ? 'bg-orange-500' : 'bg-yellow-500'
+                              }`}
+                              style={{ width: `${cat.accuracy}%` }}
+                            />
+                          </div>
+                          <div className="text-xs text-gray-400 mt-1">共練習 {cat.total} 題</div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-500 mt-4 bg-blue-50 p-3 rounded-lg">
+                    💡 <strong>建議：</strong>多練習正確率較低的單元，每天花 10 分鐘專攻弱點！
+                  </p>
+                </>
+              ) : (
+                <div className="text-center py-6 text-gray-500">
+                  <div className="text-4xl mb-2">📈</div>
+                  <p>孩子還在努力中，做更多題目後</p>
+                  <p>這裡會顯示需要加強的單元</p>
                 </div>
-                <p className="text-sm text-gray-500 mt-4">
-                  💡 建議多練習正確率較低的單元
-                </p>
-              </div>
-            )}
+              )}
+            </div>
 
-            {/* 成就 */}
-            {childAchievements.length > 0 && (
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="font-bold text-gray-800 mb-4">🏅 已獲得成就 ({childAchievements.length})</h3>
-                <div className="flex flex-wrap gap-2">
+            {/* 成就徽章 */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="font-bold text-gray-800 mb-4">🏅 成就徽章 ({childAchievements.length}/14)</h3>
+              {childAchievements.length > 0 ? (
+                <div className="flex flex-wrap gap-3">
                   {childAchievements.map((a) => (
-                    <div key={a.id} className="bg-purple-50 rounded-lg px-3 py-2 text-center">
-                      <div className="text-xl">{a.icon}</div>
-                      <div className="text-xs font-medium text-gray-700">{a.name}</div>
+                    <div key={a.id} className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl px-4 py-3 text-center shadow-sm">
+                      <div className="text-2xl mb-1">{a.icon}</div>
+                      <div className="text-sm font-medium text-gray-700">{a.name}</div>
                     </div>
                   ))}
                 </div>
-              </div>
-            )}
+              ) : (
+                <div className="text-center py-6 text-gray-500">
+                  <div className="text-4xl mb-2">🎯</div>
+                  <p>還沒解鎖成就徽章</p>
+                  <p className="text-sm mt-1">完成練習目標即可獲得徽章獎勵！</p>
+                </div>
+              )}
+            </div>
 
             {/* 錯題統計 */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
