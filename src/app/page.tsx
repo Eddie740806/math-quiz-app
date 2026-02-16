@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, User, UserProgress } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, User, UserProgress } from '@/lib/storage';
 import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [weakCategories, setWeakCategories] = useState<{ category: string; accuracy: number; total: number }[]>([]);
   const [achievementCount, setAchievementCount] = useState(0);
+  const [todayCount, setTodayCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
@@ -24,6 +25,7 @@ export default function Home() {
       setProgress(getUserProgress(currentUser.id));
       setWeakCategories(getWeakCategories(currentUser.id, 3));
       setAchievementCount(getUserAchievements(currentUser.id).length);
+      setTodayCount(getTodayAnsweredCount(currentUser.id));
     }
     setLoading(false);
   }, []);
@@ -169,15 +171,15 @@ export default function Home() {
             <div className="mb-4 pb-4 border-b">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-medium text-gray-700">🎯 今日目標：10 題</span>
-                <span className="text-sm text-blue-500 font-bold">{Math.min(progress?.totalAnswered || 0, 10)}/10</span>
+                <span className="text-sm text-blue-500 font-bold">{Math.min(todayCount, 10)}/10</span>
               </div>
               <div className="bg-gray-200 rounded-full h-3">
                 <div 
                   className="bg-gradient-to-r from-blue-400 to-blue-600 h-3 rounded-full transition-all"
-                  style={{ width: `${Math.min(((progress?.totalAnswered || 0) / 10) * 100, 100)}%` }}
+                  style={{ width: `${Math.min((todayCount / 10) * 100, 100)}%` }}
                 />
               </div>
-              {(progress?.totalAnswered || 0) >= 10 && (
+              {todayCount >= 10 && (
                 <div className="text-center text-green-500 text-sm mt-2 font-medium">✅ 已完成今日目標！繼續加油 💪</div>
               )}
             </div>

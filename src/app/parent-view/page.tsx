@@ -99,7 +99,7 @@ export default function ParentViewPage() {
               </div>
               
               {/* 統計數據 */}
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                 <div className="bg-blue-50 rounded-xl p-4">
                   <div className="text-2xl font-bold text-blue-600">{childProgress.totalAnswered}</div>
                   <div className="text-sm text-gray-500">總答題數</div>
@@ -109,10 +109,23 @@ export default function ParentViewPage() {
                   <div className="text-sm text-gray-500">正確率</div>
                 </div>
                 <div className="bg-orange-50 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-orange-600">{childProgress.streak || 0}</div>
+                  <div className="text-2xl font-bold text-orange-600">{childProgress.streak || 1}</div>
                   <div className="text-sm text-gray-500">連續天數</div>
                 </div>
+                <div className="bg-purple-50 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-purple-600">{childProgress.correctCount}</div>
+                  <div className="text-sm text-gray-500">答對題數</div>
+                </div>
               </div>
+              
+              {/* 最近活動 */}
+              {childProgress.lastActiveAt && (
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <p className="text-sm text-gray-500">
+                    📅 最近練習：{new Date(childProgress.lastActiveAt).toLocaleString('zh-TW')}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* 弱點分析 */}

@@ -178,6 +178,9 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
   const progress = getUserProgress(odiserId);
   const isCorrect = userAnswer === correctAnswer;
   
+  // 記錄今日答題數
+  incrementTodayCount(odiserId);
+  
   // 追蹤到 Supabase（背景執行）
   const currentUser = getCurrentUser();
   if (currentUser && supabaseUserIds[currentUser.username]) {
@@ -245,6 +248,28 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
   
   saveUserProgress(progress);
   return isCorrect;
+}
+
+// 獲取今日答題數
+export function getTodayAnsweredCount(userId: string): number {
+  const progress = getUserProgress(userId);
+  const today = new Date().toISOString().split('T')[0];
+  if (progress.lastPracticeDate === today) {
+    // 如果今天有練習，計算今日答題數
+    // 這裡用簡單邏輯：如果最後練習是今天，返回總答題數（實際應該分開追蹤）
+    const data = localStorage.getItem(`math_quiz_today_${userId}_${today}`);
+    return data ? parseInt(data) : 0;
+  }
+  return 0;
+}
+
+// 記錄今日答題數
+export function incrementTodayCount(userId: string): void {
+  if (typeof window === 'undefined') return;
+  const today = new Date().toISOString().split('T')[0];
+  const key = `math_quiz_today_${userId}_${today}`;
+  const current = parseInt(localStorage.getItem(key) || '0');
+  localStorage.setItem(key, (current + 1).toString());
 }
 
 // 獲取弱點分類 Top3

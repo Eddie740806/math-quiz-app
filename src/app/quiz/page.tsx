@@ -25,6 +25,7 @@ function QuizContent() {
   const countParam = parseInt(searchParams.get('count') || '0');
   const difficultyParam = searchParams.get('difficulty') || '';
   const quizName = searchParams.get('name') || '';
+  const categoriesParam = searchParams.get('categories') || '';
   
   const [user, setUser] = useState<User | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -93,6 +94,12 @@ function QuizContent() {
         filtered = filtered.filter((q: Question) => q.difficulty === 'hard');
       }
       
+      // 題型篩選
+      if (categoriesParam) {
+        const allowedCategories = categoriesParam.split(',');
+        filtered = filtered.filter((q: Question) => allowedCategories.includes(q.category));
+      }
+      
       const gradeQuestions = filtered
         .sort(() => Math.random() - 0.5)
         .slice(0, questionCount);
@@ -100,7 +107,7 @@ function QuizContent() {
       setQuestions(gradeQuestions);
       setShowCountSelector(false);
     }
-  }, [grade, router, questionCount, difficulty]);
+  }, [grade, router, questionCount, difficulty, categoriesParam]);
 
   // 儲存排行榜 & 檢查成就（必須在所有條件式 return 之前）
   useEffect(() => {
@@ -530,13 +537,22 @@ function QuizContent() {
           </div>
         ) : (
           <div className="space-y-4">
-            <div className={`p-4 rounded-xl text-center transform transition-all duration-300 ${isCorrect ? 'bg-green-100 text-green-700 scale-105' : 'bg-red-100 text-red-700 animate-pulse'}`}>
-              <div className="text-2xl mb-1">{isCorrect ? '🎉' : '😅'}</div>
+            <div className={`p-4 rounded-xl text-center transform transition-all duration-300 ${isCorrect ? 'bg-green-100 text-green-700 scale-105' : 'bg-red-100 text-red-700'}`}>
+              <div className="text-2xl mb-1">{isCorrect ? '🎉' : '💪'}</div>
               <div className="font-medium">
                 {isCorrect ? '回答正確！' : `答錯了！正確答案是 ${String.fromCharCode(65 + currentQuestion.answer)}`}
               </div>
               {isCorrect && combo >= 3 && (
                 <div className="text-orange-500 text-sm mt-1 font-bold animate-bounce">🔥 {combo} 連擊！太強了！</div>
+              )}
+              {!isCorrect && (
+                <div className="text-red-400 text-sm mt-1">
+                  {wrongQuestions.length === 0 
+                    ? '沒關係，錯誤是學習的機會！' 
+                    : wrongQuestions.length < 3
+                    ? '加油！看看解題思路，下次一定會！'
+                    : '別灰心！練習越多，進步越快！'}
+                </div>
               )}
             </div>
             
