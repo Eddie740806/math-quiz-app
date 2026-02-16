@@ -30,7 +30,9 @@ export default function LoginPage() {
       return;
     }
 
-    const result = loginUser(username, password);
+    // 取得之前儲存的年級，或預設 5
+    const savedGrade = parseInt(localStorage.getItem('math_quiz_grade') || '5');
+    const result = await loginUser(username, password, savedGrade);
     
     if (result.success) {
       router.push('/');

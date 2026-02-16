@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 import questionsData from '@/data/questions.json';
 
@@ -58,6 +58,20 @@ function QuizContent() {
     
     return () => clearInterval(timer);
   }, [questionStartTime, showCountSelector, quizFinished]);
+
+  // Heartbeat for online tracking (every 60 seconds)
+  useEffect(() => {
+    if (!user) return;
+    
+    // Initial heartbeat
+    heartbeat();
+    
+    const interval = setInterval(() => {
+      heartbeat();
+    }, 60000); // 60 seconds
+    
+    return () => clearInterval(interval);
+  }, [user]);
 
   useEffect(() => {
     initTheme();
@@ -166,8 +180,9 @@ function QuizContent() {
       setWrongQuestions(prev => [...prev, currentQuestion]);
     }
     
-    // 記錄答案（含分類）
-    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer, currentQuestion.category);
+    // 記錄答案（含分類和時間）
+    const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
+    recordAnswer(user.id, currentQuestion.id, selectedAnswer, currentQuestion.answer, currentQuestion.category, timeSpent);
   };
 
   const handleNext = () => {

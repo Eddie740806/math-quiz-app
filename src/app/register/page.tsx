@@ -13,6 +13,7 @@ export default function RegisterPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [grade, setGrade] = useState(5);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -50,10 +51,12 @@ export default function RegisterPage() {
       return;
     }
 
-    const result = registerUser(username, password);
+    const result = await registerUser(username, password, grade);
     
     if (result.success && result.user) {
       setCurrentUser(result.user);
+      // 儲存年級到 localStorage
+      localStorage.setItem('math_quiz_grade', grade.toString());
       router.push('/');
     } else {
       setError(result.message);
@@ -109,6 +112,20 @@ export default function RegisterPage() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="請再次輸入密碼"
             />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              年級
+            </label>
+            <select
+              value={grade}
+              onChange={(e) => setGrade(parseInt(e.target.value))}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-white"
+            >
+              <option value={5}>五年級</option>
+              <option value={6}>六年級</option>
+            </select>
           </div>
 
           {error && (

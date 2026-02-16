@@ -1,4 +1,8 @@
 // 本地存儲工具函數
+import { trackUser, trackAnswer, pingSession, endSession } from './supabase'
+
+// Supabase user ID cache (username -> supabase id)
+let supabaseUserIds: Record<string, string> = {}
 
 export interface User {
   id: string;
@@ -59,7 +63,7 @@ export function setCurrentUser(user: User | null) {
   }
 }
 
-export function registerUser(username: string, password: string): { success: boolean; message: string; user?: User } {
+export async function registerUser(username: string, password: string, grade: number = 5): Promise<{ success: boolean; message: string; user?: User }> {
   const users = getUsers();
   
   // 檢查用戶名是否已存在
@@ -80,15 +84,32 @@ export function registerUser(username: string, password: string): { success: boo
   // 初始化用戶進度
   initUserProgress(newUser.id);
   
+  // 追蹤到 Supabase（背景執行，不阻塞）
+  trackUser(username, grade).then(data => {
+    if (data?.id) {
+      supabaseUserIds[username] = data.id
+    }
+  }).catch(console.error)
+  
   return { success: true, message: '註冊成功', user: newUser };
 }
 
-export function loginUser(username: string, password: string): { success: boolean; message: string; user?: User } {
+export async function loginUser(username: string, password: string, grade: number = 5): Promise<{ success: boolean; message: string; user?: User }> {
   const users = getUsers();
   const user = users.find(u => u.username === username && u.password === password);
   
   if (user) {
     setCurrentUser(user);
+    
+    // 追蹤到 Supabase（背景執行）
+    trackUser(username, grade).then(data => {
+      if (data?.id) {
+        supabaseUserIds[username] = data.id
+        // 開始 session
+        pingSession(data.id).catch(console.error)
+      }
+    }).catch(console.error)
+    
     return { success: true, message: '登入成功', user };
   }
   
@@ -96,7 +117,19 @@ export function loginUser(username: string, password: string): { success: boolea
 }
 
 export function logoutUser() {
+  const currentUser = getCurrentUser();
+  if (currentUser && supabaseUserIds[currentUser.username]) {
+    endSession(supabaseUserIds[currentUser.username]).catch(console.error)
+  }
   setCurrentUser(null);
+}
+
+// Session heartbeat - call this periodically when user is active
+export function heartbeat() {
+  const currentUser = getCurrentUser();
+  if (currentUser && supabaseUserIds[currentUser.username]) {
+    pingSession(supabaseUserIds[currentUser.username]).catch(console.error)
+  }
 }
 
 // 進度相關
@@ -141,9 +174,20 @@ export function initUserProgress(odiserId: string) {
   saveUserProgress(progress);
 }
 
-export function recordAnswer(odiserId: string, questionId: string, userAnswer: number, correctAnswer: number, category?: string) {
+export function recordAnswer(odiserId: string, questionId: string, userAnswer: number, correctAnswer: number, category?: string, timeSpent?: number) {
   const progress = getUserProgress(odiserId);
   const isCorrect = userAnswer === correctAnswer;
+  
+  // 追蹤到 Supabase（背景執行）
+  const currentUser = getCurrentUser();
+  if (currentUser && supabaseUserIds[currentUser.username]) {
+    trackAnswer(
+      supabaseUserIds[currentUser.username],
+      questionId,
+      isCorrect,
+      timeSpent || 0
+    ).catch(console.error)
+  }
   
   progress.totalAnswered++;
   progress.lastActiveAt = new Date().toISOString();
