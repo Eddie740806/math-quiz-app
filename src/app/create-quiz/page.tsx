@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { initTheme } from '@/lib/theme';
+import { applyFontSize } from '@/lib/storage';
 
 // 題型分類
 const CATEGORY_GROUPS = {
@@ -36,6 +37,7 @@ export default function CreateQuizPage() {
 
   useEffect(() => {
     initTheme();
+    applyFontSize();
   }, []);
 
   const generateQuiz = () => {

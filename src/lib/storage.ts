@@ -1,14 +1,19 @@
 // 本地存儲工具函數
-import { trackUser, trackAnswer, pingSession, endSession } from './supabase'
+import { trackUser, trackAnswer, pingSession, endSession, supabase } from './supabase'
+import { hashPassword, verifyPassword, isPasswordHashed } from './crypto'
 
 // Supabase user ID cache (username -> supabase id)
 let supabaseUserIds: Record<string, string> = {}
 
+export type UserRole = 'student' | 'parent' | 'teacher';
+
 export interface User {
   id: string;
   username: string;
-  password: string; // 實際應該加密
+  password: string; // hash 或明文（舊用戶）
+  role: UserRole;
   createdAt: string;
+  supabaseId?: string;
 }
 
 export interface WrongRecord {
@@ -36,11 +41,56 @@ export interface UserProgress {
   lastPracticeDate?: string;
 }
 
+// ========================================
+// 字體大小設定
+// ========================================
+export type FontSize = 'small' | 'medium' | 'large' | 'xlarge';
+
+const FONT_SIZE_MAP: Record<FontSize, string> = {
+  small: '14px',
+  medium: '16px',
+  large: '18px',
+  xlarge: '22px'
+};
+
+const FONT_SIZE_SCALE: Record<FontSize, number> = {
+  small: 0.875,
+  medium: 1,
+  large: 1.125,
+  xlarge: 1.375
+};
+
+export function getFontSize(): FontSize {
+  if (typeof window === 'undefined') return 'medium';
+  return (localStorage.getItem('math_quiz_font_size') as FontSize) || 'medium';
+}
+
+export function setFontSize(size: FontSize) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem('math_quiz_font_size', size);
+  applyFontSize(size);
+}
+
+export function applyFontSize(size?: FontSize) {
+  if (typeof window === 'undefined') return;
+  const actualSize = size || getFontSize();
+  document.documentElement.style.fontSize = FONT_SIZE_MAP[actualSize];
+  document.documentElement.setAttribute('data-font-size', actualSize);
+}
+
+export function getFontSizeScale(): number {
+  return FONT_SIZE_SCALE[getFontSize()];
+}
+
+// ========================================
 // 用戶相關
+// ========================================
 export function getUsers(): User[] {
   if (typeof window === 'undefined') return [];
   const data = localStorage.getItem('math_quiz_users');
-  return data ? JSON.parse(data) : [];
+  const users = data ? JSON.parse(data) : [];
+  // 舊用戶可能沒有 role 欄位
+  return users.map((u: User) => ({ ...u, role: u.role || 'student' }));
 }
 
 export function saveUsers(users: User[]) {
@@ -51,7 +101,9 @@ export function saveUsers(users: User[]) {
 export function getCurrentUser(): User | null {
   if (typeof window === 'undefined') return null;
   const data = localStorage.getItem('math_quiz_current_user');
-  return data ? JSON.parse(data) : null;
+  if (!data) return null;
+  const user = JSON.parse(data);
+  return { ...user, role: user.role || 'student' };
 }
 
 export function setCurrentUser(user: User | null) {
@@ -63,7 +115,12 @@ export function setCurrentUser(user: User | null) {
   }
 }
 
-export async function registerUser(username: string, password: string, grade: number = 5): Promise<{ success: boolean; message: string; user?: User }> {
+export async function registerUser(
+  username: string, 
+  password: string, 
+  grade: number = 5,
+  role: UserRole = 'student'
+): Promise<{ success: boolean; message: string; user?: User }> {
   const users = getUsers();
   
   // 檢查用戶名是否已存在
@@ -71,10 +128,14 @@ export async function registerUser(username: string, password: string, grade: nu
     return { success: false, message: '用戶名已存在' };
   }
   
+  // 密碼加密
+  const passwordHash = await hashPassword(password);
+  
   const newUser: User = {
     id: Date.now().toString(),
     username,
-    password, // 實際應該加密
+    password: passwordHash,
+    role,
     createdAt: new Date().toISOString()
   };
   
@@ -82,33 +143,104 @@ export async function registerUser(username: string, password: string, grade: nu
   saveUsers(users);
   
   // 初始化用戶進度
-  initUserProgress(newUser.id);
+  if (role === 'student') {
+    initUserProgress(newUser.id);
+  }
   
   // 追蹤到 Supabase（背景執行，不阻塞）
-  trackUser(username, grade).then(data => {
+  trackUserToCloud(username, grade, role, passwordHash).then(data => {
     if (data?.id) {
-      supabaseUserIds[username] = data.id
+      supabaseUserIds[username] = data.id;
+      newUser.supabaseId = data.id;
+      // 更新本地用戶
+      const updatedUsers = getUsers().map(u => 
+        u.id === newUser.id ? { ...u, supabaseId: data.id } : u
+      );
+      saveUsers(updatedUsers);
     }
-  }).catch(console.error)
+  }).catch(console.error);
   
   return { success: true, message: '註冊成功', user: newUser };
 }
 
+async function trackUserToCloud(username: string, grade: number, role: UserRole, passwordHash: string) {
+  if (!supabase) return null;
+  
+  const { data, error } = await supabase
+    .from('users')
+    .upsert({
+      username,
+      grade,
+      role,
+      password_hash: passwordHash,
+      last_active: new Date().toISOString()
+    }, {
+      onConflict: 'username'
+    })
+    .select()
+    .single();
+  
+  if (error) console.error('Track user error:', error);
+  return data;
+}
+
 export async function loginUser(username: string, password: string, grade: number = 5): Promise<{ success: boolean; message: string; user?: User }> {
   const users = getUsers();
-  const user = users.find(u => u.username === username && u.password === password);
+  const user = users.find(u => u.username === username);
   
-  if (user) {
+  if (!user) {
+    return { success: false, message: '用戶名或密碼錯誤' };
+  }
+  
+  // 檢查密碼 - 支援舊的明文密碼和新的 hash
+  let passwordMatch = false;
+  
+  if (isPasswordHashed(user.password)) {
+    // 新用戶：驗證 hash
+    passwordMatch = await verifyPassword(password, user.password);
+  } else {
+    // 舊用戶：明文比對，然後遷移到 hash
+    if (user.password === password) {
+      passwordMatch = true;
+      // 自動遷移到 hash
+      const passwordHash = await hashPassword(password);
+      const updatedUsers = users.map(u => 
+        u.id === user.id ? { ...u, password: passwordHash } : u
+      );
+      saveUsers(updatedUsers);
+      user.password = passwordHash;
+      
+      // 同步到雲端
+      if (supabase) {
+        (async () => {
+          try {
+            await supabase.from('users')
+              .update({ password_hash: passwordHash })
+              .eq('username', username);
+            console.log('Password migrated to hash');
+          } catch (err) {
+            console.error('Password migration error:', err);
+          }
+        })();
+      }
+    }
+  }
+  
+  if (passwordMatch) {
     setCurrentUser(user);
     
     // 追蹤到 Supabase（背景執行）
     trackUser(username, grade).then(data => {
       if (data?.id) {
-        supabaseUserIds[username] = data.id
+        supabaseUserIds[username] = data.id;
         // 開始 session
-        pingSession(data.id).catch(console.error)
+        pingSession(data.id).catch(console.error);
+        // 同步雲端進度到本地
+        if (user.role === 'student') {
+          syncProgressFromCloud(data.id, user.id);
+        }
       }
-    }).catch(console.error)
+    }).catch(console.error);
     
     return { success: true, message: '登入成功', user };
   }
@@ -119,7 +251,7 @@ export async function loginUser(username: string, password: string, grade: numbe
 export function logoutUser() {
   const currentUser = getCurrentUser();
   if (currentUser && supabaseUserIds[currentUser.username]) {
-    endSession(supabaseUserIds[currentUser.username]).catch(console.error)
+    endSession(supabaseUserIds[currentUser.username]).catch(console.error);
   }
   setCurrentUser(null);
 }
@@ -128,11 +260,104 @@ export function logoutUser() {
 export function heartbeat() {
   const currentUser = getCurrentUser();
   if (currentUser && supabaseUserIds[currentUser.username]) {
-    pingSession(supabaseUserIds[currentUser.username]).catch(console.error)
+    pingSession(supabaseUserIds[currentUser.username]).catch(console.error);
   }
 }
 
+// ========================================
+// 雲端同步功能
+// ========================================
+async function syncProgressFromCloud(supabaseUserId: string, localUserId: string) {
+  if (!supabase) return;
+  
+  try {
+    const { data, error } = await supabase
+      .from('user_progress')
+      .select('*')
+      .eq('user_id', supabaseUserId)
+      .single();
+    
+    if (error && error.code !== 'PGRST116') { // PGRST116 = not found
+      console.error('Sync progress error:', error);
+      return;
+    }
+    
+    if (data) {
+      // 雲端有資料，與本地合併
+      const localProgress = getUserProgress(localUserId);
+      const cloudProgress: UserProgress = {
+        odiserId: localUserId,
+        totalAnswered: data.total_answered || 0,
+        correctCount: data.correct_count || 0,
+        wrongRecords: data.wrong_records || [],
+        lastActiveAt: data.updated_at || new Date().toISOString(),
+        categoryStats: data.category_stats || [],
+        streak: data.streak || 0,
+        lastPracticeDate: data.last_practice_date || undefined
+      };
+      
+      // 如果雲端資料比較新或比較多，使用雲端的
+      if (cloudProgress.totalAnswered > localProgress.totalAnswered) {
+        saveUserProgress(cloudProgress);
+        console.log('Progress synced from cloud');
+      }
+      
+      // 同步成就
+      if (data.achievements && data.achievements.length > 0) {
+        const localAchievements = getUserAchievements(localUserId);
+        if (data.achievements.length > localAchievements.length) {
+          saveUserAchievements(localUserId, data.achievements);
+          console.log('Achievements synced from cloud');
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Sync error:', err);
+  }
+}
+
+export async function syncProgressToCloud(localUserId: string) {
+  if (!supabase) return;
+  
+  const currentUser = getCurrentUser();
+  if (!currentUser) return;
+  
+  const supabaseUserId = supabaseUserIds[currentUser.username];
+  if (!supabaseUserId) return;
+  
+  const progress = getUserProgress(localUserId);
+  const achievements = getUserAchievements(localUserId);
+  
+  try {
+    const { error } = await supabase
+      .from('user_progress')
+      .upsert({
+        user_id: supabaseUserId,
+        total_answered: progress.totalAnswered,
+        correct_count: progress.correctCount,
+        streak: progress.streak || 0,
+        last_practice_date: progress.lastPracticeDate || null,
+        category_stats: progress.categoryStats || [],
+        wrong_records: progress.wrongRecords || [],
+        achievements: achievements,
+        updated_at: new Date().toISOString()
+      }, {
+        onConflict: 'user_id'
+      });
+    
+    if (error) {
+      console.error('Sync to cloud error:', error);
+    } else {
+      console.log('Progress synced to cloud');
+    }
+  } catch (err) {
+    console.error('Sync error:', err);
+  }
+}
+
+// ========================================
 // 進度相關
+// ========================================
 export function getUserProgress(odiserId: string): UserProgress {
   if (typeof window === 'undefined') {
     return {
@@ -189,7 +414,7 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
       questionId,
       isCorrect,
       timeSpent || 0
-    ).catch(console.error)
+    ).catch(console.error);
   }
   
   progress.totalAnswered++;
@@ -247,6 +472,12 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
   }
   
   saveUserProgress(progress);
+  
+  // 背景同步到雲端（每 10 題同步一次）
+  if (progress.totalAnswered % 10 === 0) {
+    syncProgressToCloud(odiserId);
+  }
+  
   return isCorrect;
 }
 
@@ -255,8 +486,6 @@ export function getTodayAnsweredCount(userId: string): number {
   const progress = getUserProgress(userId);
   const today = new Date().toISOString().split('T')[0];
   if (progress.lastPracticeDate === today) {
-    // 如果今天有練習，計算今日答題數
-    // 這裡用簡單邏輯：如果最後練習是今天，返回總答題數（實際應該分開追蹤）
     const data = localStorage.getItem(`math_quiz_today_${userId}_${today}`);
     return data ? parseInt(data) : 0;
   }
@@ -301,7 +530,9 @@ export function removeFromWrongRecords(odiserId: string, questionId: string) {
   saveUserProgress(progress);
 }
 
-// 排行榜
+// ========================================
+// 排行榜（雲端同步）
+// ========================================
 export interface LeaderboardEntry {
   username: string;
   score: number;
@@ -318,14 +549,70 @@ export function getLeaderboard(): LeaderboardEntry[] {
   return data ? JSON.parse(data) : [];
 }
 
-export function addToLeaderboard(entry: LeaderboardEntry) {
+export async function addToLeaderboard(entry: LeaderboardEntry) {
   if (typeof window === 'undefined') return;
+  
+  // 本地存儲
   const leaderboard = getLeaderboard();
   leaderboard.push(entry);
-  // 按分數排序，保留前 50 名
   leaderboard.sort((a, b) => b.score - a.score || b.accuracy - a.accuracy);
   const top50 = leaderboard.slice(0, 50);
   localStorage.setItem('math_quiz_leaderboard', JSON.stringify(top50));
+  
+  // 同步到雲端
+  if (supabase) {
+    try {
+      await supabase.from('leaderboard').insert({
+        username: entry.username,
+        score: entry.score,
+        accuracy: entry.accuracy,
+        max_combo: entry.maxCombo,
+        total_questions: entry.totalQuestions,
+        grade: entry.grade
+      });
+      console.log('Leaderboard synced to cloud');
+    } catch (err) {
+      console.error('Leaderboard sync error:', err);
+    }
+  }
+}
+
+export async function getCloudLeaderboard(grade?: number): Promise<LeaderboardEntry[]> {
+  if (!supabase) {
+    return getLeaderboard(); // fallback to local
+  }
+  
+  try {
+    let query = supabase
+      .from('leaderboard')
+      .select('*')
+      .order('score', { ascending: false })
+      .limit(50);
+    
+    if (grade) {
+      query = query.eq('grade', grade);
+    }
+    
+    const { data, error } = await query;
+    
+    if (error) {
+      console.error('Get leaderboard error:', error);
+      return getLeaderboard();
+    }
+    
+    return (data || []).map(row => ({
+      username: row.username,
+      score: row.score,
+      accuracy: row.accuracy,
+      maxCombo: row.max_combo,
+      totalQuestions: row.total_questions,
+      date: row.created_at,
+      grade: row.grade
+    }));
+  } catch (err) {
+    console.error('Leaderboard fetch error:', err);
+    return getLeaderboard();
+  }
 }
 
 export function clearLeaderboard() {
@@ -333,7 +620,377 @@ export function clearLeaderboard() {
   localStorage.removeItem('math_quiz_leaderboard');
 }
 
+// ========================================
+// 家長功能
+// ========================================
+export async function getChildrenForParent(parentUsername: string): Promise<User[]> {
+  if (!supabase) return [];
+  
+  try {
+    // 先取得家長的 supabase ID
+    const { data: parentData } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', parentUsername)
+      .single();
+    
+    if (!parentData) return [];
+    
+    // 取得綁定的孩子
+    const { data: children } = await supabase
+      .from('parent_children')
+      .select('child_id')
+      .eq('parent_id', parentData.id);
+    
+    if (!children || children.length === 0) return [];
+    
+    // 取得孩子的資料
+    const childIds = children.map(c => c.child_id);
+    const { data: childUsers } = await supabase
+      .from('users')
+      .select('*')
+      .in('id', childIds);
+    
+    return (childUsers || []).map(u => ({
+      id: u.id,
+      username: u.username,
+      password: '',
+      role: 'student' as UserRole,
+      createdAt: u.created_at,
+      supabaseId: u.id
+    }));
+  } catch (err) {
+    console.error('Get children error:', err);
+    return [];
+  }
+}
+
+export async function bindChildToParent(parentUsername: string, childUsername: string): Promise<{ success: boolean; message: string }> {
+  if (!supabase) {
+    return { success: false, message: '雲端服務未連接' };
+  }
+  
+  try {
+    // 取得家長和孩子的 ID
+    const { data: parentData } = await supabase
+      .from('users')
+      .select('id, role')
+      .eq('username', parentUsername)
+      .single();
+    
+    const { data: childData } = await supabase
+      .from('users')
+      .select('id, role')
+      .eq('username', childUsername)
+      .single();
+    
+    if (!parentData) {
+      return { success: false, message: '找不到家長帳號' };
+    }
+    
+    if (!childData) {
+      return { success: false, message: '找不到孩子帳號' };
+    }
+    
+    if (childData.role === 'parent' || childData.role === 'teacher') {
+      return { success: false, message: '只能綁定學生帳號' };
+    }
+    
+    // 建立綁定關係
+    const { error } = await supabase
+      .from('parent_children')
+      .insert({
+        parent_id: parentData.id,
+        child_id: childData.id
+      });
+    
+    if (error) {
+      if (error.code === '23505') { // unique violation
+        return { success: false, message: '已經綁定過這個孩子' };
+      }
+      return { success: false, message: '綁定失敗' };
+    }
+    
+    return { success: true, message: '綁定成功' };
+  } catch (err) {
+    console.error('Bind child error:', err);
+    return { success: false, message: '綁定失敗' };
+  }
+}
+
+export async function getChildProgress(childUsername: string): Promise<UserProgress | null> {
+  if (!supabase) return null;
+  
+  try {
+    const { data: userData } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', childUsername)
+      .single();
+    
+    if (!userData) return null;
+    
+    const { data: progressData } = await supabase
+      .from('user_progress')
+      .select('*')
+      .eq('user_id', userData.id)
+      .single();
+    
+    if (!progressData) return null;
+    
+    return {
+      odiserId: userData.id,
+      totalAnswered: progressData.total_answered || 0,
+      correctCount: progressData.correct_count || 0,
+      wrongRecords: progressData.wrong_records || [],
+      lastActiveAt: progressData.updated_at || new Date().toISOString(),
+      categoryStats: progressData.category_stats || [],
+      streak: progressData.streak || 0,
+      lastPracticeDate: progressData.last_practice_date || undefined
+    };
+  } catch (err) {
+    console.error('Get child progress error:', err);
+    return null;
+  }
+}
+
+// ========================================
+// 班級功能
+// ========================================
+export interface ClassInfo {
+  id: string;
+  name: string;
+  description: string;
+  teacherId: string;
+  inviteCode: string;
+  grade: number;
+  memberCount?: number;
+  createdAt: string;
+}
+
+export async function createClass(teacherUsername: string, name: string, description: string, grade: number): Promise<{ success: boolean; message: string; classInfo?: ClassInfo }> {
+  if (!supabase) {
+    return { success: false, message: '雲端服務未連接' };
+  }
+  
+  try {
+    // 取得老師 ID
+    const { data: teacherData } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', teacherUsername)
+      .single();
+    
+    if (!teacherData) {
+      return { success: false, message: '找不到教師帳號' };
+    }
+    
+    // 生成邀請碼
+    const inviteCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+    
+    const { data, error } = await supabase
+      .from('classes')
+      .insert({
+        name,
+        description,
+        teacher_id: teacherData.id,
+        invite_code: inviteCode,
+        grade
+      })
+      .select()
+      .single();
+    
+    if (error) {
+      return { success: false, message: '建立班級失敗' };
+    }
+    
+    return {
+      success: true,
+      message: '班級建立成功',
+      classInfo: {
+        id: data.id,
+        name: data.name,
+        description: data.description,
+        teacherId: data.teacher_id,
+        inviteCode: data.invite_code,
+        grade: data.grade,
+        createdAt: data.created_at
+      }
+    };
+  } catch (err) {
+    console.error('Create class error:', err);
+    return { success: false, message: '建立班級失敗' };
+  }
+}
+
+export async function joinClass(studentUsername: string, inviteCode: string): Promise<{ success: boolean; message: string }> {
+  if (!supabase) {
+    return { success: false, message: '雲端服務未連接' };
+  }
+  
+  try {
+    // 取得學生 ID
+    const { data: studentData } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', studentUsername)
+      .single();
+    
+    if (!studentData) {
+      return { success: false, message: '找不到學生帳號' };
+    }
+    
+    // 取得班級
+    const { data: classData } = await supabase
+      .from('classes')
+      .select('id')
+      .eq('invite_code', inviteCode.toUpperCase())
+      .eq('is_active', true)
+      .single();
+    
+    if (!classData) {
+      return { success: false, message: '邀請碼無效或班級已關閉' };
+    }
+    
+    // 加入班級
+    const { error } = await supabase
+      .from('class_members')
+      .insert({
+        class_id: classData.id,
+        user_id: studentData.id
+      });
+    
+    if (error) {
+      if (error.code === '23505') {
+        return { success: false, message: '你已經是這個班級的成員了' };
+      }
+      return { success: false, message: '加入班級失敗' };
+    }
+    
+    return { success: true, message: '成功加入班級' };
+  } catch (err) {
+    console.error('Join class error:', err);
+    return { success: false, message: '加入班級失敗' };
+  }
+}
+
+export async function getTeacherClasses(teacherUsername: string): Promise<ClassInfo[]> {
+  if (!supabase) return [];
+  
+  try {
+    const { data: teacherData } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', teacherUsername)
+      .single();
+    
+    if (!teacherData) return [];
+    
+    const { data: classes } = await supabase
+      .from('classes')
+      .select('*')
+      .eq('teacher_id', teacherData.id)
+      .eq('is_active', true)
+      .order('created_at', { ascending: false });
+    
+    if (!classes) return [];
+    
+    // 取得每個班級的成員數
+    const result: ClassInfo[] = [];
+    for (const cls of classes) {
+      const { count } = await supabase
+        .from('class_members')
+        .select('*', { count: 'exact', head: true })
+        .eq('class_id', cls.id);
+      
+      result.push({
+        id: cls.id,
+        name: cls.name,
+        description: cls.description,
+        teacherId: cls.teacher_id,
+        inviteCode: cls.invite_code,
+        grade: cls.grade,
+        memberCount: count || 0,
+        createdAt: cls.created_at
+      });
+    }
+    
+    return result;
+  } catch (err) {
+    console.error('Get teacher classes error:', err);
+    return [];
+  }
+}
+
+export async function getClassMembers(classId: string): Promise<{ username: string; progress: UserProgress | null }[]> {
+  if (!supabase) return [];
+  
+  try {
+    const { data: members } = await supabase
+      .from('class_members')
+      .select('user_id')
+      .eq('class_id', classId);
+    
+    if (!members || members.length === 0) return [];
+    
+    const result: { username: string; progress: UserProgress | null }[] = [];
+    
+    for (const member of members) {
+      const { data: userData } = await supabase
+        .from('users')
+        .select('username')
+        .eq('id', member.user_id)
+        .single();
+      
+      const { data: progressData } = await supabase
+        .from('user_progress')
+        .select('*')
+        .eq('user_id', member.user_id)
+        .single();
+      
+      result.push({
+        username: userData?.username || 'Unknown',
+        progress: progressData ? {
+          odiserId: member.user_id,
+          totalAnswered: progressData.total_answered || 0,
+          correctCount: progressData.correct_count || 0,
+          wrongRecords: progressData.wrong_records || [],
+          lastActiveAt: progressData.updated_at || new Date().toISOString(),
+          categoryStats: progressData.category_stats || [],
+          streak: progressData.streak || 0,
+          lastPracticeDate: progressData.last_practice_date || undefined
+        } : null
+      });
+    }
+    
+    return result;
+  } catch (err) {
+    console.error('Get class members error:', err);
+    return [];
+  }
+}
+
+// ========================================
+// 新手引導
+// ========================================
+export function hasCompletedTour(): boolean {
+  if (typeof window === 'undefined') return true;
+  return localStorage.getItem('math_quiz_tour_completed') === 'true';
+}
+
+export function setTourCompleted(completed: boolean) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem('math_quiz_tour_completed', completed ? 'true' : 'false');
+}
+
+export function resetTour() {
+  if (typeof window === 'undefined') return;
+  localStorage.removeItem('math_quiz_tour_completed');
+}
+
+// ========================================
 // 成就系統
+// ========================================
 export interface Achievement {
   id: string;
   name: string;

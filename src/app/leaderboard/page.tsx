@@ -2,22 +2,57 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getLeaderboard, LeaderboardEntry } from '@/lib/storage';
+import { getCloudLeaderboard, getLeaderboard, LeaderboardEntry, applyFontSize } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 
 export default function LeaderboardPage() {
   const router = useRouter();
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [filter, setFilter] = useState<'all' | 5 | 6>('all');
+  const [loading, setLoading] = useState(true);
+  const [isCloud, setIsCloud] = useState(false);
 
   useEffect(() => {
     initTheme();
-    setLeaderboard(getLeaderboard());
+    applyFontSize();
+    loadLeaderboard();
   }, []);
 
-  const filteredLeaderboard = filter === 'all' 
-    ? leaderboard 
-    : leaderboard.filter(e => e.grade === filter);
+  useEffect(() => {
+    loadLeaderboard();
+  }, [filter]);
+
+  const loadLeaderboard = async () => {
+    setLoading(true);
+    try {
+      // 嘗試從雲端獲取
+      const gradeFilter = filter === 'all' ? undefined : filter;
+      const cloudData = await getCloudLeaderboard(gradeFilter);
+      
+      if (cloudData.length > 0) {
+        setLeaderboard(cloudData);
+        setIsCloud(true);
+      } else {
+        // 回退到本地數據
+        const localData = getLeaderboard();
+        const filtered = filter === 'all' 
+          ? localData 
+          : localData.filter(e => e.grade === filter);
+        setLeaderboard(filtered);
+        setIsCloud(false);
+      }
+    } catch (err) {
+      console.error('Load leaderboard error:', err);
+      // 回退到本地數據
+      const localData = getLeaderboard();
+      const filtered = filter === 'all' 
+        ? localData 
+        : localData.filter(e => e.grade === filter);
+      setLeaderboard(filtered);
+      setIsCloud(false);
+    }
+    setLoading(false);
+  };
 
   const getRankEmoji = (index: number) => {
     if (index === 0) return '🥇';
@@ -41,6 +76,15 @@ export default function LeaderboardPage() {
           <div className="w-20"></div>
         </div>
 
+        {/* 雲端/本地標記 */}
+        <div className="flex justify-center mb-2">
+          <span className={`text-xs px-2 py-1 rounded-full ${
+            isCloud ? 'bg-green-500/20 text-green-100' : 'bg-gray-500/20 text-gray-200'
+          }`}>
+            {isCloud ? '☁️ 雲端排行榜' : '💾 本地排行榜'}
+          </span>
+        </div>
+
         {/* 篩選 */}
         <div className="flex justify-center gap-2 mb-6">
           {(['all', 5, 6] as const).map((f) => (
@@ -58,7 +102,12 @@ export default function LeaderboardPage() {
           ))}
         </div>
 
-        {filteredLeaderboard.length === 0 ? (
+        {loading ? (
+          <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+            <div className="text-4xl mb-4">⏳</div>
+            <p className="text-gray-500">載入中...</p>
+          </div>
+        ) : leaderboard.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
             <div className="text-6xl mb-4">🏆</div>
             <h2 className="text-xl font-bold text-gray-800 mb-2">還沒有紀錄</h2>
@@ -72,9 +121,9 @@ export default function LeaderboardPage() {
           </div>
         ) : (
           <div className="space-y-3">
-            {filteredLeaderboard.map((entry, index) => (
+            {leaderboard.map((entry, index) => (
               <div
-                key={index}
+                key={`${entry.username}-${entry.date}-${index}`}
                 className={`bg-white rounded-xl shadow p-4 flex items-center gap-4 ${
                   index < 3 ? 'ring-2 ring-yellow-400' : ''
                 }`}
@@ -105,6 +154,12 @@ export default function LeaderboardPage() {
             ))}
           </div>
         )}
+
+        {/* 說明 */}
+        <div className="mt-6 text-center text-white/60 text-sm">
+          <p>排行榜每次練習完成後自動更新</p>
+          {isCloud && <p>☁️ 資料已同步到雲端，換設備也能看到</p>}
+        </div>
       </div>
     </main>
   );

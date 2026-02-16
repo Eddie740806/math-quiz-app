@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat, applyFontSize } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 import questionsData from '@/data/questions.json';
 
@@ -76,6 +76,7 @@ function QuizContent() {
 
   useEffect(() => {
     initTheme();
+    applyFontSize();
     const currentUser = getCurrentUser();
     if (!currentUser) {
       router.push('/login');
@@ -111,38 +112,42 @@ function QuizContent() {
 
   // 儲存排行榜 & 檢查成就（必須在所有條件式 return 之前）
   useEffect(() => {
-    if (quizFinished && user && answeredCount > 0) {
-      const accuracy = Math.round((score / (answeredCount * 10)) * 100);
-      
-      // 儲存排行榜
-      addToLeaderboard({
-        username: user.username,
-        score,
-        accuracy,
-        maxCombo,
-        totalQuestions: questions.length,
-        date: new Date().toISOString(),
-        grade
-      });
-      
-      // 檢查成就
-      const progress = getUserProgress(user.id);
-      const avgTime = answeredCount > 0 ? Math.round(totalTime / answeredCount) : 0;
-      const isPerfect = accuracy === 100 && answeredCount >= 10;
-      
-      const achievements = checkAndUnlockAchievements(user.id, {
-        totalAnswered: progress.totalAnswered,
-        correctCount: progress.correctCount,
-        streak: progress.streak || 0,
-        maxCombo,
-        avgTime,
-        isPerfect
-      });
-      
-      if (achievements.length > 0) {
-        setNewAchievements(achievements);
+    const saveResults = async () => {
+      if (quizFinished && user && answeredCount > 0) {
+        const accuracy = Math.round((score / (answeredCount * 10)) * 100);
+        
+        // 儲存排行榜（雲端同步）
+        await addToLeaderboard({
+          username: user.username,
+          score,
+          accuracy,
+          maxCombo,
+          totalQuestions: questions.length,
+          date: new Date().toISOString(),
+          grade
+        });
+        
+        // 檢查成就
+        const progress = getUserProgress(user.id);
+        const avgTime = answeredCount > 0 ? Math.round(totalTime / answeredCount) : 0;
+        const isPerfect = accuracy === 100 && answeredCount >= 10;
+        
+        const achievements = checkAndUnlockAchievements(user.id, {
+          totalAnswered: progress.totalAnswered,
+          correctCount: progress.correctCount,
+          streak: progress.streak || 0,
+          maxCombo,
+          avgTime,
+          isPerfect
+        });
+        
+        if (achievements.length > 0) {
+          setNewAchievements(achievements);
+        }
       }
-    }
+    };
+    
+    saveResults();
   }, [quizFinished, user, score, answeredCount, maxCombo, questions.length, grade, totalTime]);
 
   const startWithCount = (count: number) => {

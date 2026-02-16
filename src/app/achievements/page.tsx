@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, getUserAchievements, ACHIEVEMENTS, Achievement, User } from '@/lib/storage';
+import { getCurrentUser, getUserAchievements, ACHIEVEMENTS, Achievement, User, applyFontSize } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 
 export default function AchievementsPage() {
@@ -12,6 +12,7 @@ export default function AchievementsPage() {
 
   useEffect(() => {
     initTheme();
+    applyFontSize();
     const currentUser = getCurrentUser();
     if (!currentUser) {
       router.push('/login');

@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, User, UserProgress } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, User, UserProgress, applyFontSize } from '@/lib/storage';
 import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
+import Tour from '@/components/Tour';
 
 export default function Home() {
   const router = useRouter();
@@ -17,15 +18,18 @@ export default function Home() {
 
   useEffect(() => {
     initTheme();
+    applyFontSize();
     setIsDark(getTheme() === 'dark');
     
     const currentUser = getCurrentUser();
     if (currentUser) {
       setUser(currentUser);
-      setProgress(getUserProgress(currentUser.id));
-      setWeakCategories(getWeakCategories(currentUser.id, 3));
-      setAchievementCount(getUserAchievements(currentUser.id).length);
-      setTodayCount(getTodayAnsweredCount(currentUser.id));
+      if (currentUser.role === 'student') {
+        setProgress(getUserProgress(currentUser.id));
+        setWeakCategories(getWeakCategories(currentUser.id, 3));
+        setAchievementCount(getUserAchievements(currentUser.id).length);
+        setTodayCount(getTodayAnsweredCount(currentUser.id));
+      }
     }
     setLoading(false);
   }, []);
@@ -49,6 +53,19 @@ export default function Home() {
     router.push(`/quiz?grade=${grade}`);
   };
 
+  // 根據角色導向不同頁面
+  const navigateByRole = () => {
+    if (!user) {
+      router.push('/login');
+      return;
+    }
+    if (user.role === 'parent') {
+      router.push('/parent-dashboard');
+    } else if (user.role === 'teacher') {
+      router.push('/class-management');
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
@@ -57,11 +74,106 @@ export default function Home() {
     );
   }
 
+  // 非學生用戶顯示簡化介面
+  if (user && user.role !== 'student') {
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 p-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center py-8 relative">
+            <button
+              onClick={handleToggleTheme}
+              className="absolute right-0 top-8 p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+            >
+              {isDark ? '☀️' : '🌙'}
+            </button>
+            <h1 className="text-4xl font-bold text-white mb-2">📐 國小數學題庫</h1>
+            <p className="text-blue-100">五、六年級數學練習平台</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-600">歡迎回來！</p>
+                <p className="text-2xl font-bold text-gray-800">{user.username}</p>
+                <p className="text-sm text-gray-500">
+                  {user.role === 'parent' ? '👨‍👩‍👧 家長帳號' : '👨‍🏫 教師帳號'}
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => router.push('/settings')}
+                  className="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 text-sm transition"
+                >
+                  ⚙️ 設定
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg text-gray-700 text-sm transition"
+                >
+                  登出
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* 角色專屬功能 */}
+          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            {user.role === 'parent' ? (
+              <button
+                onClick={() => router.push('/parent-dashboard')}
+                className="w-full py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl font-medium transition text-lg"
+              >
+                👨‍👩‍👧 進入家長專區
+              </button>
+            ) : (
+              <button
+                onClick={() => router.push('/class-management')}
+                className="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition text-lg"
+              >
+                👨‍🏫 進入班級管理
+              </button>
+            )}
+          </div>
+
+          {/* 其他功能 */}
+          <div className="flex flex-wrap justify-center gap-3">
+            <div
+              onClick={() => router.push('/leaderboard')}
+              className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
+            >
+              <div className="text-2xl mb-1">🏆</div>
+              <div className="font-bold text-gray-800 text-xs">排行榜</div>
+            </div>
+            <div
+              onClick={() => router.push('/parent-view')}
+              className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
+            >
+              <div className="text-2xl mb-1">🔍</div>
+              <div className="font-bold text-gray-800 text-xs">查詢學生</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 p-4">
+      {/* 新手引導 */}
+      {user && <Tour />}
+      
       <div className="max-w-4xl mx-auto">
         {/* 標題 */}
         <div className="text-center py-8 relative">
+          {/* 設定按鈕 */}
+          <button
+            onClick={() => router.push('/settings')}
+            className="absolute left-0 top-8 p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+            title="設定"
+          >
+            ⚙️
+          </button>
+          
           {/* 深色模式切換 */}
           <button
             onClick={handleToggleTheme}
@@ -137,7 +249,7 @@ export default function Home() {
         </div>
 
         {/* 一鍵開始 - 今日 10 題（遊客也能看到） */}
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+        <div className="grid md:grid-cols-2 gap-4 mb-6" data-tour="quick-start">
           <button
             onClick={() => user ? router.push('/quiz?grade=5&count=10') : router.push('/login')}
             className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl shadow-xl p-6 text-white text-left transition transform hover:scale-105"
@@ -222,7 +334,7 @@ export default function Home() {
 
         {/* 弱點分析 Top3 */}
         {user && weakCategories.length > 0 && (
-          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6" data-tour="weak-practice">
             <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
               <span>📊</span> 弱點分析
             </h3>
@@ -266,7 +378,7 @@ export default function Home() {
         )}
 
         {/* 年級選擇 */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-6 mb-6" data-tour="create-quiz">
           <div
             onClick={() => startQuiz(5)}
             className="bg-white rounded-2xl shadow-xl p-6 cursor-pointer hover:scale-105 transition transform"
@@ -306,6 +418,7 @@ export default function Home() {
           <div
             onClick={() => router.push('/leaderboard')}
             className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20"
+            data-tour="leaderboard"
           >
             <div className="text-2xl mb-1">🏆</div>
             <div className="font-bold text-gray-800 text-xs">排行榜</div>
@@ -315,6 +428,7 @@ export default function Home() {
           <div
             onClick={() => router.push('/achievements')}
             className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20 relative"
+            data-tour="achievements"
           >
             <div className="text-2xl mb-1">🏅</div>
             <div className="font-bold text-gray-800 text-xs">成就</div>
@@ -329,6 +443,7 @@ export default function Home() {
           <div
             onClick={() => user ? router.push('/wrong-answers') : router.push('/login')}
             className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20 relative"
+            data-tour="wrong-book"
           >
             <div className="text-2xl mb-1">📝</div>
             <div className="font-bold text-gray-800 text-xs">錯題本</div>

@@ -1,12 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { loginUser } from '@/lib/storage';
+import { loginUser, applyFontSize } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
-
-import { useEffect } from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -17,6 +15,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     initTheme();
+    applyFontSize();
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,8 +33,15 @@ export default function LoginPage() {
     const savedGrade = parseInt(localStorage.getItem('math_quiz_grade') || '5');
     const result = await loginUser(username, password, savedGrade);
     
-    if (result.success) {
-      router.push('/');
+    if (result.success && result.user) {
+      // 根據角色導向不同頁面
+      if (result.user.role === 'parent') {
+        router.push('/parent-dashboard');
+      } else if (result.user.role === 'teacher') {
+        router.push('/class-management');
+      } else {
+        router.push('/');
+      }
     } else {
       setError(result.message);
     }
