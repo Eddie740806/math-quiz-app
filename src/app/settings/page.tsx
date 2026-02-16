@@ -43,7 +43,8 @@ export default function SettingsPage() {
 
   const handleResetTour = () => {
     resetTour();
-    alert('新手引導已重置！下次進入首頁時會再次顯示。');
+    // 直接跳轉到首頁並觸發 Tour
+    router.push('/');
   };
 
   const handleJoinClass = async () => {

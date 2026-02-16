@@ -56,13 +56,38 @@ export default function Tour() {
 
   useEffect(() => {
     // 檢查是否需要顯示 tour
-    if (!hasCompletedTour()) {
-      // 延遲一下再顯示，讓頁面先渲染完成
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
+    const checkAndShowTour = () => {
+      if (!hasCompletedTour()) {
+        // 延遲一下再顯示，讓頁面先渲染完成
+        const timer = setTimeout(() => {
+          setIsOpen(true);
+          setCurrentStep(0);
+        }, 1000);
+        return () => clearTimeout(timer);
+      }
+    };
+
+    checkAndShowTour();
+
+    // 監聽 storage 變化（用於跨頁面同步）
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'math_quiz_tour_completed' && e.newValue !== 'true') {
+        checkAndShowTour();
+      }
+    };
+    window.addEventListener('storage', handleStorageChange);
+
+    // 監聯自定義事件（用於同頁面觸發）
+    const handleTourReset = () => {
+      setIsOpen(true);
+      setCurrentStep(0);
+    };
+    window.addEventListener('tourReset', handleTourReset);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('tourReset', handleTourReset);
+    };
   }, []);
 
   useEffect(() => {

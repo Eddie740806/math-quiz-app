@@ -1003,6 +1003,8 @@ export function setTourCompleted(completed: boolean) {
 export function resetTour() {
   if (typeof window === 'undefined') return;
   localStorage.removeItem('math_quiz_tour_completed');
+  // 觸發自定義事件，讓 Tour 組件知道要重新顯示
+  window.dispatchEvent(new Event('tourReset'));
 }
 
 // ========================================
