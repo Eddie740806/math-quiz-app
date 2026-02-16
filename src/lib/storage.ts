@@ -322,7 +322,26 @@ export async function syncProgressToCloud(localUserId: string) {
   const currentUser = getCurrentUser();
   if (!currentUser) return;
   
-  const supabaseUserId = supabaseUserIds[currentUser.username];
+  let supabaseUserId = supabaseUserIds[currentUser.username];
+  
+  // 如果緩存沒有，嘗試從 Supabase 查詢
+  if (!supabaseUserId) {
+    try {
+      const { data } = await supabase
+        .from('users')
+        .select('id')
+        .eq('username', currentUser.username)
+        .single();
+      
+      if (data?.id) {
+        supabaseUserIds[currentUser.username] = data.id;
+        supabaseUserId = data.id;
+      }
+    } catch (err) {
+      console.error('Get user id error:', err);
+    }
+  }
+  
   if (!supabaseUserId) return;
   
   const progress = getUserProgress(localUserId);
@@ -473,10 +492,8 @@ export function recordAnswer(odiserId: string, questionId: string, userAnswer: n
   
   saveUserProgress(progress);
   
-  // 背景同步到雲端（每 10 題同步一次）
-  if (progress.totalAnswered % 10 === 0) {
-    syncProgressToCloud(odiserId);
-  }
+  // 每次答題後都同步到雲端（背景執行）
+  syncProgressToCloud(odiserId);
   
   return isCorrect;
 }
