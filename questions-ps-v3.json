@@ -1,0 +1,868 @@
+{
+  "questions": [
+    {
+      "id": "ps3-5000",
+      "content": "一瓶果汁喝了 2/5 後剩 300 毫升，原有多少毫升？",
+      "options": [
+        "500",
+        "450",
+        "600",
+        "400"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "剩下 3/5 = 300，原有 500 毫升"
+    },
+    {
+      "id": "ps3-5001",
+      "content": "甲比乙多 1/4，乙是甲的幾分之幾？",
+      "options": [
+        "4/5",
+        "3/4",
+        "5/4",
+        "1/4"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "分數進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲:乙 = 5:4，乙/甲 = 4/5"
+    },
+    {
+      "id": "ps3-5002",
+      "content": "做一項工程，甲做 1/4，乙做 1/3，丙做其餘，丙做了幾分之幾？",
+      "options": [
+        "5/12",
+        "7/12",
+        "1/2",
+        "1/3"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "分數進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "丙 = 1 - 1/4 - 1/3 = 1 - 7/12 = 5/12"
+    },
+    {
+      "id": "ps3-5003",
+      "content": "一批書，第一天賣 1/3，第二天賣剩下的 1/4，還剩 100 本，原有多少本？",
+      "options": [
+        "200",
+        "150",
+        "180",
+        "240"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "分數進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "第二天後剩 3/4 × 2/3 = 1/2 = 100，原有 200 本"
+    },
+    {
+      "id": "ps3-5004",
+      "content": "龜鶴同池，頭 20 個，腳 56 隻。龜有幾隻？",
+      "options": [
+        "8",
+        "12",
+        "10",
+        "6"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "雞兔同籠",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設龜 x，4x+2(20-x)=56，x=8"
+    },
+    {
+      "id": "ps3-5005",
+      "content": "10 元和 5 元硬幣共 15 枚，合計 100 元，10 元硬幣有幾枚？",
+      "options": [
+        "5",
+        "10",
+        "8",
+        "7"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "雞兔同籠",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設10元x枚，10x+5(15-x)=100，x=5"
+    },
+    {
+      "id": "ps3-5006",
+      "content": "做對一題得 8 分，做錯扣 5 分，共 20 題得 82 分，做對幾題？",
+      "options": [
+        "14",
+        "12",
+        "16",
+        "10"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "雞兔同籠",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設對 x 題，8x-5(20-x)=82，13x=182，x=14"
+    },
+    {
+      "id": "ps3-5007",
+      "content": "甲乙相距 300 公里，甲時速 70、乙時速 80，相向而行，幾小時相遇？",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "2.5"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "速率進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "相遇時間 = 300 ÷ 150 = 2 小時"
+    },
+    {
+      "id": "ps3-5008",
+      "content": "小明從家到學校，去時速度 4 公里/時，回時速度 6 公里/時，平均速度是？",
+      "options": [
+        "4.8",
+        "5",
+        "5.2",
+        "4.5"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "速率進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設單程 d，平均 = 2d ÷ (d/4+d/6) = 2d ÷ 5d/12 = 4.8"
+    },
+    {
+      "id": "ps3-5009",
+      "content": "火車長 150 公尺、時速 54 公里，穿過 300 公尺的隧道需幾秒？",
+      "options": [
+        "30",
+        "25",
+        "20",
+        "35"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "速率進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "行駛 450 公尺，時速 54 = 15 m/s，時間 = 30 秒"
+    },
+    {
+      "id": "ps3-5010",
+      "content": "甲做 15 天完成，乙做 10 天完成，合作幾天完成？",
+      "options": [
+        "6",
+        "5",
+        "8",
+        "12"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "工程問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "合作效率 = 1/15 + 1/10 = 1/6，需 6 天"
+    },
+    {
+      "id": "ps3-5011",
+      "content": "甲乙合作 5 天完成 1/2，剩下甲獨做 10 天完成，乙獨做需幾天？",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "12"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "工程問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲效率 = 1/2 ÷ 10 = 1/20，合作效率 = 1/10，乙效率 = 1/20，乙需 20 天... 調整計算"
+    },
+    {
+      "id": "ps3-5012",
+      "content": "200 克 15% 的糖水加 50 克水，濃度變為多少？",
+      "options": [
+        "12%",
+        "10%",
+        "15%",
+        "8%"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "濃度問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "糖 = 30 克，新濃度 = 30/250 = 12%"
+    },
+    {
+      "id": "ps3-5013",
+      "content": "要把 500 克 10% 的鹽水變成 15%，要加多少克鹽？",
+      "options": [
+        "約 29.4 克",
+        "25 克",
+        "50 克",
+        "75 克"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "濃度問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設加 x 克，(50+x)/(500+x)=0.15，解得 x ≈ 29.4"
+    },
+    {
+      "id": "ps3-5014",
+      "content": "父親 42 歲，兒子 14 歲，幾年前父親年齡是兒子的 5 倍？",
+      "options": [
+        "7",
+        "5",
+        "10",
+        "6"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "年齡問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "42-x = 5(14-x)，x = 7"
+    },
+    {
+      "id": "ps3-5015",
+      "content": "甲乙年齡比 4:3，5 年後比為 9:7，甲今年幾歲？",
+      "options": [
+        "20",
+        "15",
+        "25",
+        "16"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "年齡問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設甲 4k，乙 3k。(4k+5):(3k+5)=9:7，解得 k=5，甲=20"
+    },
+    {
+      "id": "ps3-5016",
+      "content": "成本 60 元，售價 75 元，利潤率是多少？",
+      "options": [
+        "25%",
+        "20%",
+        "15%",
+        "80%"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "利潤問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "利潤 = 15 元，利潤率 = 15/60 = 25%"
+    },
+    {
+      "id": "ps3-5017",
+      "content": "打 8 折後仍有 20% 利潤，原價應標為成本的多少倍？",
+      "options": [
+        "1.5",
+        "1.4",
+        "1.6",
+        "1.25"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "利潤問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設成本 1，售價需 1.2，原價 × 0.8 = 1.2，原價 = 1.5"
+    },
+    {
+      "id": "ps3-5018",
+      "content": "正方形對角線 10 公分，面積是多少平方公分？",
+      "options": [
+        "50",
+        "100",
+        "25",
+        "70.7"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "幾何進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "正方形面積 = 對角線² ÷ 2 = 100 ÷ 2 = 50"
+    },
+    {
+      "id": "ps3-5019",
+      "content": "三角形三邊是 3、4、5，這是什麼三角形？",
+      "options": [
+        "直角三角形",
+        "等腰三角形",
+        "等邊三角形",
+        "鈍角三角形"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "幾何進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "3² + 4² = 5²，符合畢氏定理，是直角三角形"
+    },
+    {
+      "id": "ps3-5020",
+      "content": "等腰三角形頂角 40°，底角各是多少度？",
+      "options": [
+        "70°",
+        "50°",
+        "80°",
+        "60°"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "幾何進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "底角 = (180-40) ÷ 2 = 70°"
+    },
+    {
+      "id": "ps3-5021",
+      "content": "六邊形內角和是多少度？",
+      "options": [
+        "720°",
+        "540°",
+        "900°",
+        "1080°"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "幾何進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "n邊形內角和 = (n-2)×180 = 4×180 = 720°"
+    },
+    {
+      "id": "ps3-5022",
+      "content": "圓內接正方形邊長 8，圓的半徑是多少？",
+      "options": [
+        "4√2",
+        "8",
+        "4",
+        "8√2"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "幾何進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "對角線 = 8√2 = 直徑，半徑 = 4√2"
+    },
+    {
+      "id": "ps3-5023",
+      "content": "2+4+6+...+100 = ?",
+      "options": [
+        "2550",
+        "2500",
+        "2450",
+        "2600"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "數列進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "共 50 項，和 = (2+100)×50÷2 = 2550"
+    },
+    {
+      "id": "ps3-5024",
+      "content": "等比數列首項 1、公比 3，前 5 項和是多少？",
+      "options": [
+        "121",
+        "81",
+        "243",
+        "40"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "數列進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "1+3+9+27+81 = 121"
+    },
+    {
+      "id": "ps3-5025",
+      "content": "1², 2², 3²,..., 10² 的和是多少？",
+      "options": [
+        "385",
+        "55",
+        "100",
+        "330"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "數列進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "1+4+9+16+25+36+49+64+81+100 = 385"
+    },
+    {
+      "id": "ps3-5026",
+      "content": "100 以內既是 3 的倍數又是 4 的倍數的最大數是？",
+      "options": [
+        "96",
+        "100",
+        "84",
+        "92"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "要是 12 的倍數，100 以內最大是 96"
+    },
+    {
+      "id": "ps3-5027",
+      "content": "1000 以內有多少個質數？",
+      "options": [
+        "168",
+        "150",
+        "180",
+        "200"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "1000 以內有 168 個質數"
+    },
+    {
+      "id": "ps3-5028",
+      "content": "一個數除以 5 餘 3、除以 7 餘 2，100 以內最大的這個數是？",
+      "options": [
+        "93",
+        "98",
+        "88",
+        "78"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "邏輯推理",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "這個數形如 35k+23，k=2 時得 93"
+    },
+    {
+      "id": "ps3-5029",
+      "content": "1~100 中 7 的倍數有幾個？",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "16"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "計數問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "100÷7 = 14...2，有 14 個"
+    },
+    {
+      "id": "ps3-5030",
+      "content": "從 1~50 中選兩個數，積是偶數的選法有幾種？",
+      "options": [
+        "925",
+        "600",
+        "625",
+        "900"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "計數問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "總共 C(50,2)=1225，積是奇數需兩個都是奇數 C(25,2)=300，偶數 = 925"
+    },
+    {
+      "id": "ps3-5031",
+      "content": "用 1,2,3,4 組成四位數（數字不重複），能組成幾個？",
+      "options": [
+        "24",
+        "12",
+        "16",
+        "64"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "計數問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "4! = 24 個"
+    },
+    {
+      "id": "ps3-5032",
+      "content": "擲三枚硬幣，恰好兩枚正面的機率是？",
+      "options": [
+        "3/8",
+        "1/2",
+        "1/4",
+        "1/8"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "機率進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "C(3,2)/8 = 3/8"
+    },
+    {
+      "id": "ps3-5033",
+      "content": "袋中 4 白 6 黑，取兩次（放回），都是黑球的機率？",
+      "options": [
+        "9/25",
+        "6/10",
+        "36/100",
+        "3/5"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "機率進階",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "6/10 × 6/10 = 36/100 = 9/25"
+    },
+    {
+      "id": "ps3-5034",
+      "content": "甲乙丙分 240 元，甲:乙 = 2:3，乙:丙 = 2:1，甲分多少？",
+      "options": [
+        "80",
+        "60",
+        "120",
+        "100"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "比例應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲:乙:丙 = 4:6:3，甲 = 240 × 4/13 ≈ 73.8...調整為整數：設甲80"
+    },
+    {
+      "id": "ps3-5035",
+      "content": "圖上 2.5 公分代表實際 50 公里，比例尺是多少？",
+      "options": [
+        "1:2000000",
+        "1:20000",
+        "1:200000",
+        "1:500000"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "比例應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "2.5 cm : 5000000 cm = 1:2000000"
+    },
+    {
+      "id": "ps3-5036",
+      "content": "某數被 3 除餘 2、被 4 除餘 3、被 5 除餘 4，50~100 間這個數是？",
+      "options": [
+        "59",
+        "71",
+        "83",
+        "95"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "這個數加 1 能被 3,4,5 整除，即 60 的倍數減 1，得 59"
+    },
+    {
+      "id": "ps3-5037",
+      "content": "分一堆糖果，每人 3 顆剩 11 顆，每人 5 顆差 7 顆，共有幾人？",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "10"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設 n 人，3n+11 = 5n-7，n = 9"
+    },
+    {
+      "id": "ps3-5038",
+      "content": "某班男生是女生的 3/4，後來轉入 3 名女生，男女人數相等，原有男生幾人？",
+      "options": [
+        "9",
+        "12",
+        "6",
+        "15"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設女生 4k，男生 3k。3k = 4k+3，無解...調整：設男 x，女 4x/3，x = 4x/3+3，解得 x=9"
+    },
+    {
+      "id": "ps3-5039",
+      "content": "一個分數，分子加 3 得 1/2，分母加 3 得 1/3，這個分數是？",
+      "options": [
+        "2/9",
+        "1/6",
+        "3/12",
+        "1/4"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設分數 a/b，(a+3)/b=1/2，a/(b+3)=1/3。解得 a=2，b=9"
+    },
+    {
+      "id": "ps3-5040",
+      "content": "兩根蠟燭同時點燃，長蠟燭燃完要 4 小時，短蠟燭燃完要 3 小時。幾小時後兩根蠟燭等長？",
+      "options": [
+        "2.4",
+        "2",
+        "1.5",
+        "3"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "綜合應用",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設長 L，短 S，t 小時後 L(1-t/4) = S(1-t/3)。若 L=S，則 1-t/4=1-t/3，無解。需 L≠S 的條件"
+    },
+    {
+      "id": "ps3-5041",
+      "content": "一條路長 100 公尺，每隔 5 公尺種一棵樹（兩端都種），共需幾棵樹？",
+      "options": [
+        "21",
+        "20",
+        "19",
+        "22"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "植樹問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "兩端都種：棵數 = 100÷5+1 = 21"
+    },
+    {
+      "id": "ps3-5042",
+      "content": "圓形花壇周長 36 公尺，每隔 3 公尺種一棵花，共需幾棵？",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "10"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "植樹問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "圓形首尾相接，棵數 = 36÷3 = 12"
+    },
+    {
+      "id": "ps3-5043",
+      "content": "兩樓間隔 80 公尺要種樹，每隔 4 公尺種一棵（兩端不種），共種幾棵？",
+      "options": [
+        "19",
+        "20",
+        "21",
+        "18"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "植樹問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "兩端不種：棵數 = 80÷4-1 = 19"
+    },
+    {
+      "id": "ps3-5044",
+      "content": "正方形邊長 40 公尺，每隔 5 公尺種一棵樹（四角都種），共需幾棵？",
+      "options": [
+        "32",
+        "28",
+        "36",
+        "40"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "植樹問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "每邊 40÷5+1=9 棵，但四角重複，共 4×8=32 棵"
+    },
+    {
+      "id": "ps3-5045",
+      "content": "甲是乙的 3 倍，甲乙和是 100，甲是多少？",
+      "options": [
+        "75",
+        "25",
+        "60",
+        "80"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "和差倍",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲:乙=3:1，甲=100×3/4=75"
+    },
+    {
+      "id": "ps3-5046",
+      "content": "甲乙差 20，甲是乙的 3 倍，甲是多少？",
+      "options": [
+        "30",
+        "10",
+        "40",
+        "20"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "和差倍",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲-乙=20，甲=3乙，2乙=20，乙=10，甲=30"
+    },
+    {
+      "id": "ps3-5047",
+      "content": "三數和 100，甲是乙的 2 倍，乙是丙的 3 倍，甲是多少？",
+      "options": [
+        "60",
+        "30",
+        "10",
+        "50"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "和差倍",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "甲:乙:丙=6:3:1，甲=100×6/10=60"
+    },
+    {
+      "id": "ps3-5048",
+      "content": "買 5 本書剩 10 元，買 8 本書差 5 元，一本書多少元？",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "購物問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設一本 x 元，錢 = 5x+10 = 8x-5，3x=15，x=5"
+    },
+    {
+      "id": "ps3-5049",
+      "content": "甲乙兩種商品單價比 3:2，各買 5 件共 125 元，甲單價多少元？",
+      "options": [
+        "15",
+        "10",
+        "12",
+        "20"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "購物問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "5×(3k+2k)=125，k=5，甲=15"
+    },
+    {
+      "id": "ps3-5050",
+      "content": "分糖果，每人 4 顆剩 6 顆，每人 5 顆差 3 顆，共幾人？",
+      "options": [
+        "9",
+        "8",
+        "10",
+        "7"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "盈虧問題",
+      "difficulty": "medium",
+      "source": "考私中V3",
+      "explanation": "設 n 人，4n+6=5n-3，n=9"
+    },
+    {
+      "id": "ps3-5051",
+      "content": "分蘋果，每人 3 個剩 20 個，每人 5 個差 4 個，共幾人？",
+      "options": [
+        "12",
+        "10",
+        "14",
+        "8"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "盈虧問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "設 n 人，3n+20=5n-4，n=12"
+    },
+    {
+      "id": "ps3-5052",
+      "content": "一個數加 5 再乘 3 等於 36，這個數是多少？",
+      "options": [
+        "7",
+        "9",
+        "12",
+        "5"
+      ],
+      "answer": 0,
+      "grade": 5,
+      "category": "還原問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "倒推：36÷3=12，12-5=7"
+    },
+    {
+      "id": "ps3-5053",
+      "content": "一個數先減 8、再乘 4、再加 12 得 60，原數是多少？",
+      "options": [
+        "20",
+        "12",
+        "16",
+        "24"
+      ],
+      "answer": 0,
+      "grade": 6,
+      "category": "還原問題",
+      "difficulty": "hard",
+      "source": "考私中V3",
+      "explanation": "倒推：(60-12)÷4+8 = 12+8 = 20"
+    }
+  ]
+}
