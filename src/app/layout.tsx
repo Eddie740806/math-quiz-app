@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "國小數學題庫 - 支點教育 K12",
+  title: "國小數學練習平台",
   description: "五、六年級數學練習平台，1000+ 精選題目，錯題本自動收集，弱點分析報告",
 };
 

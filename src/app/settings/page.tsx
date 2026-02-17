@@ -259,9 +259,9 @@ export default function SettingsPage() {
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h2 className="text-lg font-bold text-gray-800 mb-4">ℹ️ 關於</h2>
             <div className="text-sm text-gray-500 space-y-1">
-              <p>支點教育 數學題庫系統</p>
+              <p>國小數學練習平台</p>
               <p>版本 2.0.0</p>
-              <p className="text-xs pt-2">© 2026 支點教育</p>
+              <p className="text-xs pt-2">© 張可享 製作</p>
             </div>
           </div>
         </div>

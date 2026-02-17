@@ -260,7 +260,7 @@ export default function AdminPage() {
 
         {/* Footer */}
         <div className="text-center text-gray-500 mt-8">
-          支點教育數學題庫系統 | 管理後台 v1.0
+          國小數學練習平台 | 管理後台 v1.0
         </div>
       </div>
     </div>
