@@ -13,12 +13,14 @@ import {
   User
 } from '@/lib/storage';
 import { initTheme, getTheme, setTheme } from '@/lib/theme';
+import { isSoundEnabled, setSoundEnabled, playCorrectSound } from '@/lib/sounds';
 
 export default function SettingsPage() {
   const router = useRouter();
   const [currentUser, setCurrentUserState] = useState<User | null>(null);
   const [fontSize, setFontSizeState] = useState<FontSize>('medium');
   const [theme, setThemeState] = useState<'light' | 'dark'>('light');
+  const [soundEnabled, setSoundEnabledState] = useState(true);
   const [classCode, setClassCode] = useState('');
   const [joinLoading, setJoinLoading] = useState(false);
   const [joinMessage, setJoinMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
@@ -29,7 +31,17 @@ export default function SettingsPage() {
     setCurrentUserState(getCurrentUser());
     setFontSizeState(getFontSize());
     setThemeState(getTheme() as 'light' | 'dark');
+    setSoundEnabledState(isSoundEnabled());
   }, []);
+  
+  const handleSoundToggle = (enabled: boolean) => {
+    setSoundEnabledState(enabled);
+    setSoundEnabled(enabled);
+    if (enabled) {
+      // 播放測試音效
+      playCorrectSound();
+    }
+  };
 
   const handleFontSizeChange = (size: FontSize) => {
     setFontSizeState(size);
@@ -140,6 +152,36 @@ export default function SettingsPage() {
               >
                 <div className="text-2xl mb-2">🌙</div>
                 <div className="font-medium text-gray-800">深色模式</div>
+              </button>
+            </div>
+          </div>
+
+          {/* 音效 */}
+          <div className="bg-white rounded-2xl shadow-xl p-6">
+            <h2 className="text-lg font-bold text-gray-800 mb-4">🔊 音效</h2>
+            <p className="text-sm text-gray-500 mb-4">答對答錯時播放音效提示</p>
+            <div className="grid grid-cols-2 gap-4">
+              <button
+                onClick={() => handleSoundToggle(true)}
+                className={`p-4 rounded-lg border-2 transition ${
+                  soundEnabled
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className="text-2xl mb-2">🔔</div>
+                <div className="font-medium text-gray-800">開啟音效</div>
+              </button>
+              <button
+                onClick={() => handleSoundToggle(false)}
+                className={`p-4 rounded-lg border-2 transition ${
+                  !soundEnabled
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className="text-2xl mb-2">🔇</div>
+                <div className="font-medium text-gray-800">關閉音效</div>
               </button>
             </div>
           </div>

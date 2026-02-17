@@ -2,8 +2,9 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat, applyFontSize } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat, applyFontSize, isBookmarked, toggleBookmark } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
+import { playCorrectSound, playWrongSound, playStreakSound, playAchievementSound, playCompleteSound } from '@/lib/sounds';
 import questionsData from '@/data/questions.json';
 
 interface Question {
@@ -48,6 +49,7 @@ function QuizContent() {
   const [totalTime, setTotalTime] = useState(0);
   const [currentQuestionTime, setCurrentQuestionTime] = useState(0);
   const [newAchievements, setNewAchievements] = useState<Achievement[]>([]);
+  const [bookmarked, setBookmarked] = useState(false);
 
   // 計時器
   useEffect(() => {
@@ -107,6 +109,11 @@ function QuizContent() {
       
       setQuestions(gradeQuestions);
       setShowCountSelector(false);
+      
+      // 檢查第一題的收藏狀態
+      if (currentUser && gradeQuestions[0]) {
+        setBookmarked(isBookmarked(currentUser.id, gradeQuestions[0].id));
+      }
     }
   }, [grade, router, questionCount, difficulty, categoriesParam]);
 
@@ -143,6 +150,9 @@ function QuizContent() {
         
         if (achievements.length > 0) {
           setNewAchievements(achievements);
+          playAchievementSound();
+        } else if (quizFinished) {
+          playCompleteSound();
         }
       }
     };
@@ -181,13 +191,17 @@ function QuizContent() {
       if (newCombo > maxCombo) {
         setMaxCombo(newCombo);
       }
-      // 連擊特效
+      // 連擊特效與音效
       if (newCombo >= 3) {
         setShowComboEffect(true);
+        playStreakSound(newCombo);
         setTimeout(() => setShowComboEffect(false), 1000);
+      } else {
+        playCorrectSound();
       }
     } else {
       setCombo(0);
+      playWrongSound();
       // 記錄錯題
       setWrongQuestions(prev => [...prev, currentQuestion]);
     }
@@ -203,11 +217,23 @@ function QuizContent() {
       return;
     }
     
-    setCurrentIndex(prev => prev + 1);
+    const nextIndex = currentIndex + 1;
+    setCurrentIndex(nextIndex);
     setSelectedAnswer(null);
     setShowResult(false);
     setQuestionStartTime(Date.now());
     setCurrentQuestionTime(0);
+    
+    // 檢查下一題的收藏狀態
+    if (user && questions[nextIndex]) {
+      setBookmarked(isBookmarked(user.id, questions[nextIndex].id));
+    }
+  };
+  
+  const handleToggleBookmark = () => {
+    if (!user || !currentQuestion) return;
+    const newState = toggleBookmark(user.id, currentQuestion.id);
+    setBookmarked(newState);
   };
 
   const handleSkip = () => {
@@ -474,9 +500,22 @@ function QuizContent() {
         {/* 題目卡片 */}
         <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
           <div className="flex items-center justify-between mb-4">
-            <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-              {currentQuestion.category}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                {currentQuestion.category}
+              </span>
+              <button
+                onClick={handleToggleBookmark}
+                className={`p-1.5 rounded-full transition ${
+                  bookmarked 
+                    ? 'bg-yellow-100 text-yellow-500' 
+                    : 'bg-gray-100 text-gray-400 hover:bg-yellow-50 hover:text-yellow-500'
+                }`}
+                title={bookmarked ? '取消收藏' : '收藏題目'}
+              >
+                {bookmarked ? '⭐' : '☆'}
+              </button>
+            </div>
             <span className="text-gray-400 text-sm">
               {currentIndex + 1} / {questions.length}
             </span>

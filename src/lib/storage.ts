@@ -1151,3 +1151,66 @@ export function checkAndUnlockAchievements(userId: string, stats: {
   
   return newAchievements;
 }
+
+// ==================== 收藏功能 ====================
+
+export interface BookmarkedQuestion {
+  questionId: string;
+  addedAt: string;
+  note?: string;
+}
+
+export function getBookmarks(userId: string): BookmarkedQuestion[] {
+  if (typeof window === 'undefined') return [];
+  const key = `bookmarks_${userId}`;
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : [];
+}
+
+export function addBookmark(userId: string, questionId: string, note?: string): boolean {
+  if (typeof window === 'undefined') return false;
+  const bookmarks = getBookmarks(userId);
+  
+  // 檢查是否已收藏
+  if (bookmarks.some(b => b.questionId === questionId)) {
+    return false;
+  }
+  
+  bookmarks.push({
+    questionId,
+    addedAt: new Date().toISOString(),
+    note
+  });
+  
+  localStorage.setItem(`bookmarks_${userId}`, JSON.stringify(bookmarks));
+  return true;
+}
+
+export function removeBookmark(userId: string, questionId: string): boolean {
+  if (typeof window === 'undefined') return false;
+  const bookmarks = getBookmarks(userId);
+  const filtered = bookmarks.filter(b => b.questionId !== questionId);
+  
+  if (filtered.length === bookmarks.length) {
+    return false; // 沒有找到要刪除的
+  }
+  
+  localStorage.setItem(`bookmarks_${userId}`, JSON.stringify(filtered));
+  return true;
+}
+
+export function isBookmarked(userId: string, questionId: string): boolean {
+  if (typeof window === 'undefined') return false;
+  const bookmarks = getBookmarks(userId);
+  return bookmarks.some(b => b.questionId === questionId);
+}
+
+export function toggleBookmark(userId: string, questionId: string): boolean {
+  if (isBookmarked(userId, questionId)) {
+    removeBookmark(userId, questionId);
+    return false;
+  } else {
+    addBookmark(userId, questionId);
+    return true;
+  }
+}

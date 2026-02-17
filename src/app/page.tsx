@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, User, UserProgress, applyFontSize } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, getBookmarks, User, UserProgress, applyFontSize } from '@/lib/storage';
 import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
 import Tour from '@/components/Tour';
 
@@ -13,6 +13,7 @@ export default function Home() {
   const [weakCategories, setWeakCategories] = useState<{ category: string; accuracy: number; total: number }[]>([]);
   const [achievementCount, setAchievementCount] = useState(0);
   const [todayCount, setTodayCount] = useState(0);
+  const [bookmarkCount, setBookmarkCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
@@ -29,6 +30,7 @@ export default function Home() {
         setWeakCategories(getWeakCategories(currentUser.id, 3));
         setAchievementCount(getUserAchievements(currentUser.id).length);
         setTodayCount(getTodayAnsweredCount(currentUser.id));
+        setBookmarkCount(getBookmarks(currentUser.id).length);
       }
     }
     setLoading(false);
@@ -461,6 +463,20 @@ export default function Home() {
           >
             <div className="text-2xl mb-1">📋</div>
             <div className="font-bold text-gray-800 text-xs">出卷</div>
+          </div>
+
+          {/* 收藏 */}
+          <div
+            onClick={() => user ? router.push('/bookmarks') : router.push('/login')}
+            className="bg-white rounded-xl shadow-lg p-4 cursor-pointer hover:scale-105 transition text-center w-20 relative"
+          >
+            <div className="text-2xl mb-1">⭐</div>
+            <div className="font-bold text-gray-800 text-xs">收藏</div>
+            {bookmarkCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-yellow-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {bookmarkCount}
+              </span>
+            )}
           </div>
 
           {/* 家長查看 */}
