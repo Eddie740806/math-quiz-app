@@ -393,7 +393,7 @@ export default function Home() {
               ))}
               <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">+18 種題型</span>
             </div>
-            <div className="text-xs text-gray-400 mb-2">📚 含 500 道精選題目</div>
+            <div className="text-xs text-gray-400 mb-2">📚 含 1,100+ 道精選題目</div>
             <div className="text-blue-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
 
@@ -409,7 +409,7 @@ export default function Home() {
               ))}
               <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">+18 種題型</span>
             </div>
-            <div className="text-xs text-gray-400 mb-2">📚 含 500 道精選題目</div>
+            <div className="text-xs text-gray-400 mb-2">📚 含 1,100+ 道精選題目</div>
             <div className="text-purple-500 font-medium text-sm">選擇難度和題數 →</div>
           </div>
         </div>
@@ -495,7 +495,7 @@ export default function Home() {
             <div className="text-2xl mb-2">👋 第一次來嗎？</div>
             <p className="text-blue-100 mb-4">註冊免費帳號，記錄你的學習進度！</p>
             <ul className="text-left text-sm text-blue-100 space-y-1 max-w-xs mx-auto">
-              <li>✅ 1000+ 道精選題目</li>
+              <li>✅ 2000+ 道精選題目</li>
               <li>✅ 錯題本自動收集</li>
               <li>✅ 弱點分析報告</li>
               <li>✅ 連擊系統超好玩</li>
