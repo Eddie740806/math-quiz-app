@@ -246,3 +246,37 @@ export function subscribeToOnlineCount(callback: (count: number) => void) {
     client.removeChannel(channel)
   }
 }
+
+// 獲取所有用戶列表
+export async function getAllUsers() {
+  if (!supabase) return []
+  
+  const { data, error } = await supabase
+    .from('users')
+    .select('*')
+    .order('created_at', { ascending: false })
+  
+  if (error) {
+    console.error('Get all users error:', error)
+    return []
+  }
+  
+  return data || []
+}
+
+// 獲取用戶答題統計
+export async function getUserAnswerStats(userId: string) {
+  if (!supabase) return { total: 0, correct: 0 }
+  
+  const { data, error } = await supabase
+    .from('answers')
+    .select('is_correct')
+    .eq('user_id', userId)
+  
+  if (error || !data) return { total: 0, correct: 0 }
+  
+  return {
+    total: data.length,
+    correct: data.filter(a => a.is_correct).length
+  }
+}

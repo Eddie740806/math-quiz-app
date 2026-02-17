@@ -8,8 +8,18 @@ import {
   getTotalStats,
   getGradeDistribution,
   getHardestQuestions,
-  subscribeToOnlineCount
+  subscribeToOnlineCount,
+  getAllUsers
 } from '@/lib/supabase'
+
+interface UserData {
+  id: string
+  username: string
+  grade: number
+  role: string
+  created_at: string
+  last_active: string
+}
 
 interface Stats {
   online: number
@@ -18,6 +28,7 @@ interface Stats {
     answers: number
     correctRate: number
   }
+  users: UserData[]
   total: {
     users: number
     answers: number
@@ -39,12 +50,13 @@ export default function AdminPage() {
 
   const loadStats = async () => {
     try {
-      const [online, today, total, gradeDistribution, hardestQuestions] = await Promise.all([
+      const [online, today, total, gradeDistribution, hardestQuestions, users] = await Promise.all([
         getOnlineCount(),
         getTodayStats(),
         getTotalStats(),
         getGradeDistribution(),
-        getHardestQuestions()
+        getHardestQuestions(),
+        getAllUsers()
       ])
 
       setStats({
@@ -52,7 +64,8 @@ export default function AdminPage() {
         today,
         total,
         gradeDistribution,
-        hardestQuestions
+        hardestQuestions,
+        users: users as UserData[]
       })
       setLastUpdate(new Date())
     } catch (error) {
@@ -256,6 +269,55 @@ export default function AdminPage() {
               <p className="text-gray-500">尚無足夠資料（需至少 5 次作答）</p>
             )}
           </div>
+        </div>
+
+        {/* User List */}
+        <div className="bg-gray-800 rounded-2xl p-6 mt-6">
+          <h2 className="text-xl font-bold text-white mb-4">👥 註冊用戶列表</h2>
+          {stats?.users && stats.users.length > 0 ? (
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-700">
+                    <th className="text-left text-gray-400 py-3 px-2">#</th>
+                    <th className="text-left text-gray-400 py-3 px-2">用戶名</th>
+                    <th className="text-left text-gray-400 py-3 px-2">角色</th>
+                    <th className="text-left text-gray-400 py-3 px-2">年級</th>
+                    <th className="text-left text-gray-400 py-3 px-2">註冊時間</th>
+                    <th className="text-left text-gray-400 py-3 px-2">最後活動</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.users.map((user, index) => (
+                    <tr key={user.id} className="border-b border-gray-700 hover:bg-gray-700/50">
+                      <td className="py-3 px-2 text-gray-500">{index + 1}</td>
+                      <td className="py-3 px-2 text-white font-medium">{user.username}</td>
+                      <td className="py-3 px-2">
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          user.role === 'teacher' ? 'bg-green-600 text-white' :
+                          user.role === 'parent' ? 'bg-blue-600 text-white' :
+                          'bg-gray-600 text-white'
+                        }`}>
+                          {user.role === 'teacher' ? '👨‍🏫 老師' : 
+                           user.role === 'parent' ? '👨‍👩‍👧 家長' : 
+                           '👦 學生'}
+                        </span>
+                      </td>
+                      <td className="py-3 px-2 text-gray-300">{user.grade} 年級</td>
+                      <td className="py-3 px-2 text-gray-400 text-sm">
+                        {new Date(user.created_at).toLocaleDateString('zh-TW')}
+                      </td>
+                      <td className="py-3 px-2 text-gray-400 text-sm">
+                        {new Date(user.last_active).toLocaleString('zh-TW')}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <p className="text-gray-500">尚無註冊用戶</p>
+          )}
         </div>
 
         {/* Footer */}
