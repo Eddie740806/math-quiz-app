@@ -641,38 +641,6 @@
       "explanation": "根據題意分析數量關係，列式計算得到答案 24顆"
     },
     {
-      "id": "g5-pc-001",
-      "content": "下列哪個是質數？",
-      "options": [
-        "17",
-        "27",
-        "21",
-        "15"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "質數與合數",
-      "difficulty": "hard",
-      "source": "段考題",
-      "explanation": "質數只有 1 和自己兩個因數。判斷後答案是 17"
-    },
-    {
-      "id": "g5-pc-002",
-      "content": "下列哪個是合數？",
-      "options": [
-        "13",
-        "7",
-        "15",
-        "11"
-      ],
-      "answer": 2,
-      "grade": 5,
-      "category": "質數與合數",
-      "difficulty": "hard",
-      "source": "段考題",
-      "explanation": "根據題意分析數量關係，列式計算得到答案 15"
-    },
-    {
       "id": "g5-pc-003",
       "content": "從 20 到 30 之間有幾個質數？",
       "options": [
@@ -8129,22 +8097,6 @@
       "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 5樓"
     },
     {
-      "id": "g6-pn-009",
-      "content": "下列哪個數最小？",
-      "options": [
-        "-15",
-        "0",
-        "-8",
-        "-3"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "正負數運算",
-      "difficulty": "hard",
-      "source": "段考題",
-      "explanation": "正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -15"
-    },
-    {
       "id": "g6-pn-010",
       "content": "計算：(-2)³ = ?",
       "options": [
@@ -15441,22 +15393,6 @@
       "source": "段考題"
     },
     {
-      "id": "g6-sp-611",
-      "content": "(-2)⁴ = ?",
-      "options": [
-        "-16",
-        "16",
-        "8",
-        "-8"
-      ],
-      "answer": 1,
-      "explanation": "16",
-      "grade": 6,
-      "category": "衝刺題組二",
-      "difficulty": "hard",
-      "source": "段考題"
-    },
-    {
       "id": "g6-sp-612",
       "content": "解方程式：2(x+3)=3(x-1)+5",
       "options": [
@@ -21297,22 +21233,6 @@
       "explanation": "正方體體積 = 邊長³ = 3 × 3 × 3 = 27 立方公分"
     },
     {
-      "id": "bal-2012",
-      "content": "50% 等於多少？",
-      "options": [
-        "1/2",
-        "1/4",
-        "1/5",
-        "1/3"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "百分比基礎",
-      "difficulty": "easy",
-      "source": "均衡補充",
-      "explanation": "50% = 50/100 = 1/2"
-    },
-    {
       "id": "bal-2013",
       "content": "25% 等於多少小數？",
       "options": [
@@ -21407,22 +21327,6 @@
       "difficulty": "easy",
       "source": "均衡補充",
       "explanation": "平均 = (85 + 90 + 80) ÷ 3 = 255 ÷ 3 = 85 分"
-    },
-    {
-      "id": "bal-2019",
-      "content": "下列哪個是質數？",
-      "options": [
-        "17",
-        "15",
-        "21",
-        "9"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "質數",
-      "difficulty": "easy",
-      "source": "均衡補充",
-      "explanation": "17 只能被 1 和自己整除，是質數。15=3×5, 21=3×7, 9=3×3 都不是"
     },
     {
       "id": "bal-2020",
@@ -22705,22 +22609,6 @@
       "explanation": "15 = 3 × 5，有其他因數，是合數"
     },
     {
-      "id": "add-3019",
-      "content": "3:6 化簡後是？",
-      "options": [
-        "1:2",
-        "3:6",
-        "6:3",
-        "2:1"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比與比值",
-      "difficulty": "easy",
-      "source": "均衡補充2",
-      "explanation": "3:6 = 1:2（同除以 3）"
-    },
-    {
       "id": "add-3020",
       "content": "8:12 化簡後是？",
       "options": [
@@ -22735,38 +22623,6 @@
       "difficulty": "easy",
       "source": "均衡補充2",
       "explanation": "8:12 = 2:3（同除以 4）"
-    },
-    {
-      "id": "add-3021",
-      "content": "直角是幾度？",
-      "options": [
-        "90°",
-        "180°",
-        "45°",
-        "360°"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "角度",
-      "difficulty": "easy",
-      "source": "均衡補充2",
-      "explanation": "直角 = 90°"
-    },
-    {
-      "id": "add-3022",
-      "content": "平角是幾度？",
-      "options": [
-        "180°",
-        "90°",
-        "360°",
-        "45°"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "角度",
-      "difficulty": "easy",
-      "source": "均衡補充2",
-      "explanation": "平角 = 180°"
     },
     {
       "id": "add-3023",
@@ -26785,22 +26641,6 @@
       "explanation": "雞 = 19"
     },
     {
-      "id": "ps-batch-6061",
-      "content": "雞兔共 38 隻，腳共 114 隻，雞有幾隻？",
-      "options": [
-        "19",
-        "19",
-        "21",
-        "17"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "雞兔同籠",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "雞 = 19"
-    },
-    {
       "id": "ps-batch-6062",
       "content": "雞兔共 30 隻，腳共 78 隻，雞有幾隻？",
       "options": [
@@ -26831,22 +26671,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "雞 = 19"
-    },
-    {
-      "id": "ps-batch-6064",
-      "content": "雞兔共 36 隻，腳共 108 隻，雞有幾隻？",
-      "options": [
-        "18",
-        "18",
-        "20",
-        "16"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "雞兔同籠",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "雞 = 18"
     },
     {
       "id": "ps-batch-6065",
@@ -27233,22 +27057,6 @@
       "explanation": "雞 = 25"
     },
     {
-      "id": "ps-batch-6089",
-      "content": "雞兔共 38 隻，腳共 112 隻，雞有幾隻？",
-      "options": [
-        "20",
-        "18",
-        "22",
-        "18"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "雞兔同籠",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "雞 = 20"
-    },
-    {
       "id": "ps-batch-6090",
       "content": "雞兔共 36 隻，腳共 100 隻，雞有幾隻？",
       "options": [
@@ -27407,22 +27215,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "雞 = 16"
-    },
-    {
-      "id": "ps-batch-6100",
-      "content": "雞兔共 40 隻，腳共 118 隻，雞有幾隻？",
-      "options": [
-        "21",
-        "19",
-        "23",
-        "19"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "雞兔同籠",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "雞 = 21"
     },
     {
       "id": "ps-batch-6101",
@@ -27615,22 +27407,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "雞 = 20"
-    },
-    {
-      "id": "ps-batch-6113",
-      "content": "雞兔共 18 隻，腳共 52 隻，雞有幾隻？",
-      "options": [
-        "10",
-        "8",
-        "12",
-        "8"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "雞兔同籠",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "雞 = 10"
     },
     {
       "id": "ps-batch-6114",
@@ -32209,22 +31985,6 @@
       "explanation": "面積 = 63"
     },
     {
-      "id": "ps-batch-6400",
-      "content": "梯形上底 4、下底 12、高 6，面積是多少？",
-      "options": [
-        "48",
-        "58",
-        "48",
-        "96"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "幾何問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "面積 = 48"
-    },
-    {
       "id": "ps-batch-6401",
       "content": "梯形上底 6、下底 15、高 6，面積是多少？",
       "options": [
@@ -33009,22 +32769,6 @@
       "explanation": "第 16 項 = 51"
     },
     {
-      "id": "ps-batch-6450",
-      "content": "等差數列首項 3、公差 3，第 16 項是多少？",
-      "options": [
-        "48",
-        "51",
-        "45",
-        "48"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "數列問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "第 16 項 = 48"
-    },
-    {
       "id": "ps-batch-6451",
       "content": "等差數列首項 10、公差 4，第 18 項是多少？",
       "options": [
@@ -33071,22 +32815,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "第 13 項 = 55"
-    },
-    {
-      "id": "ps-batch-6454",
-      "content": "等差數列首項 3、公差 3，第 14 項是多少？",
-      "options": [
-        "42",
-        "45",
-        "39",
-        "42"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "數列問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "第 14 項 = 42"
     },
     {
       "id": "ps-batch-6455",
@@ -33713,70 +33441,6 @@
       "explanation": "乙 = 92"
     },
     {
-      "id": "ps-batch-6494",
-      "content": "甲乙丙按 3:6:3 分 324 元，乙分得多少元？",
-      "options": [
-        "162",
-        "81",
-        "81",
-        "108"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 162"
-    },
-    {
-      "id": "ps-batch-6495",
-      "content": "甲乙丙按 2:4:3 分 99 元，乙分得多少元？",
-      "options": [
-        "44",
-        "22",
-        "33",
-        "33"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 44"
-    },
-    {
-      "id": "ps-batch-6496",
-      "content": "甲乙丙按 5:2:2 分 252 元，乙分得多少元？",
-      "options": [
-        "56",
-        "140",
-        "56",
-        "84"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 56"
-    },
-    {
-      "id": "ps-batch-6497",
-      "content": "甲乙丙按 4:3:4 分 110 元，乙分得多少元？",
-      "options": [
-        "30",
-        "40",
-        "40",
-        "36"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 30"
-    },
-    {
       "id": "ps-batch-6498",
       "content": "甲乙丙按 3:5:2 分 210 元，乙分得多少元？",
       "options": [
@@ -33791,118 +33455,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "乙 = 105"
-    },
-    {
-      "id": "ps-batch-6499",
-      "content": "甲乙丙按 5:4:4 分 247 元，乙分得多少元？",
-      "options": [
-        "76",
-        "95",
-        "76",
-        "82"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 76"
-    },
-    {
-      "id": "ps-batch-6500",
-      "content": "甲乙丙按 4:6:4 分 140 元，乙分得多少元？",
-      "options": [
-        "60",
-        "40",
-        "40",
-        "46"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 60"
-    },
-    {
-      "id": "ps-batch-6501",
-      "content": "甲乙丙按 3:4:2 分 153 元，乙分得多少元？",
-      "options": [
-        "68",
-        "51",
-        "34",
-        "51"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 68"
-    },
-    {
-      "id": "ps-batch-6502",
-      "content": "甲乙丙按 3:3:1 分 105 元，乙分得多少元？",
-      "options": [
-        "45",
-        "45",
-        "15",
-        "35"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 45"
-    },
-    {
-      "id": "ps-batch-6503",
-      "content": "甲乙丙按 3:3:3 分 144 元，乙分得多少元？",
-      "options": [
-        "48",
-        "48",
-        "48",
-        "48"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 48"
-    },
-    {
-      "id": "ps-batch-6504",
-      "content": "甲乙丙按 3:2:1 分 138 元，乙分得多少元？",
-      "options": [
-        "46",
-        "69",
-        "23",
-        "46"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 46"
-    },
-    {
-      "id": "ps-batch-6505",
-      "content": "甲乙丙按 5:5:2 分 180 元，乙分得多少元？",
-      "options": [
-        "75",
-        "75",
-        "30",
-        "60"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 75"
     },
     {
       "id": "ps-batch-6506",
@@ -33953,102 +33505,6 @@
       "explanation": "乙 = 51"
     },
     {
-      "id": "ps-batch-6509",
-      "content": "甲乙丙按 5:5:4 分 378 元，乙分得多少元？",
-      "options": [
-        "135",
-        "135",
-        "108",
-        "126"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 135"
-    },
-    {
-      "id": "ps-batch-6510",
-      "content": "甲乙丙按 4:4:2 分 290 元，乙分得多少元？",
-      "options": [
-        "116",
-        "116",
-        "58",
-        "96"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 116"
-    },
-    {
-      "id": "ps-batch-6511",
-      "content": "甲乙丙按 4:4:3 分 132 元，乙分得多少元？",
-      "options": [
-        "48",
-        "48",
-        "36",
-        "44"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 48"
-    },
-    {
-      "id": "ps-batch-6512",
-      "content": "甲乙丙按 2:4:2 分 216 元，乙分得多少元？",
-      "options": [
-        "108",
-        "54",
-        "54",
-        "72"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 108"
-    },
-    {
-      "id": "ps-batch-6513",
-      "content": "甲乙丙按 3:5:4 分 192 元，乙分得多少元？",
-      "options": [
-        "80",
-        "48",
-        "64",
-        "64"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 80"
-    },
-    {
-      "id": "ps-batch-6514",
-      "content": "甲乙丙按 5:6:4 分 330 元，乙分得多少元？",
-      "options": [
-        "132",
-        "110",
-        "88",
-        "110"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 132"
-    },
-    {
       "id": "ps-batch-6515",
       "content": "甲乙丙按 5:3:2 分 210 元，乙分得多少元？",
       "options": [
@@ -34065,102 +33521,6 @@
       "explanation": "乙 = 63"
     },
     {
-      "id": "ps-batch-6516",
-      "content": "甲乙丙按 5:2:2 分 90 元，乙分得多少元？",
-      "options": [
-        "20",
-        "50",
-        "20",
-        "30"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 20"
-    },
-    {
-      "id": "ps-batch-6517",
-      "content": "甲乙丙按 3:5:4 分 216 元，乙分得多少元？",
-      "options": [
-        "90",
-        "54",
-        "72",
-        "72"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 90"
-    },
-    {
-      "id": "ps-batch-6518",
-      "content": "甲乙丙按 3:5:1 分 144 元，乙分得多少元？",
-      "options": [
-        "80",
-        "48",
-        "16",
-        "48"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 80"
-    },
-    {
-      "id": "ps-batch-6519",
-      "content": "甲乙丙按 5:3:3 分 253 元，乙分得多少元？",
-      "options": [
-        "69",
-        "115",
-        "69",
-        "84"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 69"
-    },
-    {
-      "id": "ps-batch-6520",
-      "content": "甲乙丙按 3:5:1 分 117 元，乙分得多少元？",
-      "options": [
-        "65",
-        "39",
-        "13",
-        "39"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 65"
-    },
-    {
-      "id": "ps-batch-6521",
-      "content": "甲乙丙按 2:6:2 分 270 元，乙分得多少元？",
-      "options": [
-        "162",
-        "54",
-        "54",
-        "90"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 162"
-    },
-    {
       "id": "ps-batch-6522",
       "content": "甲乙丙按 2:6:1 分 198 元，乙分得多少元？",
       "options": [
@@ -34175,54 +33535,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "乙 = 132"
-    },
-    {
-      "id": "ps-batch-6523",
-      "content": "甲乙丙按 2:2:3 分 140 元，乙分得多少元？",
-      "options": [
-        "40",
-        "40",
-        "60",
-        "46"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 40"
-    },
-    {
-      "id": "ps-batch-6524",
-      "content": "甲乙丙按 4:6:2 分 348 元，乙分得多少元？",
-      "options": [
-        "174",
-        "116",
-        "58",
-        "116"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 174"
-    },
-    {
-      "id": "ps-batch-6525",
-      "content": "甲乙丙按 2:5:2 分 162 元，乙分得多少元？",
-      "options": [
-        "90",
-        "36",
-        "36",
-        "54"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 90"
     },
     {
       "id": "ps-batch-6526",
@@ -34257,22 +33569,6 @@
       "explanation": "乙 = 50"
     },
     {
-      "id": "ps-batch-6528",
-      "content": "甲乙丙按 3:4:2 分 126 元，乙分得多少元？",
-      "options": [
-        "56",
-        "42",
-        "28",
-        "42"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 56"
-    },
-    {
       "id": "ps-batch-6529",
       "content": "甲乙丙按 5:6:3 分 238 元，乙分得多少元？",
       "options": [
@@ -34303,38 +33599,6 @@
       "difficulty": "hard",
       "source": "考私中批量",
       "explanation": "乙 = 30"
-    },
-    {
-      "id": "ps-batch-6531",
-      "content": "甲乙丙按 4:2:4 分 260 元，乙分得多少元？",
-      "options": [
-        "52",
-        "104",
-        "104",
-        "86"
-      ],
-      "answer": 0,
-      "grade": 6,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 52"
-    },
-    {
-      "id": "ps-batch-6532",
-      "content": "甲乙丙按 5:3:4 分 168 元，乙分得多少元？",
-      "options": [
-        "42",
-        "70",
-        "56",
-        "56"
-      ],
-      "answer": 0,
-      "grade": 5,
-      "category": "比例問題",
-      "difficulty": "hard",
-      "source": "考私中批量",
-      "explanation": "乙 = 42"
     },
     {
       "id": "ps-batch-6533",
