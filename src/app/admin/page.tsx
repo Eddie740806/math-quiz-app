@@ -9,7 +9,8 @@ import {
   getGradeDistribution,
   getHardestQuestions,
   subscribeToOnlineCount,
-  getAllUsers
+  getAllUsers,
+  deleteUser
 } from '@/lib/supabase'
 
 interface UserData {
@@ -285,6 +286,7 @@ export default function AdminPage() {
                     <th className="text-left text-gray-400 py-3 px-2">年級</th>
                     <th className="text-left text-gray-400 py-3 px-2">註冊時間</th>
                     <th className="text-left text-gray-400 py-3 px-2">最後活動</th>
+                    <th className="text-left text-gray-400 py-3 px-2">操作</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -309,6 +311,23 @@ export default function AdminPage() {
                       </td>
                       <td className="py-3 px-2 text-gray-400 text-sm">
                         {new Date(user.last_active).toLocaleString('zh-TW')}
+                      </td>
+                      <td className="py-3 px-2">
+                        <button
+                          onClick={async () => {
+                            if (confirm(`確定要刪除用戶 "${user.username}" 嗎？\n此操作無法復原！`)) {
+                              const success = await deleteUser(user.id)
+                              if (success) {
+                                loadStats()
+                              } else {
+                                alert('刪除失敗')
+                              }
+                            }
+                          }}
+                          className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition"
+                        >
+                          🗑️ 刪除
+                        </button>
                       </td>
                     </tr>
                   ))}

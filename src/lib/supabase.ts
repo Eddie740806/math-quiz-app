@@ -280,3 +280,24 @@ export async function getUserAnswerStats(userId: string) {
     correct: data.filter(a => a.is_correct).length
   }
 }
+
+// 刪除用戶
+export async function deleteUser(userId: string) {
+  if (!supabase) return false
+  
+  // 先刪除相關的答題記錄
+  await supabase.from('answers').delete().eq('user_id', userId)
+  
+  // 刪除 session
+  await supabase.from('sessions').delete().eq('user_id', userId)
+  
+  // 刪除用戶
+  const { error } = await supabase.from('users').delete().eq('id', userId)
+  
+  if (error) {
+    console.error('Delete user error:', error)
+    return false
+  }
+  
+  return true
+}
