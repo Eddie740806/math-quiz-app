@@ -505,8 +505,7 @@ export default function Home() {
 
         {/* 頁尾 */}
         <div className="text-center py-8 text-blue-100 text-sm">
-          <p>國小數學練習平台</p>
-          <p className="text-xs mt-1">© 張可享 製作</p>
+          <p>國小數學練習平台 ｜ 張可享 製作</p>
         </div>
       </div>
     </main>
