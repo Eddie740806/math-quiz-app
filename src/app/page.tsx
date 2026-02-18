@@ -384,7 +384,7 @@ export default function Home() {
               ))}
             </div>
             <button
-              onClick={() => router.push('/quiz?grade=5&count=10&focus=weak')}
+              onClick={() => router.push('/quiz?count=10&focus=weak')}
               className="w-full mt-4 py-3 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl font-medium transition"
             >
               🎯 針對弱點練習

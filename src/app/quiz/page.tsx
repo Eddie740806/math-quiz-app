@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat, applyFontSize, isBookmarked, toggleBookmark } from '@/lib/storage';
+import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, getWeakCategories, Achievement, User, heartbeat, applyFontSize, isBookmarked, toggleBookmark } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 import { playCorrectSound, playWrongSound, playStreakSound, playAchievementSound, playCompleteSound } from '@/lib/sounds';
 import { QuestionImage, hasImage } from '@/components/QuestionImage';
@@ -30,6 +30,7 @@ function QuizContent() {
   const difficultyParam = searchParams.get('difficulty') || '';
   const quizName = searchParams.get('name') || '';
   const categoriesParam = searchParams.get('categories') || '';
+  const focusParam = searchParams.get('focus') || '';
   
   const [user, setUser] = useState<User | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -94,7 +95,10 @@ function QuizContent() {
       const allQuestions = [...questionsData.questions, ...geometryData.questions];
       
       // 篩選題目並隨機排序
-      let filtered = allQuestions.filter((q: Question) => q.grade === grade);
+      // 弱點練習時不限年級，一般練習按年級篩選
+      let filtered = focusParam === 'weak' 
+        ? allQuestions.filter((q: Question) => q.grade === 5 || q.grade === 6)
+        : allQuestions.filter((q: Question) => q.grade === grade);
       
       // 難度篩選
       if (difficulty === 'easy') {
@@ -109,6 +113,23 @@ function QuizContent() {
         filtered = filtered.filter((q: Question) => allowedCategories.includes(q.category));
       }
       
+      // 弱點練習：優先選用戶弱點題型的題目
+      if (focusParam === 'weak' && currentUser) {
+        const weakCats = getWeakCategories(currentUser.id, 5); // 取前5個弱點
+        if (weakCats.length > 0) {
+          const weakCatNames = weakCats.map(c => c.category);
+          const weakFiltered = filtered.filter((q: Question) => weakCatNames.includes(q.category));
+          // 如果弱點題目夠多就只用弱點題，不夠就混合
+          if (weakFiltered.length >= questionCount) {
+            filtered = weakFiltered;
+          } else if (weakFiltered.length > 0) {
+            // 弱點題優先，不夠再補其他題
+            const otherFiltered = filtered.filter((q: Question) => !weakCatNames.includes(q.category));
+            filtered = [...weakFiltered, ...otherFiltered.slice(0, questionCount - weakFiltered.length)];
+          }
+        }
+      }
+      
       const gradeQuestions = filtered
         .sort(() => Math.random() - 0.5)
         .slice(0, questionCount);
@@ -121,7 +142,7 @@ function QuizContent() {
         setBookmarked(isBookmarked(currentUser.id, gradeQuestions[0].id));
       }
     }
-  }, [grade, router, questionCount, difficulty, categoriesParam]);
+  }, [grade, router, questionCount, difficulty, categoriesParam, focusParam]);
 
   // 儲存排行榜 & 檢查成就（必須在所有條件式 return 之前）
   useEffect(() => {
