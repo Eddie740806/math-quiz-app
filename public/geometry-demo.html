@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幾何圖形題目 Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .question-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .question-title {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .question-content {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+    svg {
+      max-width: 100%;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .option {
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 16px;
+    }
+    .option:hover {
+      border-color: #667eea;
+      background: #f0f0ff;
+    }
+    .option.correct {
+      border-color: #22c55e;
+      background: #dcfce7;
+    }
+    .label {
+      font-size: 14px;
+      fill: #666;
+    }
+    .dimension {
+      font-size: 12px;
+      fill: #333;
+      font-weight: bold;
+    }
+    .note {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📐 幾何圖形題目 Demo</h1>
+    
+    <!-- 題目 1：長方形面積 -->
+    <div class="question-card">
+      <div class="question-title">題目 1 - 基礎</div>
+      <div class="question-content">下圖是一個長方形，求它的面積是多少平方公分？</div>
+      <div class="svg-container">
+        <svg width="240" height="160" viewBox="0 0 240 160">
+          <!-- 長方形 -->
+          <rect x="20" y="30" width="200" height="100" fill="#a5b4fc" stroke="#4f46e5" stroke-width="3"/>
+          <!-- 長度標示 -->
+          <line x1="20" y1="145" x2="220" y2="145" stroke="#333" stroke-width="2"/>
+          <line x1="20" y1="140" x2="20" y2="150" stroke="#333" stroke-width="2"/>
+          <line x1="220" y1="140" x2="220" y2="150" stroke="#333" stroke-width="2"/>
+          <text x="120" y="158" text-anchor="middle" class="dimension">12 公分</text>
+          <!-- 寬度標示 -->
+          <line x1="235" y1="30" x2="235" y2="130" stroke="#333" stroke-width="2"/>
+          <line x1="230" y1="30" x2="240" y2="30" stroke="#333" stroke-width="2"/>
+          <line x1="230" y1="130" x2="240" y2="130" stroke="#333" stroke-width="2"/>
+          <text x="235" y="85" text-anchor="middle" class="dimension" transform="rotate(90, 235, 85)">8 公分</text>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="option" onclick="this.classList.add('correct')">A. 96 平方公分 ✓</div>
+        <div class="option">B. 40 平方公分</div>
+        <div class="option">C. 80 平方公分</div>
+        <div class="option">D. 20 平方公分</div>
+      </div>
+    </div>
+
+    <!-- 題目 2：圓形面積 -->
+    <div class="question-card">
+      <div class="question-title">題目 2 - 圓形</div>
+      <div class="question-content">下圖是一個圓形，半徑為 7 公分，求面積是多少平方公分？（π = 22/7）</div>
+      <div class="svg-container">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <!-- 圓形 -->
+          <circle cx="100" cy="100" r="80" fill="#fca5a5" stroke="#dc2626" stroke-width="3"/>
+          <!-- 半徑線 -->
+          <line x1="100" y1="100" x2="180" y2="100" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+          <!-- 圓心點 -->
+          <circle cx="100" cy="100" r="4" fill="#333"/>
+          <!-- 半徑標示 -->
+          <text x="140" y="95" class="dimension">7 公分</text>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="option" onclick="this.classList.add('correct')">A. 154 平方公分 ✓</div>
+        <div class="option">B. 44 平方公分</div>
+        <div class="option">C. 49 平方公分</div>
+        <div class="option">D. 308 平方公分</div>
+      </div>
+    </div>
+
+    <!-- 題目 3：陰影面積 -->
+    <div class="question-card">
+      <div class="question-title">題目 3 - 陰影面積（進階）</div>
+      <div class="question-content">下圖正方形邊長 10 公分，內有一個圓形，求<strong>陰影部分</strong>的面積？（π = 3.14）</div>
+      <div class="svg-container">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <!-- 正方形（陰影） -->
+          <rect x="20" y="20" width="160" height="160" fill="#6366f1"/>
+          <!-- 圓形（白色，挖空效果） -->
+          <circle cx="100" cy="100" r="80" fill="white"/>
+          <!-- 正方形邊框 -->
+          <rect x="20" y="20" width="160" height="160" fill="none" stroke="#4f46e5" stroke-width="3"/>
+          <!-- 邊長標示 -->
+          <text x="100" y="195" text-anchor="middle" class="dimension">10 公分</text>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="option" onclick="this.classList.add('correct')">A. 21.5 平方公分 ✓</div>
+        <div class="option">B. 78.5 平方公分</div>
+        <div class="option">C. 100 平方公分</div>
+        <div class="option">D. 31.4 平方公分</div>
+      </div>
+    </div>
+
+    <!-- 題目 4：組合圖形 -->
+    <div class="question-card">
+      <div class="question-title">題目 4 - 組合圖形</div>
+      <div class="question-content">下圖由一個長方形和一個三角形組成，求總面積？</div>
+      <div class="svg-container">
+        <svg width="260" height="180" viewBox="0 0 260 180">
+          <!-- 長方形 -->
+          <rect x="30" y="60" width="120" height="80" fill="#86efac" stroke="#16a34a" stroke-width="3"/>
+          <!-- 三角形 -->
+          <polygon points="150,60 230,100 150,140" fill="#fde047" stroke="#ca8a04" stroke-width="3"/>
+          <!-- 長方形尺寸 -->
+          <text x="90" y="170" text-anchor="middle" class="dimension">6 公分</text>
+          <text x="15" y="105" class="dimension" transform="rotate(-90, 15, 105)">4 公分</text>
+          <!-- 三角形尺寸 -->
+          <text x="190" y="85" class="dimension">4 公分</text>
+          <text x="160" y="105" class="dimension" font-size="10">4公分</text>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="option" onclick="this.classList.add('correct')">A. 32 平方公分 ✓</div>
+        <div class="option">B. 24 平方公分</div>
+        <div class="option">C. 40 平方公分</div>
+        <div class="option">D. 28 平方公分</div>
+      </div>
+    </div>
+
+    <!-- 題目 5：梯形 -->
+    <div class="question-card">
+      <div class="question-title">題目 5 - 梯形</div>
+      <div class="question-content">下圖是一個梯形，上底 4 公分，下底 8 公分，高 5 公分，求面積？</div>
+      <div class="svg-container">
+        <svg width="240" height="180" viewBox="0 0 240 180">
+          <!-- 梯形 -->
+          <polygon points="70,40 170,40 200,140 40,140" fill="#c4b5fd" stroke="#7c3aed" stroke-width="3"/>
+          <!-- 上底標示 -->
+          <line x1="70" y1="30" x2="170" y2="30" stroke="#333" stroke-width="2"/>
+          <text x="120" y="25" text-anchor="middle" class="dimension">4 公分</text>
+          <!-- 下底標示 -->
+          <line x1="40" y1="155" x2="200" y2="155" stroke="#333" stroke-width="2"/>
+          <text x="120" y="170" text-anchor="middle" class="dimension">8 公分</text>
+          <!-- 高標示（虛線） -->
+          <line x1="120" y1="40" x2="120" y2="140" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="130" y="95" class="dimension">5 公分</text>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="option" onclick="this.classList.add('correct')">A. 30 平方公分 ✓</div>
+        <div class="option">B. 60 平方公分</div>
+        <div class="option">C. 20 平方公分</div>
+        <div class="option">D. 40 平方公分</div>
+      </div>
+    </div>
+
+    <div class="note">
+      💡 這些圖形都是用 SVG 程式碼畫的，不需要圖片檔案<br>
+      可以根據題目參數動態生成
+    </div>
+  </div>
+</body>
+</html>
