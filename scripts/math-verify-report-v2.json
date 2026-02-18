@@ -1,0 +1,290 @@
+{
+  "timestamp": "2026-02-18T09:37:03.536Z",
+  "totalQuestions": 2199,
+  "verifiedCount": 105,
+  "errorCount": 39,
+  "byType": {
+    "percentOf": 1,
+    "workTogether": 61,
+    "sameDirChase": 2,
+    "fractionSelling": 1,
+    "ratioSimple": 1,
+    "average": 1,
+    "fractionSingleSell": 38
+  },
+  "errors": [
+    {
+      "id": "g6-mx-507",
+      "type": "workTogether",
+      "content": "一件工作甲乙合做 4 天完成，甲丙合做 6 天完成，乙丙合做 8 天完成，三人合做需幾天？...",
+      "expected": "2.4",
+      "got": 3.7
+    },
+    {
+      "id": "ps-batch-6000",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 50,
+      "got": 100
+    },
+    {
+      "id": "ps-batch-6003",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 2/5，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 100,
+      "got": 200
+    },
+    {
+      "id": "ps-batch-6004",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 63,
+      "got": 125
+    },
+    {
+      "id": "ps-batch-6005",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6006",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 80,
+      "got": 160
+    },
+    {
+      "id": "ps-batch-6007",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 2/5，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 50,
+      "got": 100
+    },
+    {
+      "id": "ps-batch-6009",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 2/5，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 50,
+      "got": 100
+    },
+    {
+      "id": "ps-batch-6010",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 80,
+      "got": 160
+    },
+    {
+      "id": "ps-batch-6011",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 20 件，原有多少件？...",
+      "expected": 25,
+      "got": 50
+    },
+    {
+      "id": "ps-batch-6013",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 75,
+      "got": 150
+    },
+    {
+      "id": "ps-batch-6015",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 60,
+      "got": 120
+    },
+    {
+      "id": "ps-batch-6016",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 2/5，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 100,
+      "got": 200
+    },
+    {
+      "id": "ps-batch-6017",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 45,
+      "got": 90
+    },
+    {
+      "id": "ps-batch-6019",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6020",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6022",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 60,
+      "got": 120
+    },
+    {
+      "id": "ps-batch-6023",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 50,
+      "got": 100
+    },
+    {
+      "id": "ps-batch-6024",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 75,
+      "got": 150
+    },
+    {
+      "id": "ps-batch-6025",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 60,
+      "got": 120
+    },
+    {
+      "id": "ps-batch-6028",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 80,
+      "got": 160
+    },
+    {
+      "id": "ps-batch-6029",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 80,
+      "got": 160
+    },
+    {
+      "id": "ps-batch-6030",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 45,
+      "got": 90
+    },
+    {
+      "id": "ps-batch-6033",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 38,
+      "got": 75
+    },
+    {
+      "id": "ps-batch-6035",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 63,
+      "got": 125
+    },
+    {
+      "id": "ps-batch-6036",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 75,
+      "got": 150
+    },
+    {
+      "id": "ps-batch-6040",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 45,
+      "got": 90
+    },
+    {
+      "id": "ps-batch-6042",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 40 件，原有多少件？...",
+      "expected": 60,
+      "got": 120
+    },
+    {
+      "id": "ps-batch-6044",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6045",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 63,
+      "got": 125
+    },
+    {
+      "id": "ps-batch-6046",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6047",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 60 件，原有多少件？...",
+      "expected": 90,
+      "got": 180
+    },
+    {
+      "id": "ps-batch-6049",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 45,
+      "got": 90
+    },
+    {
+      "id": "ps-batch-6050",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 75,
+      "got": 150
+    },
+    {
+      "id": "ps-batch-6052",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/4，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 40,
+      "got": 80
+    },
+    {
+      "id": "ps-batch-6053",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 75,
+      "got": 150
+    },
+    {
+      "id": "ps-batch-6054",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 50 件，原有多少件？...",
+      "expected": 63,
+      "got": 125
+    },
+    {
+      "id": "ps-batch-6056",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/3，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 45,
+      "got": 90
+    },
+    {
+      "id": "ps-batch-6058",
+      "type": "fractionSingleSell",
+      "content": "一批貨物第一天賣出 1/5，第二天賣出剩下的一半，還剩 30 件，原有多少件？...",
+      "expected": 38,
+      "got": 75
+    }
+  ]
+}
