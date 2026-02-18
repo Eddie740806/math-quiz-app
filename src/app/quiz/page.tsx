@@ -6,7 +6,9 @@ import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchieveme
 import { initTheme } from '@/lib/theme';
 import { playCorrectSound, playWrongSound, playStreakSound, playAchievementSound, playCompleteSound } from '@/lib/sounds';
 import { QuestionImage, hasImage } from '@/components/QuestionImage';
+import { GeometryImage, hasGeometryImage } from '@/components/GeometryImage';
 import questionsData from '@/data/questions.json';
+import geometryData from '@/data/questions-geometry.json';
 
 interface Question {
   id: string;
@@ -88,8 +90,11 @@ function QuizContent() {
     setUser(currentUser);
 
     if (questionCount > 0) {
+      // 合併所有題庫（主題庫 + 幾何圖形題）
+      const allQuestions = [...questionsData.questions, ...geometryData.questions];
+      
       // 篩選題目並隨機排序
-      let filtered = questionsData.questions.filter((q: Question) => q.grade === grade);
+      let filtered = allQuestions.filter((q: Question) => q.grade === grade);
       
       // 難度篩選
       if (difficulty === 'easy') {
@@ -529,6 +534,9 @@ function QuizContent() {
           {/* 如果題目需要圖形，顯示 SVG 圖 */}
           {hasImage(currentQuestion.id) && (
             <QuestionImage questionId={currentQuestion.id} />
+          )}
+          {hasGeometryImage(currentQuestion.id) && (
+            <GeometryImage questionId={currentQuestion.id} />
           )}
 
           <div className="space-y-3">
