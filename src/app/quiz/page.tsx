@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { getCurrentUser, recordAnswer, addToLeaderboard, checkAndUnlockAchievements, getUserProgress, Achievement, User, heartbeat, applyFontSize, isBookmarked, toggleBookmark } from '@/lib/storage';
 import { initTheme } from '@/lib/theme';
 import { playCorrectSound, playWrongSound, playStreakSound, playAchievementSound, playCompleteSound } from '@/lib/sounds';
+import { QuestionImage, hasImage } from '@/components/QuestionImage';
 import questionsData from '@/data/questions.json';
 
 interface Question {
@@ -521,9 +522,14 @@ function QuizContent() {
             </span>
           </div>
 
-          <h2 className="text-xl font-medium text-gray-800 mb-6 leading-relaxed">
+          <h2 className="text-xl font-medium text-gray-800 mb-4 leading-relaxed">
             {currentQuestion.content}
           </h2>
+          
+          {/* 如果題目需要圖形，顯示 SVG 圖 */}
+          {hasImage(currentQuestion.id) && (
+            <QuestionImage questionId={currentQuestion.id} />
+          )}
 
           <div className="space-y-3">
             {currentQuestion.options.map((option, index) => {
