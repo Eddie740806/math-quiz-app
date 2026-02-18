@@ -1214,3 +1214,57 @@ export function toggleBookmark(userId: string, questionId: string): boolean {
     return true;
   }
 }
+
+// ==================== 徽章展示功能 ====================
+
+export function getDisplayedBadges(userId: string): string[] {
+  if (typeof window === 'undefined') return [];
+  const key = `math_quiz_displayed_badges_${userId}`;
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : [];
+}
+
+export function setDisplayedBadges(userId: string, badgeIds: string[]): void {
+  if (typeof window === 'undefined') return;
+  // 最多 3 個
+  const limited = badgeIds.slice(0, 3);
+  const key = `math_quiz_displayed_badges_${userId}`;
+  localStorage.setItem(key, JSON.stringify(limited));
+  
+  // 同步到雲端
+  syncProgressToCloud(userId);
+}
+
+export function toggleDisplayedBadge(userId: string, badgeId: string): { success: boolean; isDisplayed: boolean; message?: string } {
+  const current = getDisplayedBadges(userId);
+  const userAchievements = getUserAchievements(userId);
+  
+  // 檢查是否已解鎖
+  if (!userAchievements.some(a => a.id === badgeId)) {
+    return { success: false, isDisplayed: false, message: '尚未解鎖此成就' };
+  }
+  
+  const index = current.indexOf(badgeId);
+  if (index > -1) {
+    // 已裝備，卸除
+    current.splice(index, 1);
+    setDisplayedBadges(userId, current);
+    return { success: true, isDisplayed: false };
+  } else {
+    // 未裝備，嘗試裝備
+    if (current.length >= 3) {
+      return { success: false, isDisplayed: false, message: '最多只能展示 3 個徽章' };
+    }
+    current.push(badgeId);
+    setDisplayedBadges(userId, current);
+    return { success: true, isDisplayed: true };
+  }
+}
+
+export function getDisplayedBadgeIcons(userId: string): string[] {
+  const badgeIds = getDisplayedBadges(userId);
+  return badgeIds.map(id => {
+    const achievement = ACHIEVEMENTS.find(a => a.id === id);
+    return achievement?.icon || '';
+  }).filter(Boolean);
+}

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, getBookmarks, User, UserProgress, applyFontSize } from '@/lib/storage';
+import { getCurrentUser, logoutUser, getUserProgress, getWeakCategories, getUserAchievements, getTodayAnsweredCount, getBookmarks, getDisplayedBadgeIcons, User, UserProgress, applyFontSize } from '@/lib/storage';
 import { initTheme, toggleTheme, getTheme } from '@/lib/theme';
 import Tour from '@/components/Tour';
 
@@ -14,6 +14,7 @@ export default function Home() {
   const [achievementCount, setAchievementCount] = useState(0);
   const [todayCount, setTodayCount] = useState(0);
   const [bookmarkCount, setBookmarkCount] = useState(0);
+  const [displayedBadges, setDisplayedBadges] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
@@ -31,6 +32,7 @@ export default function Home() {
         setAchievementCount(getUserAchievements(currentUser.id).length);
         setTodayCount(getTodayAnsweredCount(currentUser.id));
         setBookmarkCount(getBookmarks(currentUser.id).length);
+        setDisplayedBadges(getDisplayedBadgeIcons(currentUser.id));
       }
     }
     setLoading(false);
@@ -195,7 +197,16 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-600">歡迎回來！</p>
-                <p className="text-2xl font-bold text-gray-800">{user.username}</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-2xl font-bold text-gray-800">{user.username}</p>
+                  {displayedBadges.length > 0 && (
+                    <div className="flex gap-1">
+                      {displayedBadges.map((icon, i) => (
+                        <span key={i} className="text-lg" title="成就徽章">{icon}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 {progress && (
                   <div className="flex gap-4 mt-2 text-sm text-gray-500">
                     <span>已答題：{progress.totalAnswered}</span>
