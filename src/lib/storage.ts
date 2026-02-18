@@ -1268,3 +1268,11 @@ export function getDisplayedBadgeIcons(userId: string): string[] {
     return achievement?.icon || '';
   }).filter(Boolean);
 }
+
+export function getDisplayedBadgesWithNames(userId: string): { icon: string; name: string }[] {
+  const badgeIds = getDisplayedBadges(userId);
+  return badgeIds.map(id => {
+    const achievement = ACHIEVEMENTS.find(a => a.id === id);
+    return achievement ? { icon: achievement.icon, name: achievement.name } : null;
+  }).filter((b): b is { icon: string; name: string } => b !== null);
+}
