@@ -107,8 +107,8 @@ export default function WrongAnswersPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-600">
-        <div className="text-white text-xl">載入中...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200">
+        <div className="text-blue-600 text-xl">載入中...</div>
       </div>
     );
   }
@@ -118,26 +118,26 @@ export default function WrongAnswersPage() {
     const currentQuestion = practiceQuestions[currentIndex];
     
     return (
-      <main className="min-h-screen bg-gradient-to-br from-orange-500 to-red-600 p-4">
+      <main className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-200 p-4">
         <div className="max-w-2xl mx-auto">
           {/* 頂部狀態 */}
           <div className="flex items-center justify-between mb-6">
             <button
               onClick={() => setReviewMode('list')}
-              className="text-white hover:text-orange-200 transition"
+              className="text-blue-700 hover:text-blue-500 transition"
             >
               ← 返回
             </button>
-            <div className="text-white font-bold">
+            <div className="text-blue-800 font-bold">
               錯題複習
             </div>
-            <div className="text-white">
+            <div className="text-blue-700">
               {currentIndex + 1} / {practiceQuestions.length}
             </div>
           </div>
 
           {/* 進度條 */}
-          <div className="bg-white/20 rounded-full h-2 mb-6">
+          <div className="bg-blue-300/50 rounded-full h-2 mb-6">
             <div
               className="bg-white rounded-full h-2 transition-all"
               style={{ width: `${((currentIndex + 1) / practiceQuestions.length) * 100}%` }}
@@ -201,7 +201,7 @@ export default function WrongAnswersPage() {
             <button
               onClick={handleSubmit}
               disabled={selectedAnswer === null}
-              className="w-full py-4 bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl font-medium text-lg transition"
+              className="w-full py-4 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl font-medium text-lg transition"
             >
               確認答案
             </button>
@@ -224,7 +224,7 @@ export default function WrongAnswersPage() {
               
               <button
                 onClick={handleNext}
-                className="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium text-lg transition"
+                className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium text-lg transition"
               >
                 {currentIndex >= practiceQuestions.length - 1 ? '完成複習' : '下一題'}
               </button>
@@ -237,17 +237,17 @@ export default function WrongAnswersPage() {
 
   // 錯題列表模式
   return (
-    <main className="min-h-screen bg-gradient-to-br from-orange-500 to-red-600 p-4">
+    <main className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-200 p-4">
       <div className="max-w-2xl mx-auto">
         {/* 頂部 */}
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => router.push('/')}
-            className="text-white hover:text-orange-200 transition"
+            className="text-blue-700 hover:text-blue-500 transition"
           >
             ← 返回首頁
           </button>
-          <h1 className="text-white font-bold text-xl">📝 錯題本</h1>
+          <h1 className="text-blue-800 font-bold text-xl">📝 錯題本</h1>
           <div className="w-20"></div>
         </div>
 
@@ -258,7 +258,7 @@ export default function WrongAnswersPage() {
             <p className="text-gray-500 mb-6">目前沒有錯題，繼續保持！</p>
             <button
               onClick={() => router.push('/')}
-              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition"
+              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition"
             >
               繼續練習
             </button>
@@ -276,7 +276,7 @@ export default function WrongAnswersPage() {
                 </div>
                 <button
                   onClick={startPractice}
-                  className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition"
+                  className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition"
                 >
                   開始複習
                 </button>
