@@ -20,6 +20,8 @@ interface Question {
   difficulty: string;
   source: string;
   explanation?: string;
+  isAdvanced?: boolean;
+  advancedReason?: string;
 }
 
 function QuizContent() {
@@ -48,6 +50,7 @@ function QuizContent() {
   const [maxCombo, setMaxCombo] = useState(0);
   const [showComboEffect, setShowComboEffect] = useState(false);
   const [wrongQuestions, setWrongQuestions] = useState<Question[]>([]);
+  const [challengeMode, setChallengeMode] = useState(false);
   const [skippedCount, setSkippedCount] = useState(0);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [totalTime, setTotalTime] = useState(0);
@@ -100,6 +103,11 @@ function QuizContent() {
         ? allQuestions.filter((q: Question) => q.grade === 5 || q.grade === 6)
         : allQuestions.filter((q: Question) => q.grade === grade);
       
+      // 進階挑戰模式篩選（預設排除進階題目）
+      if (!challengeMode) {
+        filtered = filtered.filter((q: Question) => !q.isAdvanced);
+      }
+      
       // 難度篩選
       if (difficulty === 'easy') {
         filtered = filtered.filter((q: Question) => q.difficulty === 'medium' || q.difficulty === 'easy');
@@ -142,7 +150,7 @@ function QuizContent() {
         setBookmarked(isBookmarked(currentUser.id, gradeQuestions[0].id));
       }
     }
-  }, [grade, router, questionCount, difficulty, categoriesParam, focusParam]);
+  }, [grade, router, questionCount, difficulty, categoriesParam, focusParam, challengeMode]);
 
   // 儲存排行榜 & 檢查成就（必須在所有條件式 return 之前）
   useEffect(() => {
@@ -350,6 +358,31 @@ function QuizContent() {
                 🔥 挑戰
               </button>
             </div>
+          </div>
+
+          {/* 進階挑戰模式 */}
+          <div className="mb-6">
+            <button
+              onClick={() => setChallengeMode(!challengeMode)}
+              className={`w-full py-3 px-4 rounded-xl flex items-center justify-between transition ${
+                challengeMode 
+                  ? 'bg-purple-500 text-white' 
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <span className="text-xl">🏆</span>
+                <span className="font-medium">進階挑戰模式</span>
+              </span>
+              <span className={`w-12 h-6 rounded-full relative transition ${challengeMode ? 'bg-purple-300' : 'bg-gray-300'}`}>
+                <span className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${challengeMode ? 'translate-x-6' : 'translate-x-0.5'}`} />
+              </span>
+            </button>
+            {challengeMode && (
+              <p className="text-xs text-purple-600 mt-2 text-center">
+                ⚡ 包含負數、絕對值、開根號等國中先修題目
+              </p>
+            )}
           </div>
 
           {/* 題數選擇 */}

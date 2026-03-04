@@ -3246,7 +3246,9 @@
       "category": "分數綜合",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 分數乘法：分子乘分子，分母乘分母，最後約分。答案是 0\n3. 答案：0"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 分數乘法：分子乘分子，分母乘分母，最後約分。答案是 0\n3. 答案：0",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g5-fc-110",
@@ -4878,7 +4880,9 @@
       "grade": 5,
       "category": "公倍數公因數應用",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "進階次方"
     },
     {
       "id": "g5-cm-202",
@@ -6430,7 +6434,9 @@
       "grade": 5,
       "category": "面積進階挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g5-ar-404",
@@ -6894,7 +6900,9 @@
       "grade": 5,
       "category": "幾何最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g5-gf-503",
@@ -6958,7 +6966,9 @@
       "grade": 5,
       "category": "幾何最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g5-gf-507",
@@ -7006,7 +7016,9 @@
       "grade": 5,
       "category": "幾何最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g5-gf-510",
@@ -7902,7 +7914,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 7\n3. 答案：7"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 7\n3. 答案：7",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-002",
@@ -7918,7 +7932,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5\n3. 答案：-5"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5\n3. 答案：-5",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-003",
@@ -7934,7 +7950,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 15\n3. 答案：15"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 15\n3. 答案：15",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-004",
@@ -7950,7 +7968,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分數四則運算\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -4\n3. 答案：-4"
+      "explanation": "【解題步驟】\n1. 分數四則運算\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -4\n3. 答案：-4",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-005",
@@ -7966,7 +7986,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5\n3. 答案：-5"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -5\n3. 答案：-5",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-006",
@@ -7982,7 +8004,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -10\n3. 答案：-10"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -10\n3. 答案：-10",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-007",
@@ -7998,7 +8022,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -1°C\n3. 答案：-1°C"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -1°C\n3. 答案：-1°C",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-008",
@@ -8014,7 +8040,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 5樓\n3. 答案：5樓"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 5樓\n3. 答案：5樓",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-010",
@@ -8030,7 +8058,9 @@
       "category": "正負數運算",
       "difficulty": "hard",
       "source": "段考題",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -8\n3. 答案：-8"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 正負數運算規則：同號相加取同號，異號相加取絕對值大的符號。答案是 -8\n3. 答案：-8",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-eq-001",
@@ -11038,7 +11068,9 @@
       "grade": 6,
       "category": "方程式進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-ci-101",
@@ -11630,7 +11662,9 @@
       "grade": 6,
       "category": "百分率進階",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pc-108",
@@ -12174,7 +12208,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-202",
@@ -12190,7 +12226,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-pn-203",
@@ -12206,7 +12244,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-204",
@@ -12222,7 +12262,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-205",
@@ -12238,7 +12280,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-206",
@@ -12254,7 +12298,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-207",
@@ -12286,7 +12332,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、進階次方"
     },
     {
       "id": "g6-pn-209",
@@ -12302,7 +12350,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-210",
@@ -12318,7 +12368,9 @@
       "grade": 6,
       "category": "正負數綜合",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-cc-201",
@@ -13118,7 +13170,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-302",
@@ -13134,7 +13188,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-303",
@@ -13150,7 +13206,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-304",
@@ -13166,7 +13224,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-305",
@@ -13182,7 +13242,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-306",
@@ -13214,7 +13276,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、進階次方"
     },
     {
       "id": "g6-pn-308",
@@ -13230,7 +13294,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pn-309",
@@ -13246,7 +13312,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-pn-310",
@@ -13262,7 +13330,9 @@
       "grade": 6,
       "category": "正負數運算強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-eq-301",
@@ -13374,7 +13444,9 @@
       "grade": 6,
       "category": "方程式強化",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-eq-308",
@@ -13918,7 +13990,9 @@
       "grade": 6,
       "category": "綜合應用五",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-mx-502",
@@ -14062,7 +14136,9 @@
       "grade": 6,
       "category": "代數進階挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-al-402",
@@ -14174,7 +14250,9 @@
       "grade": 6,
       "category": "幾何綜合挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g6-ge-404",
@@ -14558,7 +14636,9 @@
       "grade": 6,
       "category": "代數最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-af-508",
@@ -14734,7 +14814,9 @@
       "grade": 6,
       "category": "幾何最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g6-gf-509",
@@ -14910,7 +14992,9 @@
       "grade": 6,
       "category": "百分率最終挑戰",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-pf-510",
@@ -15102,7 +15186,9 @@
       "grade": 6,
       "category": "衝刺題組一",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-sp-602",
@@ -15198,7 +15284,9 @@
       "grade": 6,
       "category": "衝刺題組一",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-sp-608",
@@ -15214,7 +15302,9 @@
       "grade": 6,
       "category": "衝刺題組一",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-sp-609",
@@ -15342,7 +15432,9 @@
       "grade": 6,
       "category": "衝刺題組二",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-sp-618",
@@ -15406,7 +15498,9 @@
       "grade": 6,
       "category": "衝刺題組三",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、進階次方"
     },
     {
       "id": "g6-sp-622",
@@ -15502,7 +15596,9 @@
       "grade": 6,
       "category": "衝刺題組三",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數、絕對值"
     },
     {
       "id": "g6-sp-628",
@@ -15582,7 +15678,9 @@
       "grade": 6,
       "category": "衝刺題組四",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "絕對值"
     },
     {
       "id": "g6-sp-633",
@@ -15662,7 +15760,9 @@
       "grade": 6,
       "category": "衝刺題組四",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "g6-sp-638",
@@ -15742,7 +15842,9 @@
       "grade": 6,
       "category": "衝刺題組四",
       "difficulty": "hard",
-      "source": "段考題"
+      "source": "段考題",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "g6-sp-643",
@@ -16078,7 +16180,9 @@
       "difficulty": "hard",
       "category": "幾何圖形",
       "source": "考私中",
-      "grade": 6
+      "grade": 6,
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "ps-167",
@@ -16302,7 +16406,9 @@
       "difficulty": "hard",
       "category": "立體圖形",
       "source": "考私中",
-      "grade": 6
+      "grade": 6,
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "ps-171",
@@ -16590,7 +16696,9 @@
       "difficulty": "medium",
       "category": "因數與倍數",
       "source": "考私中",
-      "grade": 5
+      "grade": 5,
+      "isAdvanced": true,
+      "advancedReason": "進階次方"
     },
     {
       "id": "ps-179",
@@ -17678,7 +17786,9 @@
       "difficulty": "hard",
       "category": "分數運算",
       "source": "考私中",
-      "grade": 6
+      "grade": 6,
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "ps-241",
@@ -18446,7 +18556,9 @@
       "difficulty": "medium",
       "category": "數列",
       "source": "考私中",
-      "grade": 5
+      "grade": 5,
+      "isAdvanced": true,
+      "advancedReason": "進階次方"
     },
     {
       "id": "ps-206",
@@ -21678,7 +21790,9 @@
       "category": "正負數運算",
       "difficulty": "easy",
       "source": "均衡補充",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-3) + 5 = 5 - 3 = 2\n3. 答案：2"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-3) + 5 = 5 - 3 = 2\n3. 答案：2",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "bal-2052",
@@ -21694,7 +21808,9 @@
       "category": "正負數運算",
       "difficulty": "easy",
       "source": "均衡補充",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-4) - (-6) = -4 + 6 = 2\n3. 答案：2"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-4) - (-6) = -4 + 6 = 2\n3. 答案：2",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "bal-2053",
@@ -21710,7 +21826,9 @@
       "category": "一元一次方程式",
       "difficulty": "easy",
       "source": "均衡補充",
-      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：7"
+      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：7",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "bal-2054",
@@ -21838,7 +21956,9 @@
       "category": "正負數運算",
       "difficulty": "medium",
       "source": "均衡補充",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-2) × (-3) = 6，6 × (-1) = -6\n3. 答案：-6"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-2) × (-3) = 6，6 × (-1) = -6\n3. 答案：-6",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "bal-2062",
@@ -22110,7 +22230,9 @@
       "category": "數列進階",
       "difficulty": "hard",
       "source": "均衡補充",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 公比 = 3，第5項 = 2 × 3⁴ = 2 × 81 = 162\n3. 答案：162"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 公比 = 3，第5項 = 2 × 3⁴ = 2 × 81 = 162\n3. 答案：162",
+      "isAdvanced": true,
+      "advancedReason": "進階次方"
     },
     {
       "id": "bal-2079",
@@ -22910,7 +23032,9 @@
       "category": "正負數運算",
       "difficulty": "easy",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 5 + (-3) = 5 - 3 = 2\n3. 答案：2"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 5 + (-3) = 5 - 3 = 2\n3. 答案：2",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3051",
@@ -22926,7 +23050,9 @@
       "category": "正負數運算",
       "difficulty": "easy",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-7) + (-2) = -9\n3. 答案：-9"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-7) + (-2) = -9\n3. 答案：-9",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3052",
@@ -22942,7 +23068,9 @@
       "category": "正負數運算",
       "difficulty": "easy",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：-16"
+      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：-16",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3053",
@@ -22958,7 +23086,9 @@
       "category": "一元一次方程式",
       "difficulty": "easy",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：10"
+      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：10",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3054",
@@ -23150,7 +23280,9 @@
       "category": "正負數運算",
       "difficulty": "medium",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-3)² = (-3) × (-3) = 9\n3. 答案：9"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. (-3)² = (-3) × (-3) = 9\n3. 答案：9",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3066",
@@ -23166,7 +23298,9 @@
       "category": "正負數運算",
       "difficulty": "medium",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. -3² = -(3²) = -9\n3. 答案：-9"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. -3² = -(3²) = -9\n3. 答案：-9",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3067",
@@ -23198,7 +23332,9 @@
       "category": "一元一次方程式",
       "difficulty": "medium",
       "source": "均衡補充2",
-      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：6"
+      "explanation": "【解題步驟】\n1. 按照四則運算順序：先乘除後加減\n2. 有括號先算括號內\n3. 小數對齊小數點計算\n4. 答案：6",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "add-3069",
@@ -24078,7 +24214,9 @@
       "category": "數列進階",
       "difficulty": "hard",
       "source": "考私中V2",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 首項 3，公比 2，第 6 項 = 3 × 2⁵ = 96\n3. 答案：96"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 首項 3，公比 2，第 6 項 = 3 × 2⁵ = 96\n3. 答案：96",
+      "isAdvanced": true,
+      "advancedReason": "進階次方"
     },
     {
       "id": "ps2-4046",
@@ -24974,7 +25112,9 @@
       "category": "幾何進階",
       "difficulty": "hard",
       "source": "考私中V3",
-      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 對角線 = 8√2 = 直徑，半徑 = 4√2\n3. 答案：4√2"
+      "explanation": "【解題步驟】\n1. 分析題目條件\n2. 對角線 = 8√2 = 直徑，半徑 = 4√2\n3. 答案：4√2",
+      "isAdvanced": true,
+      "advancedReason": "開根號"
     },
     {
       "id": "ps3-5024",
@@ -29294,7 +29434,9 @@
       "category": "利潤問題",
       "difficulty": "hard",
       "source": "考私中批量",
-      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-4"
+      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-4",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "ps-batch-6357",
@@ -29358,7 +29500,9 @@
       "category": "利潤問題",
       "difficulty": "hard",
       "source": "考私中批量",
-      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-4"
+      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-4",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "ps-batch-6361",
@@ -29374,7 +29518,9 @@
       "category": "利潤問題",
       "difficulty": "hard",
       "source": "考私中批量",
-      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-2"
+      "explanation": "【解題步驟】\n1. 定價 = 成本 × (1 + 加價率)\n2. 售價 = 定價 × 折扣\n3. 利潤 = 售價 - 成本\n4. 答案：-2",
+      "isAdvanced": true,
+      "advancedReason": "負數"
     },
     {
       "id": "ps-batch-6362",
