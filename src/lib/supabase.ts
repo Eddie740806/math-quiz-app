@@ -301,3 +301,82 @@ export async function deleteUser(userId: string) {
   
   return true
 }
+
+// ============ 錯題回報功能 ============
+
+export interface ErrorReport {
+  id: string
+  question_id: string
+  question_content: string
+  current_answer: string
+  error_type: string
+  correct_answer: string | null
+  description: string | null
+  status: string
+  resolved_at: string | null
+  resolved_by: string | null
+  created_at: string
+}
+
+// 獲取所有錯題回報
+export async function getErrorReports(status?: string) {
+  if (!supabase) return []
+  
+  let query = supabase
+    .from('error_reports')
+    .select('*')
+    .order('created_at', { ascending: false })
+  
+  if (status) {
+    query = query.eq('status', status)
+  }
+  
+  const { data, error } = await query
+  
+  if (error) {
+    console.error('Get error reports error:', error)
+    return []
+  }
+  
+  return data || []
+}
+
+// 更新錯題回報狀態
+export async function updateErrorReportStatus(reportId: string, status: string, resolvedBy?: string) {
+  if (!supabase) return false
+  
+  const updates: Record<string, unknown> = { status }
+  if (status === 'resolved') {
+    updates.resolved_at = new Date().toISOString()
+    updates.resolved_by = resolvedBy || 'admin'
+  }
+  
+  const { error } = await supabase
+    .from('error_reports')
+    .update(updates)
+    .eq('id', reportId)
+  
+  if (error) {
+    console.error('Update error report error:', error)
+    return false
+  }
+  
+  return true
+}
+
+// 獲取待處理回報數量
+export async function getPendingReportsCount() {
+  if (!supabase) return 0
+  
+  const { count, error } = await supabase
+    .from('error_reports')
+    .select('*', { count: 'exact', head: true })
+    .eq('status', 'pending')
+  
+  if (error) {
+    console.error('Get pending reports count error:', error)
+    return 0
+  }
+  
+  return count || 0
+}

@@ -10,7 +10,10 @@ import {
   getHardestQuestions,
   subscribeToOnlineCount,
   getAllUsers,
-  deleteUser
+  deleteUser,
+  getErrorReports,
+  updateErrorReportStatus,
+  ErrorReport
 } from '@/lib/supabase'
 
 interface UserData {
@@ -37,6 +40,7 @@ interface Stats {
   }
   gradeDistribution: { grade: number; count: number }[]
   hardestQuestions: { questionId: string; total: number; errorRate: number }[]
+  errorReports: ErrorReport[]
 }
 
 export default function AdminPage() {
@@ -51,13 +55,14 @@ export default function AdminPage() {
 
   const loadStats = async () => {
     try {
-      const [online, today, total, gradeDistribution, hardestQuestions, users] = await Promise.all([
+      const [online, today, total, gradeDistribution, hardestQuestions, users, errorReports] = await Promise.all([
         getOnlineCount(),
         getTodayStats(),
         getTotalStats(),
         getGradeDistribution(),
         getHardestQuestions(),
-        getAllUsers()
+        getAllUsers(),
+        getErrorReports()
       ])
 
       setStats({
@@ -66,7 +71,8 @@ export default function AdminPage() {
         total,
         gradeDistribution,
         hardestQuestions,
-        users: users as UserData[]
+        users: users as UserData[],
+        errorReports: errorReports as ErrorReport[]
       })
       setLastUpdate(new Date())
     } catch (error) {
@@ -336,6 +342,112 @@ export default function AdminPage() {
             </div>
           ) : (
             <p className="text-gray-500">尚無註冊用戶</p>
+          )}
+        </div>
+
+        {/* Error Reports */}
+        <div className="bg-gray-800 rounded-2xl p-6 mt-6">
+          <h2 className="text-xl font-bold text-white mb-4">
+            🚨 題目回報 
+            {stats?.errorReports && stats.errorReports.filter(r => r.status === 'pending').length > 0 && (
+              <span className="ml-2 px-2 py-1 bg-red-500 text-white text-sm rounded-full">
+                {stats.errorReports.filter(r => r.status === 'pending').length} 待處理
+              </span>
+            )}
+          </h2>
+          {stats?.errorReports && stats.errorReports.length > 0 ? (
+            <div className="space-y-4">
+              {stats.errorReports.map((report) => (
+                <div 
+                  key={report.id} 
+                  className={`p-4 rounded-xl border ${
+                    report.status === 'pending' 
+                      ? 'border-red-500 bg-red-500/10' 
+                      : 'border-gray-600 bg-gray-700/50'
+                  }`}
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-1 rounded text-xs ${
+                        report.error_type === 'wrong_answer' ? 'bg-red-600' :
+                        report.error_type === 'wrong_explanation' ? 'bg-orange-600' :
+                        report.error_type === 'typo' ? 'bg-yellow-600' :
+                        report.error_type === 'unclear' ? 'bg-blue-600' :
+                        'bg-gray-600'
+                      } text-white`}>
+                        {report.error_type === 'wrong_answer' ? '❌ 答案錯誤' :
+                         report.error_type === 'wrong_explanation' ? '📝 解析錯誤' :
+                         report.error_type === 'typo' ? '✏️ 錯字' :
+                         report.error_type === 'unclear' ? '❓ 看不懂' :
+                         report.error_type === 'duplicate' ? '🔄 重複' :
+                         '💬 其他'}
+                      </span>
+                      <span className={`px-2 py-1 rounded text-xs ${
+                        report.status === 'pending' ? 'bg-yellow-600' :
+                        report.status === 'resolved' ? 'bg-green-600' :
+                        'bg-gray-600'
+                      } text-white`}>
+                        {report.status === 'pending' ? '⏳ 待處理' :
+                         report.status === 'resolved' ? '✅ 已解決' :
+                         report.status}
+                      </span>
+                    </div>
+                    <span className="text-gray-500 text-xs">
+                      {new Date(report.created_at).toLocaleString('zh-TW')}
+                    </span>
+                  </div>
+                  
+                  <div className="text-gray-300 text-sm mb-2">
+                    <span className="text-gray-500">題目 ID:</span> {report.question_id}
+                  </div>
+                  
+                  <div className="text-white mb-2">
+                    {report.question_content}
+                  </div>
+                  
+                  <div className="text-gray-400 text-sm mb-2">
+                    <span className="text-gray-500">目前答案:</span> {report.current_answer}
+                    {report.correct_answer && (
+                      <span className="ml-4">
+                        <span className="text-gray-500">建議答案:</span> 
+                        <span className="text-green-400 ml-1">{report.correct_answer}</span>
+                      </span>
+                    )}
+                  </div>
+                  
+                  {report.description && (
+                    <div className="text-gray-400 text-sm italic mb-3">
+                      「{report.description}」
+                    </div>
+                  )}
+                  
+                  {report.status === 'pending' && (
+                    <div className="flex gap-2">
+                      <button
+                        onClick={async () => {
+                          const success = await updateErrorReportStatus(report.id, 'resolved', 'admin')
+                          if (success) loadStats()
+                        }}
+                        className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded transition"
+                      >
+                        ✅ 標記已解決
+                      </button>
+                      <button
+                        onClick={async () => {
+                          const success = await updateErrorReportStatus(report.id, 'ignored', 'admin')
+                          if (success) loadStats()
+                        }}
+                        className="px-3 py-1 bg-gray-600 hover:bg-gray-700 text-white text-sm rounded transition"
+                      >
+                        🙈 忽略
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-500">🎉 目前沒有待處理的回報</p>
           )}
         </div>
 

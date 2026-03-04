@@ -7,6 +7,7 @@ import { initTheme } from '@/lib/theme';
 import { playCorrectSound, playWrongSound, playStreakSound, playAchievementSound, playCompleteSound } from '@/lib/sounds';
 import { QuestionImage, hasImage } from '@/components/QuestionImage';
 import { GeometryImage, hasGeometryImage } from '@/components/GeometryImage';
+import ErrorReport from '@/components/ErrorReport';
 import questionsData from '@/data/questions.json';
 import geometryData from '@/data/questions-geometry.json';
 
@@ -51,6 +52,7 @@ function QuizContent() {
   const [showComboEffect, setShowComboEffect] = useState(false);
   const [wrongQuestions, setWrongQuestions] = useState<Question[]>([]);
   const [challengeMode, setChallengeMode] = useState(false);
+  const [showErrorReport, setShowErrorReport] = useState(false);
   const [skippedCount, setSkippedCount] = useState(0);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [totalTime, setTotalTime] = useState(0);
@@ -575,6 +577,13 @@ function QuizContent() {
               >
                 {bookmarked ? '⭐' : '☆'}
               </button>
+              <button
+                onClick={() => setShowErrorReport(true)}
+                className="p-1.5 rounded-full transition bg-gray-100 text-gray-400 hover:bg-red-50 hover:text-red-500"
+                title="回報題目問題"
+              >
+                🚨
+              </button>
             </div>
             <span className="text-gray-400 text-sm">
               {currentIndex + 1} / {questions.length}
@@ -694,6 +703,16 @@ function QuizContent() {
           </div>
         )}
       </div>
+      
+      {/* 錯題回報彈窗 */}
+      {showErrorReport && currentQuestion && (
+        <ErrorReport
+          questionId={currentQuestion.id}
+          questionContent={currentQuestion.content}
+          questionAnswer={currentQuestion.options[currentQuestion.answer]}
+          onClose={() => setShowErrorReport(false)}
+        />
+      )}
     </main>
   );
 }
